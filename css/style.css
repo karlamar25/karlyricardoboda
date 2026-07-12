@@ -1,0 +1,246 @@
+/* ==========================
+   KARLA & RICARDO
+   INVITACIÓN DE BODA
+========================== */
+
+:root{
+
+    --verde:#2F3B2D;
+    --marfil:#F5EFE5;
+    --dorado:#C8A86B;
+    --texto:#EAE3D7;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--verde);
+    color:var(--texto);
+
+    font-family:'Montserrat',sans-serif;
+
+}
+
+/* ==========================
+        PORTADA
+========================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+.hero-img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    filter:brightness(.55);
+
+    transform:scale(1.08);
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(47,59,45,.25),
+        rgba(47,59,45,.80)
+    );
+
+    z-index:1;
+
+}
+
+.hero-content{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    z-index:2;
+
+    padding:25px;
+
+}
+
+.fecha{
+
+    letter-spacing:6px;
+
+    font-size:.85rem;
+
+    margin-bottom:30px;
+
+    color:white;
+
+}
+
+.hero h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:5rem;
+
+    color:white;
+
+    font-weight:400;
+
+}
+
+.hero h2{
+
+    margin-top:15px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    font-weight:300;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    color:var(--marfil);
+
+}
+
+button{
+
+    margin-top:50px;
+
+    background:transparent;
+
+    color:var(--marfil);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    padding:16px 45px;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    background:var(--marfil);
+
+    color:var(--verde);
+
+}
+
+/* ==========================
+        MENSAJE
+========================== */
+
+.mensaje{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:120px 30px;
+
+    text-align:center;
+
+}
+
+.mensaje h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    font-weight:500;
+
+    margin-bottom:35px;
+
+    color:var(--marfil);
+
+}
+
+.mensaje p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:2;
+
+    font-size:1.15rem;
+
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+
+    font-size:3.4rem;
+
+}
+
+.hero h2{
+
+    font-size:1.2rem;
+
+    letter-spacing:4px;
+
+}
+
+.mensaje h3{
+
+    font-size:2.3rem;
+
+}
+
+}

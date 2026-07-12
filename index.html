@@ -1,107 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karla & Ricardo | Nuestra Boda</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<title>Karla & Ricardo | Nuestra Boda</title>
 
-        body{
-            font-family:'Cormorant Garamond',serif;
-            background:#f8f7f2;
-            color:#444;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            text-align:center;
-            background-image:
-            radial-gradient(circle at top left,#dbe4d2 0%,transparent 35%),
-            radial-gradient(circle at bottom right,#dbe4d2 0%,transparent 35%);
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .card{
-            background:white;
-            padding:60px;
-            border-radius:20px;
-            box-shadow:0 15px 40px rgba(0,0,0,.12);
-            max-width:700px;
-            width:90%;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
-        h1{
-            font-family:'Pinyon Script',cursive;
-            font-size:80px;
-            color:#6B7A4F;
-        }
-
-        h2{
-            margin:15px 0;
-            font-size:34px;
-            letter-spacing:4px;
-        }
-
-        p{
-            font-size:24px;
-            margin:10px 0;
-        }
-
-        .fecha{
-            margin-top:30px;
-            font-size:30px;
-            color:#6B7A4F;
-        }
-
-        button{
-            margin-top:35px;
-            background:#6B7A4F;
-            color:white;
-            border:none;
-            padding:15px 35px;
-            border-radius:40px;
-            font-size:20px;
-            cursor:pointer;
-            transition:.3s;
-        }
-
-        button:hover{
-            transform:scale(1.05);
-        }
-    </style>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<div class="card">
+<section class="hero">
 
-<h1>Karla & Ricardo</h1>
+    <div class="overlay"></div>
 
-<h2>NOS CASAMOS</h2>
+    <img src="img/portada.jpg" class="hero-img" alt="Karla y Ricardo">
 
-<p>Con la bendición de Dios</p>
+    <div class="hero-content">
 
-<div class="fecha">
-5 de diciembre de 2026
-</div>
+        <p class="fecha">05 · DICIEMBRE · 2026</p>
 
-<p>🕔 5:00 PM</p>
+        <h1>Karla & Ricardo</h1>
 
-<p><strong>Finca Anceluz</strong></p>
+        <h2>Nos Casamos</h2>
 
-<p>El Boquerón, El Salvador</p>
+        <button onclick="document.getElementById('mensaje').scrollIntoView({behavior:'smooth'})">
+            Abrir Invitación
+        </button>
 
-<button>Ver Invitación</button>
+    </div>
 
-</div>
+</section>
+
+<section id="mensaje" class="mensaje">
+
+    <h3>Con inmensa alegría</h3>
+
+    <p>
+
+        Nos llena de felicidad compartir con ustedes el inicio de una nueva etapa
+        en nuestras vidas.
+
+        Esperamos contar con su presencia para celebrar este momento tan especial.
+
+    </p>
+
+</section>
+
+<script src="js/script.js"></script>
 
 </body>
+
 </html>
