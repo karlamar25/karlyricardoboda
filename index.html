@@ -1,63 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karla & Ricardo | Nuestra Boda</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
-<title>Karla & Ricardo | Nuestra Boda</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<section class="hero">
+<header class="hero">
+
+    <img src="img/portada.jpg" alt="Karla y Ricardo">
 
     <div class="overlay"></div>
 
-    <img src="img/portada.jpg" class="hero-img" alt="Karla y Ricardo">
-
     <div class="hero-content">
 
-        <p class="fecha">05 · DICIEMBRE · 2026</p>
+        <span class="fecha">05 · DICIEMBRE · 2026</span>
 
-        <h1>Karla & Ricardo</h1>
+        <h1>Karla <span>&</span> Ricardo</h1>
 
         <h2>Nos Casamos</h2>
 
-        <button onclick="document.getElementById('mensaje').scrollIntoView({behavior:'smooth'})">
+        <a href="#mensaje" class="btn">
             Abrir Invitación
-        </button>
+        </a>
 
     </div>
 
-</section>
+</header>
 
 <section id="mensaje" class="mensaje">
 
     <h3>Con inmensa alegría</h3>
 
     <p>
-
-        Nos llena de felicidad compartir con ustedes el inicio de una nueva etapa
-        en nuestras vidas.
-
+        Nos llena de felicidad compartir con ustedes el inicio de una nueva etapa en nuestras vidas.
         Esperamos contar con su presencia para celebrar este momento tan especial.
-
     </p>
 
 </section>
 
+<section class="contador">
+
+    <h2>Faltan</h2>
+
+    <div class="countdown">
+
+        <div>
+            <span id="dias">00</span>
+            <small>Días</small>
+        </div>
+
+        <div>
+            <span id="horas">00</span>
+            <small>Horas</small>
+        </div>
+
+        <div>
+            <span id="minutos">00</span>
+            <small>Minutos</small>
+        </div>
+
+        <div>
+            <span id="segundos">00</span>
+            <small>Segundos</small>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="lugar">
+
+    <h2>Nuestro Gran Día</h2>
+
+    <h3>Finca Anceluz</h3>
+
+    <p>El Boquerón, El Salvador</p>
+
+    <a class="btn"
+       target="_blank"
+       href="https://maps.app.goo.gl/VZaHJ7mz2VrjFYp79">
+
+        Cómo llegar
+
+    </a>
+
+</section>
+
+<section class="dress">
+
+    <h2>Dress Code</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src="img/trajes.png">
+
+            <h3>Caballeros</h3>
+
+            <p>Formal Elegante</p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="img/vestidos.png">
+
+            <h3>Damas</h3>
+
+            <p>Vestido Largo</p>
+
+            <small>
+                Evitar blanco, marfil y crema.
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h2>Karla & Ricardo</h2>
+
+    <p>
+
+        ¡Gracias por acompañarnos
+        en uno de los días más importantes
+        de nuestras vidas!
+
+    </p>
+
+</footer>
+
 <script src="js/script.js"></script>
 
 </body>
-
 </html>
