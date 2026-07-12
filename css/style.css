@@ -1,246 +1,240 @@
-/* ==========================
-   KARLA & RICARDO
-   INVITACIÓN DE BODA
-========================== */
-
 :root{
-
     --verde:#2F3B2D;
-    --marfil:#F5EFE5;
+    --marfil:#F7F3EC;
     --dorado:#C8A86B;
-    --texto:#EAE3D7;
-
+    --texto:#f2f2f2;
 }
 
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
-
 }
 
 html{
-
     scroll-behavior:smooth;
-
 }
 
 body{
-
     background:var(--verde);
     color:var(--texto);
-
     font-family:'Montserrat',sans-serif;
-
 }
-
-/* ==========================
-        PORTADA
-========================== */
 
 .hero{
-
     position:relative;
-
     width:100%;
     height:100vh;
-
     overflow:hidden;
-
 }
 
-.hero-img{
-
+.hero img{
     width:100%;
     height:100%;
-
     object-fit:cover;
-
-    filter:brightness(.55);
-
-    transform:scale(1.08);
-
+    filter:brightness(.45);
+    transform:scale(1.05);
 }
 
 .overlay{
-
     position:absolute;
-
     inset:0;
-
     background:linear-gradient(
-        to bottom,
         rgba(47,59,45,.25),
-        rgba(47,59,45,.80)
+        rgba(47,59,45,.85)
     );
-
-    z-index:1;
-
 }
 
 .hero-content{
-
     position:absolute;
-
     inset:0;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
-
     text-align:center;
-
-    z-index:2;
-
-    padding:25px;
-
+    z-index:5;
+    padding:20px;
 }
 
 .fecha{
-
-    letter-spacing:6px;
-
-    font-size:.85rem;
-
-    margin-bottom:30px;
-
-    color:white;
-
+    letter-spacing:5px;
+    font-size:.9rem;
+    margin-bottom:25px;
 }
 
 .hero h1{
-
-    font-family:'Great Vibes',cursive;
-
+    font-family:"Great Vibes",cursive;
     font-size:5rem;
-
-    color:white;
-
     font-weight:400;
+    margin-bottom:15px;
+}
 
+.hero h1 span{
+    color:var(--dorado);
 }
 
 .hero h2{
-
-    margin-top:15px;
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:2rem;
-
-    font-weight:300;
-
+    font-family:"Cormorant Garamond",serif;
     letter-spacing:6px;
-
+    font-size:1.5rem;
+    font-weight:300;
     text-transform:uppercase;
-
-    color:var(--marfil);
-
 }
 
-button{
-
-    margin-top:50px;
-
-    background:transparent;
-
-    color:var(--marfil);
-
-    border:1px solid rgba(255,255,255,.6);
-
-    padding:16px 45px;
-
-    font-size:14px;
-
+.btn{
+    margin-top:45px;
+    display:inline-block;
+    padding:15px 40px;
+    border:1px solid white;
+    color:white;
+    text-decoration:none;
     letter-spacing:3px;
-
-    text-transform:uppercase;
-
-    cursor:pointer;
-
-    transition:.35s;
-
+    transition:.3s;
 }
 
-button:hover{
-
-    background:var(--marfil);
-
+.btn:hover{
+    background:white;
     color:var(--verde);
-
 }
 
-/* ==========================
-        MENSAJE
-========================== */
+section{
+    padding:90px 25px;
+}
 
 .mensaje{
-
-    max-width:900px;
-
-    margin:auto;
-
-    padding:120px 30px;
-
     text-align:center;
-
+    max-width:850px;
+    margin:auto;
 }
 
 .mensaje h3{
-
-    font-family:'Cormorant Garamond',serif;
-
+    font-family:"Cormorant Garamond",serif;
     font-size:3rem;
-
-    font-weight:500;
-
-    margin-bottom:35px;
-
-    color:var(--marfil);
-
+    margin-bottom:30px;
 }
 
 .mensaje p{
-
-    max-width:650px;
-
-    margin:auto;
-
     line-height:2;
-
-    font-size:1.15rem;
-
+    max-width:650px;
+    margin:auto;
 }
 
-/* ==========================
-      RESPONSIVE
-========================== */
+.contador{
+    background:#384736;
+    text-align:center;
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.countdown div{
+    width:120px;
+}
+
+.countdown span{
+    display:block;
+    font-size:3rem;
+    font-weight:bold;
+}
+
+.countdown small{
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.lugar{
+    text-align:center;
+}
+
+.lugar h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:3rem;
+}
+
+.lugar h3{
+    margin-top:20px;
+}
+
+.dress{
+    background:#384736;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:50px;
+}
+
+.card{
+    background:white;
+    color:#444;
+    border-radius:20px;
+    overflow:hidden;
+    max-width:380px;
+    box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.card h3{
+    margin:25px 0 10px;
+    font-family:"Cormorant Garamond",serif;
+}
+
+.card p{
+    margin-bottom:20px;
+}
+
+.card small{
+    display:block;
+    padding:0 20px 30px;
+}
+
+footer{
+    text-align:center;
+    padding:90px 20px;
+}
+
+footer h2{
+    font-family:"Great Vibes",cursive;
+    font-size:4rem;
+    margin-bottom:20px;
+}
 
 @media(max-width:768px){
 
 .hero h1{
-
-    font-size:3.4rem;
-
+    font-size:3.5rem;
 }
 
 .hero h2{
-
-    font-size:1.2rem;
-
+    font-size:1.1rem;
     letter-spacing:4px;
-
 }
 
-.mensaje h3{
+.countdown div{
+    width:80px;
+}
 
+.countdown span{
+    font-size:2rem;
+}
+
+.mensaje h3,
+.lugar h2{
     font-size:2.3rem;
-
 }
 
 }
