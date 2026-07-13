@@ -60,7 +60,7 @@ PORTADA
 
 .hero{
 
-    position:relative;
+    position:center;
     height:100vh;
     overflow:hidden;
 
@@ -527,7 +527,7 @@ DRESS CODE
 
     max-width:850px;
 
-    margin:auto;
+    margin:60px auto 0;
 
 }
 
@@ -553,9 +553,15 @@ DRESS CODE
 
 }
 
-.dress details p{
+.dress details{
 
-    margin-top:20px;
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:22px 28px;
 
 }
 
