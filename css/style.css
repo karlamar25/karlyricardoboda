@@ -257,7 +257,7 @@ PROGRAMACIÓN
 
 .programacion h2{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:'Montserrat',sans-serif;
 
     font-size:2.6rem;
 
@@ -301,21 +301,21 @@ PROGRAMACIÓN
 
 .hora{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:'Montserrat',sans-serif;
 
-    font-size:1.15rem;
+    font-size:1.rem;
 
     font-weight:400;
 
-    letter-spacing:5px;
+    letter-spacing:2px;
 
-    color:rgba(248,244,236,.85);
+    color:rgba(248,244,236,.80);
 
 }
 
 .actividad{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:'Montserrat',sans-serif;
 
     font-size:1.45rem;
 
@@ -331,7 +331,7 @@ PROGRAMACIÓN
 
 .despedida{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:'Montserrat',sans-serif;
 
     font-size:1.05rem;
 
