@@ -224,3 +224,71 @@ bottom:20px;
 }
 
 }
+/*==================================
+MENSAJE
+===================================*/
+
+.container{
+
+    width:min(900px,90%);
+    margin:auto;
+
+}
+
+.mensaje{
+
+    background:#2F3B2D;
+
+    color:#F8F4EC;
+
+    padding:140px 0;
+
+    text-align:center;
+
+}
+
+.mensaje p{
+
+    max-width:760px;
+
+    margin:0 auto 40px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    font-weight:300;
+
+    line-height:1.9;
+
+    color:#F8F4EC;
+
+}
+
+.mensaje p:last-child{
+
+    margin-bottom:0;
+
+}
+
+/*==============================
+RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+.mensaje{
+
+padding:90px 25px;
+
+}
+
+.mensaje p{
+
+font-size:1.45rem;
+
+line-height:1.8;
+
+}
+
+}
