@@ -1,6 +1,10 @@
-//=============================
+//======================================
+// KARLA & RICARDO
+//======================================
+
+//======================================
 // CUENTA REGRESIVA
-//=============================
+//======================================
 
 const weddingDate = new Date("2026-12-05T17:00:00").getTime();
 
@@ -10,29 +14,29 @@ function updateCountdown(){
 
     const distance = weddingDate - now;
 
-    if(distance < 0){
+    if(distance <= 0){
 
-        document.getElementById("days").innerHTML="00";
-        document.getElementById("hours").innerHTML="00";
-        document.getElementById("minutes").innerHTML="00";
-        document.getElementById("seconds").innerHTML="00";
+        document.getElementById("days").textContent="00";
+        document.getElementById("hours").textContent="00";
+        document.getElementById("minutes").textContent="00";
+        document.getElementById("seconds").textContent="00";
 
         return;
 
     }
 
-    const days = Math.floor(distance/(1000*60*60*24));
+    const days=Math.floor(distance/(1000*60*60*24));
 
-    const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+    const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
 
-    const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+    const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
 
-    const seconds = Math.floor((distance%(1000*60))/1000);
+    const seconds=Math.floor((distance%(1000*60))/1000);
 
-    document.getElementById("days").innerHTML = String(days).padStart(2,"0");
-    document.getElementById("hours").innerHTML = String(hours).padStart(2,"0");
-    document.getElementById("minutes").innerHTML = String(minutes).padStart(2,"0");
-    document.getElementById("seconds").innerHTML = String(seconds).padStart(2,"0");
+    document.getElementById("days").textContent=String(days).padStart(2,"0");
+    document.getElementById("hours").textContent=String(hours).padStart(2,"0");
+    document.getElementById("minutes").textContent=String(minutes).padStart(2,"0");
+    document.getElementById("seconds").textContent=String(seconds).padStart(2,"0");
 
 }
 
@@ -40,19 +44,50 @@ updateCountdown();
 
 setInterval(updateCountdown,1000);
 
-//=============================
-// EFECTO SUAVE AL HACER SCROLL
-//=============================
+//======================================
+// SCROLL SUAVE FLECHA
+//======================================
 
-const sections = document.querySelectorAll("section");
+const arrow=document.querySelector(".scroll-indicator");
 
-const observer = new IntersectionObserver(entries=>{
+if(arrow){
+
+    arrow.addEventListener("click",()=>{
+
+        window.scrollTo({
+
+            top:window.innerHeight,
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+}
+
+//======================================
+// ANIMACIÓN AL HACER SCROLL
+//======================================
+
+const sections=document.querySelectorAll("section");
+
+sections.forEach(section=>{
+
+    section.style.opacity="0";
+    section.style.transform="translateY(60px)";
+    section.style.transition="all .9s ease";
+
+});
+
+const observer=new IntersectionObserver((entries)=>{
 
     entries.forEach(entry=>{
 
         if(entry.isIntersecting){
 
-            entry.target.classList.add("show");
+            entry.target.style.opacity="1";
+            entry.target.style.transform="translateY(0)";
 
         }
 
@@ -62,10 +97,32 @@ const observer = new IntersectionObserver(entries=>{
     threshold:.15
 });
 
-sections.forEach(section=>{
+sections.forEach(section=>observer.observe(section));
 
-    section.classList.add("hidden");
+//======================================
+// ABRIR SOLO UN FAQ
+//======================================
 
-    observer.observe(section);
+const faqs=document.querySelectorAll(".faq details");
+
+faqs.forEach(item=>{
+
+    item.addEventListener("toggle",()=>{
+
+        if(item.open){
+
+            faqs.forEach(other=>{
+
+                if(other!==item){
+
+                    other.open=false;
+
+                }
+
+            });
+
+        }
+
+    });
 
 });
