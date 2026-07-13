@@ -281,9 +281,9 @@ PROGRAMACIÓN
 
     display:grid;
 
-    grid-template-columns:120px 1fr;
+    grid-template-columns:130px 1fr;
 
-    gap:45px;
+    gap:35px;
 
     align-items:center;
 
@@ -303,13 +303,13 @@ PROGRAMACIÓN
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1rem;
+    font-size:1.15rem;
 
     font-weight:400;
 
-    letter-spacing:1px;
+    letter-spacing:5px;
 
-    color:rgba(248,244,236,.75);
+    color:rgba(248,244,236,.85);
 
 }
 
