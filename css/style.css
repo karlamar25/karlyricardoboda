@@ -292,127 +292,86 @@ line-height:1.8;
 }
 
 }
+
 /*==================================
 PROGRAMACIÓN
 ===================================*/
 
 .programacion{
 
-    background:#3A4635;
-
-    padding:140px 0;
-
+    background:#2F3B2D;
+    padding:130px 0;
     color:#F8F4EC;
 
 }
 
 .programacion h2{
 
-    text-align:center;
-
     font-family:'Cormorant Garamond',serif;
-
     font-size:3.2rem;
-
     font-weight:400;
-
-    margin-bottom:80px;
+    text-align:center;
+    margin-bottom:70px;
+    color:#F8F4EC;
 
 }
 
 .timeline{
 
-    position:relative;
-
-    max-width:700px;
-
-    margin:0 auto;
-
-}
-
-.timeline::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-
-    top:0;
-
-    bottom:0;
-
-    width:2px;
-
-    background:rgba(248,244,236,.25);
-
-    transform:translateX(-50%);
+    width:min(850px,90%);
+    margin:auto;
 
 }
 
 .evento{
 
-    position:relative;
+    display:grid;
+    grid-template-columns:160px 1fr;
+    align-items:center;
 
-    margin-bottom:55px;
+    padding:22px 0;
 
-    text-align:center;
+    border-bottom:1px solid rgba(248,244,236,.15);
 
 }
 
-.punto{
+.evento:last-child{
 
-    width:16px;
-
-    height:16px;
-
-    border-radius:50%;
-
-    background:#F8F4EC;
-
-    margin:18px auto;
-
-    position:relative;
-
-    z-index:2;
+    border-bottom:none;
 
 }
 
 .hora{
 
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:1.5rem;
-
+    font-family:'Montserrat',sans-serif;
+    font-size:.95rem;
     letter-spacing:2px;
+    color:rgba(248,244,236,.75);
 
-    margin-bottom:5px;
+}
+
+.punto{
+
+    display:none;
 
 }
 
 .detalle h3{
 
     font-family:'Cormorant Garamond',serif;
-
     font-size:1.8rem;
-
     font-weight:400;
-
-    margin-bottom:6px;
+    color:#F8F4EC;
 
 }
 
 .detalle p{
 
+    margin-top:8px;
     font-size:1rem;
-
-    opacity:.85;
+    color:rgba(248,244,236,.80);
 
 }
-
-/*==========================
-CELULAR
-==========================*/
 
 @media(max-width:768px){
 
@@ -424,21 +383,27 @@ padding:90px 25px;
 
 .programacion h2{
 
-font-size:2.5rem;
+font-size:2.4rem;
 
-margin-bottom:60px;
+margin-bottom:50px;
 
 }
 
-.timeline{
+.evento{
 
-max-width:100%;
+grid-template-columns:1fr;
+
+text-align:center;
+
+gap:10px;
+
+padding:28px 0;
 
 }
 
 .hora{
 
-font-size:1.25rem;
+font-size:.85rem;
 
 }
 
@@ -447,11 +412,5 @@ font-size:1.25rem;
 font-size:1.45rem;
 
 }
-
-}
-
-body{
-
-    background:red !important;
 
 }
