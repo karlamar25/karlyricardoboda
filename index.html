@@ -25,13 +25,9 @@ PORTADA
 
 <header class="hero">
 
- <picture>
-
-    <source media="(max-width:768px)" srcset="img/portada-movil.png">
-
-    <img src="img/portada.jpeg" alt="Karla y Ricardo" class="hero-img">
-
-</picture>
+    <img src="img/portada.jpeg"
+         alt="Karla y Ricardo"
+         class="hero-img">
 
     <div class="overlay"></div>
 
@@ -47,9 +43,11 @@ PORTADA
 
     </div>
 
-    <div class="scroll-indicator">
-        ⌄
-    </div>
+    <a href="#mensaje" class="scroll-indicator" aria-label="Ir al mensaje">
+
+        &#8964;
+
+    </a>
 
 </header>
 
@@ -61,15 +59,15 @@ MENSAJE
 
     <div class="container">
 
-        <p>
-            Con la bendición de Dios y el amor que nos une, queremos compartir con ustedes<br>
-            uno de los días más importantes de nuestras vidas.
+        <p class="mensaje-texto">
+
+            Con la bendición de Dios y el amor que nos une,
+            queremos compartir con ustedes uno de los días más importantes
+            de nuestras vidas.
+
         </p>
 
-
     </div>
-
-</section>
 
 </section>
 
@@ -77,96 +75,68 @@ MENSAJE
 PROGRAMACIÓN
 ===================================-->
 
-<section class="programacion">
+<section class="programacion" id="programacion">
 
     <div class="container">
 
-        <h2>Programación</h2>
+        <h2>programacion</h2>
 
         <div class="timeline">
 
             <div class="evento">
-
                 <div class="hora">5:00 PM</div>
-
                 <div class="detalle">
                     <p class="actividad">Ceremonia</p>
                 </div>
-
             </div>
 
             <div class="evento">
-
                 <div class="hora">5:30 PM</div>
-
                 <div class="detalle">
                     <p class="actividad">Pre-cóctel y Fotografías</p>
                 </div>
-
             </div>
 
             <div class="evento">
-
                 <div class="hora">6:00 PM</div>
-
                 <div class="detalle">
                     <p class="actividad">Baile de los Novios</p>
                 </div>
-
             </div>
 
             <div class="evento">
-
                 <div class="hora">6:30 PM</div>
-
                 <div class="detalle">
                     <p class="actividad">Cena</p>
                 </div>
-
             </div>
 
             <div class="evento">
-
                 <div class="hora">7:00 PM</div>
-
                 <div class="detalle">
                     <p class="actividad">Pastel</p>
                 </div>
-
             </div>
 
             <div class="evento">
-
                 <div class="hora">8:00 PM</div>
-
                 <div class="detalle">
                     <p class="actividad">¡A Bailar!</p>
                 </div>
-
             </div>
 
             <div class="evento">
-
                 <div class="hora">8:30 PM</div>
-
                 <div class="detalle">
                     <p class="actividad">Antojitos para seguir la fiesta</p>
                 </div>
-
-
             </div>
 
             <div class="evento">
-
                 <div class="hora">12:00 AM</div>
-
                 <div class="detalle">
-
                     <p class="actividad">Gracias por acompañarnos</p>
-
-
                 </div>
-
             </div>
 
         </div>
@@ -174,21 +144,24 @@ PROGRAMACIÓN
     </div>
 
 </section>
+
 <!--==================================
 RECEPCIÓN
 ===================================-->
 
-<section class="recepcion">
+<section class="recepcion" id="recepcion">
 
     <div class="container">
 
         <h2>Recepción</h2>
 
-        <img src="img/finca.png" class="foto-finca" alt="Finca Anceluz">
+        <img src="img/finca.png"
+             alt="Finca Anceluz"
+             class="foto-finca">
 
         <h3>Finca Anceluz</h3>
 
-        <p>
+        <p class="direccion">
 
             Calle al Volcán km 18<br>
             Caserío La Virgen<br>
@@ -196,11 +169,11 @@ RECEPCIÓN
 
         </p>
 
-        <h4>Indicaciones</h4>
+        <h3>Indicaciones</h3>
 
-        <p>
+        <p class="indicaciones">
 
-            Al llegar al restaurante La Pampa, aproximadamente a 200 metros
+            Al llegar al restaurante La Pampa, aproximadamente a 200 metros,
             encontrarás un cruce hacia la derecha donde habrá un puesto de flores.
             Continúa el camino manteniéndote siempre al lado izquierdo
             hasta llegar a Finca Anceluz.
@@ -209,9 +182,10 @@ RECEPCIÓN
 
         <a href="https://maps.app.goo.gl/VZaHJ7mz2VrjFYp79"
            target="_blank"
+           rel="noopener"
            class="btn">
 
-            Mapa
+            Ver ubicación
 
         </a>
 
@@ -223,7 +197,7 @@ RECEPCIÓN
 DRESS CODE
 ===================================-->
 
-<section class="dress">
+<section class="dress" id="dress-code">
 
     <div class="container">
 
@@ -232,9 +206,11 @@ DRESS CODE
         <div class="dress-grid">
 
             <!-- Caballeros -->
-            <div class="dress-card">
+            <article class="dress-card">
 
-                <img src="img/trajes.png" alt="Caballeros">
+                <img src="img/trajes.png"
+                     alt="Vestimenta formal para caballeros"
+                     class="zoom-img">
 
                 <div class="dress-info">
 
@@ -244,25 +220,29 @@ DRESS CODE
 
                 </div>
 
-            </div>
+            </article>
 
             <!-- Damas -->
-            <div class="dress-card">
+            <article class="dress-card">
 
-                <img src="img/vestidos.png" alt="Damas">
+                <img src="img/vestidos.png"
+                     alt="Vestimenta formal para damas"
+                     class="zoom-img">
 
                 <div class="dress-info">
 
                     <h3>Damas</h3>
 
                     <p>
+
                         Vestido largo.<br>
                         Colores alegres y elegantes.
+
                     </p>
 
                 </div>
 
-            </div>
+            </article>
 
         </div>
 
@@ -299,6 +279,18 @@ DRESS CODE
     </div>
 
 </section>
+
+<!--==================================
+LIGHTBOX
+===================================-->
+
+<div id="lightbox" class="lightbox">
+
+    <span class="close-lightbox">&times;</span>
+
+    <img id="lightbox-img" src="" alt="Vista ampliada">
+
+</div>
 
 <!--==================================
 CUENTA REGRESIVA
@@ -338,7 +330,7 @@ CUENTA REGRESIVA
 PREGUNTAS FRECUENTES
 ===================================-->
 
-<section class="faq">
+<section class="faq" id="preguntas">
 
     <div class="container">
 
@@ -349,7 +341,7 @@ PREGUNTAS FRECUENTES
             <summary>¿Hasta cuándo puedo confirmar mi asistencia?</summary>
 
             <p>
-                Por favor confirma tu asistencia antes del
+                Por favor, confirma tu asistencia antes del
                 <strong>5 de noviembre de 2026</strong>.
             </p>
 
@@ -371,21 +363,20 @@ PREGUNTAS FRECUENTES
 
             <p>
                 Contaremos con valet parking de cortesía.
-                El estacionamiento estará ubicado muy cerca
-                de la entrada principal.
+                El estacionamiento estará ubicado muy cerca de la entrada principal.
             </p>
 
         </details>
 
         <details>
 
-            <summary>¿A quién puedo llamar si tengo preguntas?</summary>
+            <summary>¿A quién puedo contactar si tengo alguna consulta?</summary>
 
-            <p>
+            <p class="planner">
 
-                Griselda Zelaya<br>
+                <strong>Griselda Zelaya</strong><br>
                 Wedding Planner<br>
-                +503 7648-7344
+                <a href="tel:+50376487344">+503 7648-7344</a>
 
             </p>
 
@@ -399,18 +390,18 @@ PREGUNTAS FRECUENTES
 FINAL
 ===================================-->
 
-<footer class="final">
+<footer class="final" id="final">
 
     <div class="container">
 
         <h2>
 
-            Hagamos de este día
+            Hagamos de este día<br>
             un recuerdo inolvidable
 
         </h2>
 
-        <p>
+        <p class="despedida">
 
             ¡Nos vemos pronto!
 
