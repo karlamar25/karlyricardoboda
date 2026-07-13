@@ -437,9 +437,9 @@ DRESS CODE
 
 .dress{
 
-    padding:130px 0;
+    padding:120px 0;
 
-    background:var(--verde);
+    background:var(--verde2);
 
     text-align:center;
 
@@ -451,6 +451,8 @@ DRESS CODE
 
     font-size:3rem;
 
+    font-weight:400;
+
     margin-bottom:60px;
 
 }
@@ -461,7 +463,7 @@ DRESS CODE
 
     justify-content:center;
 
-    gap:45px;
+    gap:50px;
 
     flex-wrap:wrap;
 
@@ -469,15 +471,15 @@ DRESS CODE
 
 .dress-card{
 
-    width:280px;
-
-    overflow:hidden;
+    width:300px;
 
     background:rgba(255,255,255,.05);
 
     border:1px solid rgba(255,255,255,.08);
 
     border-radius:20px;
+
+    overflow:hidden;
 
 }
 
@@ -487,15 +489,19 @@ DRESS CODE
 
     height:220px;
 
-    object-fit:cover;
+    object-fit:contain;
+
+    background:#4A5844;
 
     display:block;
+
+    padding:10px;
 
 }
 
 .dress-info{
 
-    padding:20px;
+    padding:22px;
 
 }
 
@@ -503,11 +509,11 @@ DRESS CODE
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.8rem;
+    font-size:2rem;
 
-    text-align:center;
+    font-weight:400;
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 
 }
 
@@ -515,11 +521,41 @@ DRESS CODE
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.1rem;
+    font-size:1.15rem;
 
-    line-height:1.7;
+    line-height:1.8;
 
-    text-align:center;
+}
+
+.nota-novia{
+
+    margin-top:45px;
+
+    margin-bottom:40px;
+
+}
+
+.nota-novia h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.8rem;
+
+    color:var(--dorado);
+
+    font-weight:400;
+
+    margin-bottom:10px;
+
+}
+
+.nota-novia p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.25rem;
+
+    letter-spacing:2px;
 
 }
 
@@ -527,29 +563,7 @@ DRESS CODE
 
     max-width:850px;
 
-    margin:60px auto 0;
-
-}
-
-.dress details{
-
-    background:rgba(255,255,255,.05);
-
-    border-radius:15px;
-
-    padding:20px 30px;
-
-    text-align:left;
-
-}
-
-.dress summary{
-
-    cursor:pointer;
-
-    font-size:1.2rem;
-
-    font-weight:600;
+    margin:auto;
 
 }
 
@@ -563,15 +577,57 @@ DRESS CODE
 
     padding:22px 28px;
 
+    text-align:left;
+
 }
 
-.dress details h3{
+.dress summary{
 
-    margin-top:25px;
+    list-style:none;
 
-    color:var(--dorado);
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
 
     font-family:'Cormorant Garamond',serif;
+
+    font-size:1.6rem;
+
+}
+
+.dress summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.dress summary::after{
+
+    content:"+";
+
+    font-size:2rem;
+
+    transition:.3s;
+
+}
+
+.dress details[open] summary::after{
+
+    content:"−";
+
+}
+
+.dress details p{
+
+    margin-top:18px;
+
+    line-height:1.8;
+
+    font-size:1.05rem;
 
 }
 
