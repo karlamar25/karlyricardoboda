@@ -292,3 +292,160 @@ line-height:1.8;
 }
 
 }
+/*==================================
+PROGRAMACIÓN
+===================================*/
+
+.programacion{
+
+    background:#3A4635;
+
+    padding:140px 0;
+
+    color:#F8F4EC;
+
+}
+
+.programacion h2{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3.2rem;
+
+    font-weight:400;
+
+    margin-bottom:80px;
+
+}
+
+.timeline{
+
+    position:relative;
+
+    max-width:700px;
+
+    margin:0 auto;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    bottom:0;
+
+    width:2px;
+
+    background:rgba(248,244,236,.25);
+
+    transform:translateX(-50%);
+
+}
+
+.evento{
+
+    position:relative;
+
+    margin-bottom:55px;
+
+    text-align:center;
+
+}
+
+.punto{
+
+    width:16px;
+
+    height:16px;
+
+    border-radius:50%;
+
+    background:#F8F4EC;
+
+    margin:18px auto;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hora{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.5rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:5px;
+
+}
+
+.detalle h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.8rem;
+
+    font-weight:400;
+
+    margin-bottom:6px;
+
+}
+
+.detalle p{
+
+    font-size:1rem;
+
+    opacity:.85;
+
+}
+
+/*==========================
+CELULAR
+==========================*/
+
+@media(max-width:768px){
+
+.programacion{
+
+padding:90px 25px;
+
+}
+
+.programacion h2{
+
+font-size:2.5rem;
+
+margin-bottom:60px;
+
+}
+
+.timeline{
+
+max-width:100%;
+
+}
+
+.hora{
+
+font-size:1.25rem;
+
+}
+
+.detalle h3{
+
+font-size:1.45rem;
+
+}
+
+}
