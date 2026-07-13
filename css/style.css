@@ -213,7 +213,7 @@ MENSAJE
 
 .mensaje{
 
-padding:150px 0;
+padding:100px 0 70px;
 
 text-align:center;
 
@@ -223,13 +223,13 @@ background:var(--verde);
 
 .mensaje p{
 
-max-width:760px;
+max-width:950px;
 
 margin:0 auto 22px;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:1.9rem;
+font-size:1.8rem;
 
 font-weight:300;
 
@@ -250,7 +250,7 @@ PROGRAMACIÓN
 .programacion{
 
     background:var(--verde2);
-    padding:130px 0;
+    padding:70px 0 110px;
 
 }
 
