@@ -229,7 +229,7 @@ margin:0 auto 22px;
 
 font-family:'Montserrat',sans-serif;
 
-font-size:1.8rem;
+font-size:1rem;
 
 font-weight:300;
 
@@ -469,11 +469,15 @@ DRESS CODE
 
 .dress-card{
 
+    width:220px;
+
+    margin:auto;
+
     background:rgba(255,255,255,.05);
 
     border-radius:18px;
 
-    padding:25px;
+    padding:18px;
 
     border:1px solid rgba(255,255,255,.08);
 
@@ -481,11 +485,11 @@ DRESS CODE
 
 .dress-card img{
 
-    width:75%;
+    width:120px;
 
     margin:auto;
 
-    margin-bottom:25px;
+    margin-bottom:18px;
 
 }
 
@@ -493,15 +497,17 @@ DRESS CODE
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:2rem;
+    font-size:1.6rem;
 
-    margin-bottom:15px;
+    margin-bottom:10px;
 
 }
 
 .dress-card p{
 
-    line-height:2;
+    font-size:1rem;
+
+    line-height:1.8;
 
 }
 
