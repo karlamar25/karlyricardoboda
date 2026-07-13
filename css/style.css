@@ -112,7 +112,7 @@ rgba(0,0,0,.40)
 
 position:absolute;
 
-top:25%;
+top:20%;
 left:50%;
 
 transform:translate(-50%,-50%);
@@ -129,7 +129,7 @@ color:var(--marfil);
 
 font-family:'Great Vibes',cursive;
 
-font-size:10rem;
+font-size:8.8rem;
 
 font-weight:400;
 
