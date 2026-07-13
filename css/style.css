@@ -60,7 +60,7 @@ PORTADA
 
 .hero{
 
-    position:center;
+    position:relative;
     height:100vh;
     overflow:hidden;
 
@@ -71,7 +71,7 @@ PORTADA
     width:100%;
     height:100%;
     object-fit:cover;
-    object-position:70% center;
+    object-position:center;
     filter:brightness(.48);
 
     animation:kenburns 22s ease-in-out infinite alternate;
@@ -1002,6 +1002,34 @@ font-size:3rem;
 .avion{
 
 width:180px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+
+    height:100vh;
+
+}
+
+.hero-content h1{
+
+    font-size:5.2rem;
+
+}
+
+.hero-content h2{
+
+    font-size:1.15rem;
+
+}
+
+.fecha{
+
+    font-size:.7rem;
 
 }
 
