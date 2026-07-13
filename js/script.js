@@ -2,6 +2,7 @@
 // KARLA & RICARDO
 //======================================
 
+
 //======================================
 // CUENTA REGRESIVA
 //======================================
@@ -106,3 +107,93 @@ faqs.forEach(item=>{
     });
 
 });
+
+
+//======================================
+// DRESS CODE
+//======================================
+
+const dressDetails = document.querySelectorAll(".dress details");
+
+dressDetails.forEach(item=>{
+
+    item.addEventListener("toggle",()=>{
+
+        if(item.open){
+
+            dressDetails.forEach(other=>{
+
+                if(other!==item){
+
+                    other.open=false;
+
+                }
+
+            });
+
+        }
+
+    });
+
+});
+
+
+//======================================
+// CONFIRMACIÓN POR WHATSAPP
+//======================================
+
+const form = document.getElementById("rsvp-form");
+
+if(form){
+
+    form.addEventListener("submit",function(e){
+
+        e.preventDefault();
+
+        const nombre = document.getElementById("nombre").value.trim();
+
+        if(nombre===""){
+
+            alert("Por favor escribe tu nombre y apellido.");
+
+            return;
+
+        }
+
+        const respuesta = document.querySelector('input[name="respuesta"]:checked').value;
+
+        const mensaje = document.getElementById("mensaje").value.trim();
+
+        let texto =
+`Hola Karla y Ricardo 👋
+
+Quiero responder a su invitación de boda.
+
+Nombre:
+${nombre}
+
+Confirmación:
+${respuesta}`;
+
+        if(mensaje!==""){
+
+            texto += `
+
+Mensaje:
+${mensaje}`;
+
+        }
+
+        texto += `
+
+¡Muchas gracias!`;
+
+        const telefono = "50370473421";
+
+        const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
+
+        window.open(url,"_blank");
+
+    });
+
+}

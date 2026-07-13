@@ -104,7 +104,7 @@ PORTADA
 
     100%{
 
-        transform:scale(1.04);
+        transform:scale(1.03);
 
     }
 
@@ -128,7 +128,7 @@ PORTADA
 
     position:absolute;
 
-    top:32%;
+    top:34%;
     left:50%;
 
     transform:translate(-50%,-50%);
@@ -198,7 +198,7 @@ MENSAJE
 
 .mensaje{
 
-    padding:100px 0 70px;
+    padding:90px 0 40px;
 
     background:var(--verde);
 
@@ -208,17 +208,17 @@ MENSAJE
 
 .mensaje-texto{
 
-    max-width:950px;
+    max-width:900px;
 
     margin:0 auto;
 
     font-family:'Montserrat',sans-serif;
 
-    font-size:1rem;
+    font-size:1.15rem;
 
     font-weight:300;
 
-    line-height:1.9;
+    line-height:2;
 
     color:var(--marfil);
 
@@ -232,7 +232,7 @@ PROGRAMACIÓN
 
     background:var(--verde);
 
-    padding:70px 0 110px;
+    padding:70px 0 80px;
 
 }
 
@@ -284,13 +284,13 @@ PROGRAMACIÓN
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.35rem;
+    font-size:1.40rem;
 
     font-weight:400;
 
     letter-spacing:1px;
 
-    color:rgba(248,244,236,.75);
+    color:var(--marfil);
 
 }
 
@@ -379,27 +379,27 @@ RECEPCIÓN
 
     max-width:700px;
 
-    margin:0 auto 35px;
+    margin:0 auto 40px;
 
     font-family:'Montserrat',sans-serif;
 
-    font-size:1rem;
+    font-size:1.5rem;
 
-    line-height:1.9;
+    line-height:2;
 
 }
 
 .indicaciones{
 
-    max-width:700px;
+    max-width:760px;
 
-    margin:0 auto 35px;
+    margin:0 auto 40px;
 
     font-family:'Montserrat',sans-serif;
 
-    font-size:1rem;
+    font-size:1.05rem;
 
-    line-height:1.9;
+    line-height:2;
 
 }
 
@@ -407,11 +407,11 @@ RECEPCIÓN
 
     display:inline-block;
 
-    margin-top:10px;
+    margin-top:15px;
 
-    padding:15px 40px;
+    padding:16px 44px;
 
-    border:1px solid rgba(255,255,255,.8);
+    border:1px solid rgba(255,255,255,.75);
 
     border-radius:40px;
 
@@ -419,7 +419,7 @@ RECEPCIÓN
 
     font-size:.95rem;
 
-    letter-spacing:1px;
+    letter-spacing:2px;
 
     color:var(--marfil);
 
@@ -487,21 +487,13 @@ DRESS CODE
 
     overflow:hidden;
 
-    transition:.35s;
-
 }
 
-.dress-card:hover{
-
-    transform:translateY(-6px);
-
-}
-
-.zoom-img{
+.dress-card img{
 
     width:100%;
 
-    height:250px;
+    height:280px;
 
     object-fit:contain;
 
@@ -509,7 +501,7 @@ DRESS CODE
 
     display:block;
 
-    padding:12px;
+    padding:8px;
 
 }
 
@@ -589,7 +581,7 @@ DRESS CODE
 
     border-radius:18px;
 
-    padding:22px 28px;
+    padding:18px 24px;
 
     text-align:left;
 
@@ -609,7 +601,7 @@ DRESS CODE
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.6rem;
+    font-size:1.55rem;
 
     font-weight:400;
 
@@ -625,9 +617,7 @@ DRESS CODE
 
     content:"+";
 
-    font-size:2rem;
-
-    transition:.3s;
+    font-size:1.6rem;
 
 }
 
@@ -655,7 +645,7 @@ CUENTA REGRESIVA
 
 .contador{
 
-    padding:130px 0;
+    padding:120px 0;
 
     background:var(--verde);
 
@@ -699,14 +689,6 @@ CUENTA REGRESIVA
 
     padding:35px 20px;
 
-    transition:.35s;
-
-}
-
-.count-item:hover{
-
-    transform:translateY(-5px);
-
 }
 
 .count-item span{
@@ -747,7 +729,7 @@ PREGUNTAS FRECUENTES
 
 .faq{
 
-    padding:130px 0;
+    padding:120px 0;
 
     background:var(--verde);
 
@@ -813,7 +795,7 @@ PREGUNTAS FRECUENTES
 
     content:"+";
 
-    font-size:2rem;
+    font-size:1.8rem;
 
     transition:.3s;
 
@@ -837,39 +819,161 @@ PREGUNTAS FRECUENTES
 
 }
 
-.planner{
+.contacto{
+
+    text-align:left;
+
+}
+
+/*======================================
+CONFIRMAR ASISTENCIA
+======================================*/
+
+.confirmacion{
+
+    padding:120px 0;
+
+    background:var(--verde);
 
     text-align:center;
 
 }
 
-.planner strong{
+.confirmacion h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    font-weight:400;
+
+    margin-bottom:25px;
+
+}
+
+.confirmacion-texto{
+
+    max-width:700px;
+
+    margin:0 auto 50px;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1rem;
+
+    line-height:1.9;
+
+}
+
+#rsvp-form{
+
+    width:min(700px,90%);
+
+    margin:auto;
+
+    text-align:left;
+
+}
+
+.campo{
+
+    margin-bottom:28px;
+
+}
+
+.campo label{
 
     display:block;
+
+    margin-bottom:10px;
 
     font-family:'Cormorant Garamond',serif;
 
     font-size:1.5rem;
 
-    font-weight:400;
-
-    margin-bottom:8px;
-
 }
 
-.planner a{
+.campo input[type="text"],
+.campo textarea{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    border-radius:15px;
 
     color:var(--marfil);
 
-    text-decoration:none;
+    font-family:'Montserrat',sans-serif;
 
-    transition:.3s;
+    font-size:1rem;
+
+    outline:none;
 
 }
 
-.planner a:hover{
+.campo input::placeholder,
+.campo textarea::placeholder{
 
-    color:var(--dorado);
+    color:rgba(248,244,236,.55);
+
+}
+
+.campo textarea{
+
+    resize:vertical;
+
+    min-height:130px;
+
+}
+
+.opciones{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:10px;
+
+}
+
+.opciones label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    margin-bottom:0;
+
+}
+
+.opciones input{
+
+    accent-color:var(--marfil);
+
+}
+
+.confirmacion .btn{
+
+    display:block;
+
+    width:100%;
+
+    margin-top:20px;
 
 }
 
@@ -897,7 +1001,7 @@ FINAL
 
     line-height:1.3;
 
-    margin-bottom:25px;
+    margin-bottom:35px;
 
 }
 
@@ -915,9 +1019,9 @@ FINAL
 
 .avion{
 
-    width:250px;
+    width:300px;
 
-    margin:20px auto 35px;
+    margin:25px auto 40px;
 
     animation:flotar 4s ease-in-out infinite;
 
@@ -1015,12 +1119,6 @@ RESPONSIVE
 
     }
 
-    .scroll-indicator{
-
-        bottom:20px;
-
-    }
-
     /* SECCIONES */
 
     .mensaje,
@@ -1029,6 +1127,7 @@ RESPONSIVE
     .dress,
     .contador,
     .faq,
+    .confirmacion,
     .final{
 
         padding:90px 25px;
@@ -1040,13 +1139,14 @@ RESPONSIVE
     .dress h2,
     .contador h2,
     .faq h2,
+    .confirmacion h2,
     .final h2{
 
         font-size:2.4rem;
 
     }
 
-    /* CRONOGRAMA */
+    /* PROGRAMACIÓN */
 
     .evento{
 
@@ -1100,9 +1200,9 @@ RESPONSIVE
 
     }
 
-    .zoom-img{
+    .dress-card img{
 
-        height:220px;
+        height:240px;
 
     }
 
@@ -1136,6 +1236,32 @@ RESPONSIVE
 
     }
 
+    /* CONFIRMACIÓN */
+
+    #rsvp-form{
+
+        width:100%;
+
+    }
+
+    .campo label{
+
+        font-size:1.3rem;
+
+    }
+
+    .opciones{
+
+        gap:12px;
+
+    }
+
+    .confirmacion .btn{
+
+        width:100%;
+
+    }
+
     /* FINAL */
 
     .despedida{
@@ -1160,7 +1286,7 @@ RESPONSIVE
 
     .avion{
 
-        width:300px;
+        width:350px;
 
     }
 

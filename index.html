@@ -74,7 +74,7 @@ PROGRAMACIÓN
 
     <div class="container">
 
-        <h2>Programacion</h2>
+        <h2>Programación</h2>
 
         <div class="timeline">
 
@@ -196,7 +196,7 @@ DRESS CODE
 
     <div class="container">
 
-        <h2>Dress Code</h2>
+        <h2>Dress-Code</h2>
 
         <div class="dress-grid">
 
@@ -204,8 +204,7 @@ DRESS CODE
             <article class="dress-card">
 
                 <img src="img/trajes.png"
-                     alt="Vestimenta formal para caballeros"
-                     class="zoom-img">
+                     alt="Vestimenta formal para caballeros">
 
                 <div class="dress-info">
 
@@ -221,8 +220,7 @@ DRESS CODE
             <article class="dress-card">
 
                 <img src="img/vestidos.png"
-                     alt="Vestimenta formal para damas"
-                     class="zoom-img">
+                     alt="Vestimenta formal para damas">
 
                 <div class="dress-info">
 
@@ -285,24 +283,36 @@ CUENTA REGRESIVA
 
     <div class="countdown">
 
-        <div>
+        <div class="count-item">
+
             <span id="days">00</span>
+
             <small>Días</small>
+
         </div>
 
-        <div>
+        <div class="count-item">
+
             <span id="hours">00</span>
+
             <small>Horas</small>
+
         </div>
 
-        <div>
+        <div class="count-item">
+
             <span id="minutes">00</span>
+
             <small>Minutos</small>
+
         </div>
 
-        <div>
+        <div class="count-item">
+
             <span id="seconds">00</span>
+
             <small>Segundos</small>
+
         </div>
 
     </div>
@@ -324,8 +334,10 @@ PREGUNTAS FRECUENTES
             <summary>¿Hasta cuándo puedo confirmar mi asistencia?</summary>
 
             <p>
-                Por favor, confirma tu asistencia antes del
+
+                Por favor confirma tu asistencia antes del
                 <strong>5 de noviembre de 2026</strong>.
+
             </p>
 
         </details>
@@ -335,7 +347,9 @@ PREGUNTAS FRECUENTES
             <summary>¿La boda será en interior o al aire libre?</summary>
 
             <p>
+
                 Tanto la ceremonia como la recepción serán al aire libre.
+
             </p>
 
         </details>
@@ -345,8 +359,10 @@ PREGUNTAS FRECUENTES
             <summary>¿Dónde puedo estacionar?</summary>
 
             <p>
+
                 Contaremos con valet parking de cortesía.
                 El estacionamiento estará ubicado muy cerca de la entrada principal.
+
             </p>
 
         </details>
@@ -355,7 +371,13 @@ PREGUNTAS FRECUENTES
 
             <summary>¿A quién puedo contactar si tengo alguna consulta?</summary>
 
-            <p class="planner">
+            <p class="contacto">
+
+                Si tienes alguna consulta, puedes comunicarte con nuestra
+                <strong>Wedding Planner, Griselda Zelaya</strong>,
+                o directamente con nosotros, <strong>Karla y Ricardo</strong>.
+
+                <br><br>
 
                 <strong>Griselda Zelaya</strong><br>
                 Wedding Planner<br>
@@ -364,6 +386,107 @@ PREGUNTAS FRECUENTES
             </p>
 
         </details>
+
+    </div>
+
+</section>
+
+<!--==================================
+CONFIRMAR ASISTENCIA
+===================================-->
+
+<section class="confirmacion" id="confirmacion">
+
+    <div class="container">
+
+        <h2>Confirma tu asistencia</h2>
+
+        <p class="confirmacion-texto">
+
+            Nos ayudará mucho recibir tu confirmación antes del
+            <strong>5 de noviembre de 2026.</strong>
+
+        </p>
+
+        <form id="rsvp-form">
+
+            <div class="campo">
+
+                <label for="nombre">
+
+                    Nombre y apellido
+
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Escribe tu nombre completo"
+                    required>
+
+            </div>
+
+            <div class="campo">
+
+                <label>
+
+                    Confirmación
+
+                </label>
+
+                <div class="opciones">
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="respuesta"
+                            value="Confirmo mi asistencia"
+                            checked>
+
+                        Confirmo mi asistencia
+
+                    </label>
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="respuesta"
+                            value="Lamentablemente no podré asistir">
+
+                        Lamentablemente no podré asistir
+
+                    </label>
+
+                </div>
+
+            </div>
+
+            <div class="campo">
+
+                <label for="mensaje">
+
+                    Mensaje (opcional)
+
+                </label>
+
+                <textarea
+                    id="mensaje"
+                    rows="4"
+                    placeholder="Escribe aquí tu mensaje..."></textarea>
+
+            </div>
+
+            <button
+                type="submit"
+                class="btn">
+
+                Confirmar por WhatsApp
+
+            </button>
+
+        </form>
 
     </div>
 
