@@ -1,7 +1,7 @@
-/*========================================
+/*=========================================
 KARLA & RICARDO
 PORTADA
-========================================*/
+=========================================*/
 
 *{
     margin:0;
@@ -14,23 +14,22 @@ html{
 }
 
 body{
+
     font-family:'Montserrat',sans-serif;
-    overflow-x:hidden;
     background:#2F3B2D;
+    overflow-x:hidden;
+
 }
 
-/*==========================
+/*==============================
 PORTADA
-==========================*/
+==============================*/
 
 .hero{
 
     position:relative;
-
     width:100%;
-
     height:100vh;
-
     overflow:hidden;
 
 }
@@ -38,20 +37,15 @@ PORTADA
 .hero-img{
 
     position:absolute;
-
     inset:0;
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
     object-position:center;
 
-    filter:brightness(.58);
+    filter:brightness(.52);
 
-    animation:kenburns 22s ease-in-out infinite alternate;
+    animation:kenburns 24s ease-in-out infinite alternate;
 
 }
 
@@ -65,7 +59,7 @@ PORTADA
 
     50%{
 
-        transform:scale(1.05) translate(-8px,-6px);
+        transform:scale(1.05) translate(-10px,-6px);
 
     }
 
@@ -80,14 +74,13 @@ PORTADA
 .overlay{
 
     position:absolute;
-
     inset:0;
 
     background:linear-gradient(
 
-        rgba(20,30,20,.15),
+        rgba(0,0,0,.10),
 
-        rgba(20,30,20,.55)
+        rgba(0,0,0,.35)
 
     );
 
@@ -97,9 +90,8 @@ PORTADA
 
     position:absolute;
 
+    top:56%;
     left:50%;
-
-    top:50%;
 
     transform:translate(-50%,-50%);
 
@@ -115,17 +107,19 @@ PORTADA
 
     font-family:'Great Vibes',cursive;
 
-    font-size:6.2rem;
+    font-size:7rem;
 
     font-weight:400;
 
-    line-height:1.05;
+    line-height:1;
 
-    word-spacing:10px;
+    word-spacing:18px;
 
     letter-spacing:1px;
 
-    margin-bottom:18px;
+    margin-bottom:32px;
+
+    text-shadow:0 4px 18px rgba(0,0,0,.35);
 
 }
 
@@ -133,67 +127,59 @@ PORTADA
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.45rem;
+    font-size:1.6rem;
 
     font-weight:400;
 
     letter-spacing:8px;
 
-    margin-bottom:20px;
+    margin-bottom:35px;
 
-}
-
-.line{
-
-    width:85px;
-
-    height:1px;
-
-    background:#F8F4EC;
-
-    margin:0 auto 22px;
-
-    opacity:.8;
+    color:#F8F4EC;
 
 }
 
 .fecha{
 
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1rem;
+
     letter-spacing:5px;
 
-    font-size:.95rem;
+    color:#F8F4EC;
 
 }
 
-/*==========================
+/*==============================
 FLECHA
-==========================*/
+==============================*/
 
-.scroll{
+.scroll-indicator{
 
     position:absolute;
 
-    left:50%;
+    bottom:30px;
 
-    bottom:35px;
+    left:50%;
 
     transform:translateX(-50%);
 
     color:#F8F4EC;
 
-    font-size:2rem;
+    font-size:2.2rem;
 
-    animation:flechita 2s infinite;
+    animation:scrollDown 2s infinite;
 
 }
 
-@keyframes flechita{
+@keyframes scrollDown{
 
     0%{
 
         transform:translate(-50%,0);
 
-        opacity:.4;
+        opacity:.3;
 
     }
 
@@ -209,37 +195,39 @@ FLECHA
 
         transform:translate(-50%,0);
 
-        opacity:.4;
+        opacity:.3;
 
     }
 
 }
 
-/*==========================
+/*==============================
 CELULAR
-==========================*/
+==============================*/
 
 @media(max-width:768px){
 
-.hero{
+.hero-content{
 
-height:100svh;
+top:57%;
 
 }
 
 .hero-content h1{
 
-font-size:4.2rem;
+font-size:4.9rem;
 
-word-spacing:6px;
+word-spacing:10px;
 
 }
 
 .hero-content h2{
 
-font-size:1.1rem;
+font-size:1.2rem;
 
 letter-spacing:5px;
+
+margin-bottom:25px;
 
 }
 
@@ -251,17 +239,11 @@ letter-spacing:3px;
 
 }
 
-.line{
+.scroll-indicator{
 
-width:70px;
+font-size:1.8rem;
 
-}
-
-.scroll{
-
-font-size:1.7rem;
-
-bottom:28px;
+bottom:25px;
 
 }
 
