@@ -70,7 +70,7 @@ PORTADA
 
     position:absolute;
 
-    top:57%;
+    top:59%;
     left:50%;
 
     transform:translate(-50%,-50%);
@@ -87,7 +87,7 @@ PORTADA
 
     font-family:'Great Vibes',cursive;
 
-    font-size:8rem;
+    font-size:10rem;
 
     font-weight:400;
 
@@ -107,7 +107,7 @@ PORTADA
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.55rem;
+    font-size:1.75rem;
 
     font-weight:500;
 
