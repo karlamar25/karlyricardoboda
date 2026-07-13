@@ -457,11 +457,15 @@ DRESS CODE
 
 .dress-grid{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:repeat(2,1fr);
+    justify-content:center;
 
-    gap:50px;
+    align-items:flex-start;
+
+    gap:80px;
+
+    flex-wrap:wrap;
 
     margin-bottom:60px;
 
@@ -469,15 +473,13 @@ DRESS CODE
 
 .dress-card{
 
-    width:220px;
-
-    margin:auto;
+    width:260px;
 
     background:rgba(255,255,255,.05);
 
     border-radius:18px;
 
-    padding:18px;
+    padding:22px;
 
     border:1px solid rgba(255,255,255,.08);
 
@@ -485,11 +487,15 @@ DRESS CODE
 
 .dress-card img{
 
-    width:120px;
+    width:150px;
+
+    height:150px;
+
+    object-fit:cover;
 
     margin:auto;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
 }
 
