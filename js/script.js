@@ -9,13 +9,13 @@
 
 const weddingDate = new Date("2026-12-05T17:00:00").getTime();
 
-function updateCountdown(){
+function updateCountdown() {
 
     const now = new Date().getTime();
 
     const distance = weddingDate - now;
 
-    if(distance <= 0){
+    if (distance <= 0) {
 
         document.getElementById("days").textContent = "00";
         document.getElementById("hours").textContent = "00";
@@ -27,23 +27,20 @@ function updateCountdown(){
     }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("days").textContent = String(days).padStart(2,"0");
-    document.getElementById("hours").textContent = String(hours).padStart(2,"0");
-    document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
-    document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
+    document.getElementById("days").textContent = String(days).padStart(2, "0");
+    document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
 
 }
 
 updateCountdown();
 
-setInterval(updateCountdown,1000);
+setInterval(updateCountdown, 1000);
 
 
 //======================================
@@ -52,32 +49,32 @@ setInterval(updateCountdown,1000);
 
 const sections = document.querySelectorAll("section");
 
-sections.forEach(section=>{
+sections.forEach(section => {
 
-    section.style.opacity="0";
-    section.style.transform="translateY(60px)";
-    section.style.transition="all .9s ease";
+    section.style.opacity = "0";
+    section.style.transform = "translateY(40px)";
+    section.style.transition = "all .8s ease";
 
 });
 
-const observer = new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry=>{
+    entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
-            entry.target.style.opacity="1";
-            entry.target.style.transform="translateY(0)";
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
 
         }
 
     });
 
-},{
-    threshold:.15
+}, {
+    threshold: 0.15
 });
 
-sections.forEach(section=>observer.observe(section));
+sections.forEach(section => observer.observe(section));
 
 
 //======================================
@@ -86,17 +83,17 @@ sections.forEach(section=>observer.observe(section));
 
 const faqs = document.querySelectorAll(".faq details");
 
-faqs.forEach(item=>{
+faqs.forEach(item => {
 
-    item.addEventListener("toggle",()=>{
+    item.addEventListener("toggle", () => {
 
-        if(item.open){
+        if (item.open) {
 
-            faqs.forEach(other=>{
+            faqs.forEach(other => {
 
-                if(other!==item){
+                if (other !== item) {
 
-                    other.open=false;
+                    other.open = false;
 
                 }
 
@@ -113,19 +110,19 @@ faqs.forEach(item=>{
 // DRESS CODE
 //======================================
 
-const dressDetails = document.querySelectorAll(".dress details");
+const dress = document.querySelectorAll(".dress details");
 
-dressDetails.forEach(item=>{
+dress.forEach(item => {
 
-    item.addEventListener("toggle",()=>{
+    item.addEventListener("toggle", () => {
 
-        if(item.open){
+        if (item.open) {
 
-            dressDetails.forEach(other=>{
+            dress.forEach(other => {
 
-                if(other!==item){
+                if (other !== item) {
 
-                    other.open=false;
+                    other.open = false;
 
                 }
 
@@ -144,15 +141,15 @@ dressDetails.forEach(item=>{
 
 const form = document.getElementById("rsvp-form");
 
-if(form){
+if (form) {
 
-    form.addEventListener("submit",function(e){
+    form.addEventListener("submit", function (e) {
 
         e.preventDefault();
 
         const nombre = document.getElementById("nombre").value.trim();
 
-        if(nombre===""){
+        if (nombre === "") {
 
             alert("Por favor escribe tu nombre y apellido.");
 
@@ -175,7 +172,7 @@ ${nombre}
 Confirmación:
 ${respuesta}`;
 
-        if(mensaje!==""){
+        if (mensaje !== "") {
 
             texto += `
 
@@ -190,9 +187,10 @@ ${mensaje}`;
 
         const telefono = "50370473421";
 
-        const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
+        const enlace =
+`https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(texto)}`;
 
-        window.open(url,"_blank");
+        window.location.href = enlace;
 
     });
 
