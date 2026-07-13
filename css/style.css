@@ -461,41 +461,39 @@ DRESS CODE
 
     justify-content:center;
 
-    align-items:flex-start;
-
-    gap:80px;
+    gap:45px;
 
     flex-wrap:wrap;
-
-    margin-bottom:60px;
 
 }
 
 .dress-card{
 
-    width:260px;
+    width:270px;
+
+    min-height:390px;
 
     background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
 
     border-radius:18px;
 
     padding:22px;
 
-    border:1px solid rgba(255,255,255,.08);
-
 }
 
 .dress-card img{
 
-    width:150px;
+    width:145px;
 
-    height:150px;
+    height:145px;
 
     object-fit:cover;
 
-    margin:auto;
+    margin:block;
 
-    margin-bottom:20px;
+    margin:0 auto 20px;
 
 }
 
