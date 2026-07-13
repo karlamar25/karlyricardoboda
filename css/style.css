@@ -213,7 +213,7 @@ MENSAJE
 
 .mensaje{
 
-padding:140px 0;
+padding:150px 0;
 
 text-align:center;
 
@@ -258,9 +258,9 @@ PROGRAMACIÓN
 
     text-align:center;
     font-family:'Cormorant Garamond',serif;
-    font-size:3rem;
+    font-size:2.8rem;
     font-weight:400;
-    margin-bottom:70px;
+    margin-bottom:90px;
 
 }
 
@@ -278,9 +278,9 @@ PROGRAMACIÓN
     gap:30px;
     align-items:center;
 
-    padding:25px 0;
+    padding:34px 0;
 
-    border-bottom:1px solid rgba(255,255,255,.15);
+    border-bottom:1px solid rgba(248,244,236,.10);
 
 }
 
@@ -292,7 +292,7 @@ PROGRAMACIÓN
 
 .hora{
 
-    font-size:.9rem;
+    font-size:.85rem;
     letter-spacing:3px;
     text-transform:uppercase;
     color:rgba(255,255,255,.75);
@@ -302,8 +302,9 @@ PROGRAMACIÓN
 .detalle h3{
 
     font-family:'Cormorant Garamond',serif;
-    font-size:1.9rem;
+    font-size:1.6rem;
     font-weight:400;
+    line-height:1.4;
 
 }
 
