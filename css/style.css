@@ -72,7 +72,7 @@ PORTADA
     height:100%;
     object-fit:cover;
     object-position:center;
-    filter:brightness(.48);
+    filter:brightness(.42);
 
     animation:kenburns 22s ease-in-out infinite alternate;
 
@@ -112,7 +112,7 @@ rgba(0,0,0,.38)
 
 position:absolute;
 
-top:58%;
+top:45%;
 left:50%;
 
 transform:translate(-50%,-50%);
