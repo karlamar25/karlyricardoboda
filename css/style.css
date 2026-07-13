@@ -303,7 +303,7 @@ PROGRAMACIÓN
 
     font-family:'Montserrat',sans-serif;
 
-    font-size:1.rem;
+    font-size:1.20rem;
 
     font-weight:400;
 
@@ -317,7 +317,7 @@ PROGRAMACIÓN
 
     font-family:'Montserrat',sans-serif;
 
-    font-size:1.45rem;
+    font-size:1.30rem;
 
     font-weight:400;
 
@@ -363,14 +363,14 @@ RECEPCIÓN
 
 .foto-finca{
 
-    width:70%;
-    max-width:650px;
+    width:40%;
+    max-width:380px;
 
     margin:0 auto 40px;
 
     border-radius:18px;
 
-    box-shadow:0 25px 45px rgba(0,0,0,.25);
+    box-shadow:0 20px 35px rgba(0,0,0,.20);
 
 }
 
