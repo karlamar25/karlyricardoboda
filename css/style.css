@@ -1,769 +1,251 @@
-/*====================================
+/*========================================
 KARLA & RICARDO
-====================================*/
-
-:root{
-
---olive:#2F3B2D;
---olive-light:#3C4B39;
---cream:#F8F4EC;
---gold:#D5B676;
---white:#ffffff;
-
-}
+PORTADA
+========================================*/
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-
-background:var(--olive);
-
-font-family:'Montserrat',sans-serif;
-
-color:var(--cream);
-
-overflow-x:hidden;
-
-line-height:1.8;
-
+    font-family:'Montserrat',sans-serif;
+    overflow-x:hidden;
+    background:#2F3B2D;
 }
 
-img{
-
-display:block;
-
-max-width:100%;
-
-}
-
-.container{
-
-width:min(1100px,92%);
-
-margin:auto;
-
-}
-
-/*=====================
+/*==========================
 PORTADA
-=====================*/
+==========================*/
 
 .hero{
 
-position:relative;
+    position:relative;
 
-height:100vh;
+    width:100%;
 
-overflow:hidden;
+    height:100vh;
+
+    overflow:hidden;
 
 }
 
 .hero-img{
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
-width:100%;
+    width:100%;
 
-height:100%;
+    height:100%;
 
-object-fit:cover;
+    object-fit:cover;
 
-object-position:center;
+    object-position:center;
 
-filter:brightness(.68);
+    filter:brightness(.58);
 
-animation:heroZoom 18s ease-in-out infinite alternate;
-
-}
-
-@keyframes heroZoom{
-
-from{
-
-transform:scale(1);
+    animation:kenburns 22s ease-in-out infinite alternate;
 
 }
 
-to{
+@keyframes kenburns{
 
-transform:scale(1.08);
+    0%{
 
-}
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05) translate(-8px,-6px);
+
+    }
+
+    100%{
+
+        transform:scale(1.10) translate(8px,6px);
+
+    }
 
 }
 
 .overlay{
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
-background:linear-gradient(
+    background:linear-gradient(
 
-rgba(25,35,25,.15),
+        rgba(20,30,20,.15),
 
-rgba(25,35,25,.72)
+        rgba(20,30,20,.55)
 
-);
+    );
 
 }
 
 .hero-content{
 
-position:absolute;
+    position:absolute;
 
-left:50%;
+    left:50%;
 
-top:50%;
+    top:50%;
 
-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
 
-width:90%;
+    width:90%;
 
-text-align:center;
+    text-align:center;
 
-color:white;
+    color:#F8F4EC;
 
 }
 
 .hero-content h1{
 
-font-family:'Great Vibes',cursive;
+    font-family:'Great Vibes',cursive;
 
-font-size:6rem;
+    font-size:6.2rem;
 
-font-weight:400;
+    font-weight:400;
 
-margin-bottom:8px;
+    line-height:1.05;
 
-text-shadow:0 3px 15px rgba(0,0,0,.25);
+    word-spacing:10px;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
 
 }
 
 .hero-content h2{
 
-font-family:'Cormorant Garamond',serif;
+    font-family:'Cormorant Garamond',serif;
 
-font-size:1.5rem;
+    font-size:1.45rem;
 
-font-weight:400;
+    font-weight:400;
 
-letter-spacing:8px;
+    letter-spacing:8px;
 
-margin-bottom:20px;
+    margin-bottom:20px;
 
 }
 
 .line{
 
-width:120px;
+    width:85px;
 
-height:2px;
+    height:1px;
 
-background:var(--gold);
+    background:#F8F4EC;
 
-margin:0 auto 25px;
+    margin:0 auto 22px;
+
+    opacity:.8;
 
 }
 
 .fecha{
 
-letter-spacing:5px;
+    letter-spacing:5px;
 
-font-size:15px;
-
-margin-bottom:45px;
+    font-size:.95rem;
 
 }
 
-.btn{
+/*==========================
+FLECHA
+==========================*/
 
-display:inline-block;
+.scroll{
 
-padding:15px 42px;
+    position:absolute;
 
-border:1px solid rgba(255,255,255,.8);
+    left:50%;
 
-border-radius:50px;
+    bottom:35px;
 
-color:white;
+    transform:translateX(-50%);
 
-text-decoration:none;
+    color:#F8F4EC;
 
-letter-spacing:3px;
+    font-size:2rem;
 
-transition:.35s;
-
-}
-
-.btn:hover{
-
-background:white;
-
-color:var(--olive);
+    animation:flechita 2s infinite;
 
 }
 
-.hero::after{
+@keyframes flechita{
 
-content:"⌄";
+    0%{
 
-position:absolute;
+        transform:translate(-50%,0);
 
-bottom:25px;
+        opacity:.4;
 
-left:50%;
+    }
 
-transform:translateX(-50%);
+    50%{
 
-font-size:2rem;
+        transform:translate(-50%,10px);
 
-color:white;
+        opacity:1;
 
-animation:seta 1.8s infinite;
+    }
 
-}
+    100%{
 
-@keyframes seta{
+        transform:translate(-50%,0);
 
-0%{
+        opacity:.4;
 
-opacity:.2;
-
-transform:translate(-50%,0);
+    }
 
 }
 
-50%{
+/*==========================
+CELULAR
+==========================*/
 
-opacity:1;
+@media(max-width:768px){
 
-transform:translate(-50%,10px);
+.hero{
 
-}
-
-100%{
-
-opacity:.2;
-
-transform:translate(-50%,0);
+height:100svh;
 
 }
-
-}
-/*=====================
-MENSAJE
-=====================*/
-
-.mensaje{
-
-padding:110px 0;
-
-background:var(--olive);
-
-text-align:center;
-
-}
-
-.mensaje h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:3.2rem;
-
-font-weight:500;
-
-margin-bottom:35px;
-
-color:var(--cream);
-
-}
-
-.mensaje p{
-
-max-width:760px;
-
-margin:auto;
-
-font-size:1.15rem;
-
-line-height:2.2;
-
-}
-
-/*=====================
-CUENTA REGRESIVA
-=====================*/
-
-.contador{
-
-padding:120px 0;
-
-background:var(--olive-light);
-
-text-align:center;
-
-}
-
-.contador h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:3rem;
-
-margin-bottom:55px;
-
-}
-
-.countdown{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:25px;
-
-max-width:900px;
-
-margin:auto;
-
-}
-
-.countdown div{
-
-background:rgba(255,255,255,.06);
-
-border:1px solid rgba(255,255,255,.10);
-
-border-radius:20px;
-
-padding:35px 20px;
-
-transition:.35s;
-
-}
-
-.countdown div:hover{
-
-transform:translateY(-6px);
-
-}
-
-.countdown span{
-
-display:block;
-
-font-size:3.5rem;
-
-font-weight:700;
-
-margin-bottom:8px;
-
-}
-
-.countdown small{
-
-letter-spacing:3px;
-
-text-transform:uppercase;
-
-font-size:.85rem;
-
-opacity:.9;
-
-}
-
-/*=====================
-RECEPCIÓN
-=====================*/
-
-.recepcion{
-
-padding:120px 0;
-
-background:var(--olive);
-
-text-align:center;
-
-}
-
-.recepcion h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:3rem;
-
-margin-bottom:45px;
-
-}
-
-.foto-finca{
-
-width:60%;
-
-max-width:550px;
-
-margin:0 auto 40px;
-
-border-radius:18px;
-
-box-shadow:0 15px 35px rgba(0,0,0,.30);
-
-}
-
-.recepcion h3{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:2rem;
-
-margin-bottom:20px;
-
-}
-
-.recepcion h4{
-
-margin-top:35px;
-
-margin-bottom:15px;
-
-color:var(--gold);
-
-letter-spacing:3px;
-
-text-transform:uppercase;
-
-font-size:.9rem;
-
-}
-
-.recepcion p{
-
-max-width:600px;
-
-margin:0 auto 20px;
-
-line-height:2;
-
-}
-
-.recepcion .btn{
-
-margin-top:25px;
-
-}
-/*=====================
-DRESS CODE
-=====================*/
-
-.dress{
-
-padding:120px 0;
-
-background:var(--olive-light);
-
-text-align:center;
-
-}
-
-.dress h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:3rem;
-
-margin-bottom:50px;
-
-}
-
-.dress-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:40px;
-
-margin-bottom:50px;
-
-}
-
-.dress-card{
-
-max-width:420px;
-
-margin:auto;    
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(255,255,255,.10);
-
-border-radius:20px;
-
-overflow:hidden;
-
-transition:.35s;
-
-}
-
-.dress-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.dress-card img{
-
-width:100%;
-
-height:autopx;
-
-
-}
-
-.dress-card h3{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:2rem;
-
-margin:25px 0 10px;
-
-}
-
-.dress-card p{
-
-padding:0 25px 30px;
-
-line-height:1.9;
-
-}
-
-.dress-text{
-
-max-width:900px;
-
-margin:auto;
-
-line-height:2;
-
-}
-
-.dress-text p{
-
-margin-bottom:25px;
-
-}
-
-.dress-text h3{
-
-margin-top:35px;
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:2rem;
-
-color:var(--gold);
-
-}
-
-/*=====================
-PREGUNTAS
-=====================*/
-
-.faq{
-
-padding:120px 0;
-
-background:var(--olive);
-
-}
-
-.faq h2{
-
-text-align:center;
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:3rem;
-
-margin-bottom:55px;
-
-}
-
-.faq-item{
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(255,255,255,.10);
-
-border-radius:18px;
-
-padding:28px;
-
-max-width:900px;
-
-margin:0 auto 25px;
-
-}
-
-.faq-item h3{
-
-color:var(--gold);
-
-margin-bottom:15px;
-
-font-size:1.2rem;
-
-}
-
-.faq-item p{
-
-line-height:2;
-
-}
-
-/*=====================
-FINAL
-=====================*/
-
-.final{
-
-padding:120px 0;
-
-background:var(--olive-light);
-
-text-align:center;
-
-}
-
-.avion{
-
-width:120px;
-
-margin:0 auto 30px;
-
-opacity:.95;
-
-}
-
-.final h2{
-
-font-family:'Great Vibes',cursive;
-
-font-size:4rem;
-
-font-weight:400;
-
-margin-bottom:25px;
-
-}
-
-.final p{
-
-max-width:700px;
-
-margin:0 auto 25px;
-
-line-height:2;
-
-}
-
-.final h3{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:2rem;
-
-font-weight:400;
-
-}
-
-/*=====================
-ANIMACIONES
-=====================*/
-
-.hidden{
-
-opacity:0;
-
-transform:translateY(40px);
-
-transition:all .8s ease;
-
-}
-
-.show{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-/*=====================
-RESPONSIVE
-=====================*/
-
-@media(max-width:900px){
 
 .hero-content h1{
 
-font-size:4.3rem;
+font-size:4.2rem;
+
+word-spacing:6px;
 
 }
 
 .hero-content h2{
 
-font-size:1.2rem;
+font-size:1.1rem;
 
 letter-spacing:5px;
-
-}
-
-.countdown{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.dress-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.hero-content h1{
-
-font-size:3.2rem;
-
-}
-
-.hero-content h2{
-
-font-size:1rem;
-
-letter-spacing:4px;
 
 }
 
 .fecha{
 
-font-size:.85rem;
+font-size:.82rem;
 
 letter-spacing:3px;
 
@@ -771,56 +253,15 @@ letter-spacing:3px;
 
 .line{
 
-width:80px;
+width:70px;
 
 }
 
-.btn{
+.scroll{
 
-padding:14px 28px;
+font-size:1.7rem;
 
-font-size:.85rem;
-
-}
-
-.mensaje,
-.contador,
-.recepcion,
-.dress,
-.faq,
-.final{
-
-padding:80px 0;
-
-}
-
-.countdown{
-
-grid-template-columns:1fr 1fr;
-
-gap:15px;
-
-}
-
-.countdown span{
-
-font-size:2.3rem;
-
-}
-
-.mensaje h2,
-.contador h2,
-.recepcion h2,
-.dress h2,
-.faq h2{
-
-font-size:2.3rem;
-
-}
-
-.avion{
-
-width:80px;
+bottom:28px;
 
 }
 
