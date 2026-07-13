@@ -1,14 +1,14 @@
-/*======================================
-   KARLA & RICARDO
-======================================*/
+/*====================================
+KARLA & RICARDO
+====================================*/
 
 :root{
 
---verde:#2F3B2D;
---verde2:#3D4D39;
---marfil:#F8F4EC;
---dorado:#D5B676;
---gris:#ECECEC;
+--olive:#2F3B2D;
+--olive-light:#3C4B39;
+--cream:#F8F4EC;
+--gold:#D5B676;
+--white:#ffffff;
 
 }
 
@@ -19,18 +19,16 @@ box-sizing:border-box;
 }
 
 html{
-
 scroll-behavior:smooth;
-
 }
 
 body{
 
+background:var(--olive);
+
 font-family:'Montserrat',sans-serif;
 
-background:var(--verde);
-
-color:var(--marfil);
+color:var(--cream);
 
 overflow-x:hidden;
 
@@ -40,22 +38,23 @@ line-height:1.8;
 
 img{
 
-max-width:100%;
 display:block;
+
+max-width:100%;
 
 }
 
 .container{
 
-width:min(1100px,90%);
+width:min(1100px,92%);
 
 margin:auto;
 
 }
 
-/******************************
+/*=====================
 PORTADA
-******************************/
+=====================*/
 
 .hero{
 
@@ -69,6 +68,10 @@ overflow:hidden;
 
 .hero-img{
 
+position:absolute;
+
+inset:0;
+
 width:100%;
 
 height:100%;
@@ -77,21 +80,21 @@ object-fit:cover;
 
 object-position:center;
 
-filter:brightness(.60);
+filter:brightness(.68);
 
-animation:zoomHero 18s ease-in-out infinite alternate;
+animation:heroZoom 18s ease-in-out infinite alternate;
 
 }
 
-@keyframes zoomHero{
+@keyframes heroZoom{
 
-0%{
+from{
 
 transform:scale(1);
 
 }
 
-100%{
+to{
 
 transform:scale(1.08);
 
@@ -107,9 +110,9 @@ inset:0;
 
 background:linear-gradient(
 
-rgba(18,28,18,.15),
+rgba(25,35,25,.15),
 
-rgba(18,28,18,.72)
+rgba(25,35,25,.72)
 
 );
 
@@ -119,9 +122,9 @@ rgba(18,28,18,.72)
 
 position:absolute;
 
-top:50%;
-
 left:50%;
+
+top:50%;
 
 transform:translate(-50%,-50%);
 
@@ -137,11 +140,13 @@ color:white;
 
 font-family:'Great Vibes',cursive;
 
-font-size:5.8rem;
+font-size:6rem;
 
 font-weight:400;
 
-margin-bottom:10px;
+margin-bottom:8px;
+
+text-shadow:0 3px 15px rgba(0,0,0,.25);
 
 }
 
@@ -149,15 +154,13 @@ margin-bottom:10px;
 
 font-family:'Cormorant Garamond',serif;
 
+font-size:1.5rem;
+
+font-weight:400;
+
 letter-spacing:8px;
 
-font-size:1.6rem;
-
-font-weight:300;
-
 margin-bottom:20px;
-
-text-transform:uppercase;
 
 }
 
@@ -167,9 +170,9 @@ width:120px;
 
 height:2px;
 
-background:var(--dorado);
+background:var(--gold);
 
-margin:25px auto;
+margin:0 auto 25px;
 
 }
 
@@ -177,7 +180,7 @@ margin:25px auto;
 
 letter-spacing:5px;
 
-font-size:.95rem;
+font-size:15px;
 
 margin-bottom:45px;
 
@@ -187,11 +190,11 @@ margin-bottom:45px;
 
 display:inline-block;
 
-padding:16px 42px;
+padding:15px 42px;
 
 border:1px solid rgba(255,255,255,.8);
 
-border-radius:40px;
+border-radius:50px;
 
 color:white;
 
@@ -207,18 +210,66 @@ transition:.35s;
 
 background:white;
 
-color:var(--verde);
+color:var(--olive);
 
 }
-/******************************
+
+.hero::after{
+
+content:"⌄";
+
+position:absolute;
+
+bottom:25px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:2rem;
+
+color:white;
+
+animation:seta 1.8s infinite;
+
+}
+
+@keyframes seta{
+
+0%{
+
+opacity:.2;
+
+transform:translate(-50%,0);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:translate(-50%,10px);
+
+}
+
+100%{
+
+opacity:.2;
+
+transform:translate(-50%,0);
+
+}
+
+}
+/*=====================
 MENSAJE
-******************************/
+=====================*/
 
 .mensaje{
 
 padding:110px 0;
 
-background:var(--verde);
+background:var(--olive);
 
 text-align:center;
 
@@ -228,13 +279,13 @@ text-align:center;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:3rem;
+font-size:3.2rem;
 
 font-weight:500;
 
 margin-bottom:35px;
 
-color:var(--marfil);
+color:var(--cream);
 
 }
 
@@ -250,15 +301,15 @@ line-height:2.2;
 
 }
 
-/******************************
+/*=====================
 CUENTA REGRESIVA
-******************************/
+=====================*/
 
 .contador{
 
 padding:120px 0;
 
-background:var(--verde2);
+background:var(--olive-light);
 
 text-align:center;
 
@@ -270,7 +321,7 @@ font-family:'Cormorant Garamond',serif;
 
 font-size:3rem;
 
-margin-bottom:60px;
+margin-bottom:55px;
 
 }
 
@@ -282,7 +333,7 @@ grid-template-columns:repeat(4,1fr);
 
 gap:25px;
 
-width:min(1000px,90%);
+max-width:900px;
 
 margin:auto;
 
@@ -290,15 +341,21 @@ margin:auto;
 
 .countdown div{
 
-padding:35px 20px;
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.10);
 
 border-radius:20px;
 
-background:rgba(255,255,255,.05);
+padding:35px 20px;
 
-backdrop-filter:blur(8px);
+transition:.35s;
 
-border:1px solid rgba(255,255,255,.12);
+}
+
+.countdown div:hover{
+
+transform:translateY(-6px);
 
 }
 
@@ -306,35 +363,35 @@ border:1px solid rgba(255,255,255,.12);
 
 display:block;
 
-font-size:3.6rem;
+font-size:3.5rem;
 
-font-weight:bold;
+font-weight:700;
 
-margin-bottom:10px;
-
-color:white;
+margin-bottom:8px;
 
 }
 
 .countdown small{
 
-text-transform:uppercase;
-
 letter-spacing:3px;
+
+text-transform:uppercase;
 
 font-size:.85rem;
 
+opacity:.9;
+
 }
 
-/******************************
+/*=====================
 RECEPCIÓN
-******************************/
+=====================*/
 
 .recepcion{
 
 padding:120px 0;
 
-background:var(--verde);
+background:var(--olive);
 
 text-align:center;
 
@@ -346,7 +403,7 @@ font-family:'Cormorant Garamond',serif;
 
 font-size:3rem;
 
-margin-bottom:40px;
+margin-bottom:45px;
 
 }
 
@@ -354,13 +411,13 @@ margin-bottom:40px;
 
 width:100%;
 
-max-width:850px;
+max-width:900px;
 
-margin:0 auto 45px;
+margin:0 auto 40px;
 
 border-radius:18px;
 
-box-shadow:0 25px 45px rgba(0,0,0,.25);
+box-shadow:0 20px 45px rgba(0,0,0,.30);
 
 }
 
@@ -376,9 +433,11 @@ margin-bottom:20px;
 
 .recepcion h4{
 
-margin-top:40px;
+margin-top:35px;
 
 margin-bottom:15px;
+
+color:var(--gold);
 
 letter-spacing:3px;
 
@@ -386,30 +445,32 @@ text-transform:uppercase;
 
 font-size:.9rem;
 
-color:var(--dorado);
-
 }
 
 .recepcion p{
 
 max-width:760px;
 
-margin:auto;
+margin:0 auto 20px;
 
 line-height:2;
 
-margin-bottom:20px;
+}
+
+.recepcion .btn{
+
+margin-top:25px;
 
 }
-/******************************
+/*=====================
 DRESS CODE
-******************************/
+=====================*/
 
 .dress{
 
 padding:120px 0;
 
-background:var(--verde2);
+background:var(--olive-light);
 
 text-align:center;
 
@@ -433,7 +494,7 @@ grid-template-columns:repeat(2,1fr);
 
 gap:40px;
 
-margin-bottom:60px;
+margin-bottom:50px;
 
 }
 
@@ -441,19 +502,25 @@ margin-bottom:60px;
 
 background:rgba(255,255,255,.05);
 
-border:1px solid rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.10);
 
 border-radius:20px;
 
 overflow:hidden;
+
+transition:.35s;
+
+}
+
+.dress-card:hover{
+
+transform:translateY(-8px);
 
 }
 
 .dress-card img{
 
 width:100%;
-
-display:block;
 
 }
 
@@ -481,13 +548,13 @@ max-width:900px;
 
 margin:auto;
 
+line-height:2;
+
 }
 
 .dress-text p{
 
 margin-bottom:25px;
-
-line-height:2;
 
 }
 
@@ -495,23 +562,23 @@ line-height:2;
 
 margin-top:35px;
 
-color:var(--dorado);
-
 font-family:'Cormorant Garamond',serif;
 
 font-size:2rem;
 
+color:var(--gold);
+
 }
 
-/******************************
-FAQ
-******************************/
+/*=====================
+PREGUNTAS
+=====================*/
 
 .faq{
 
 padding:120px 0;
 
-background:var(--verde);
+background:var(--olive);
 
 }
 
@@ -523,31 +590,31 @@ font-family:'Cormorant Garamond',serif;
 
 font-size:3rem;
 
-margin-bottom:60px;
+margin-bottom:55px;
 
 }
 
 .faq-item{
 
-max-width:850px;
+background:rgba(255,255,255,.05);
 
-margin:0 auto 25px;
-
-padding:30px;
+border:1px solid rgba(255,255,255,.10);
 
 border-radius:18px;
 
-background:rgba(255,255,255,.05);
+padding:28px;
 
-border:1px solid rgba(255,255,255,.08);
+max-width:900px;
+
+margin:0 auto 25px;
 
 }
 
 .faq-item h3{
 
-margin-bottom:15px;
+color:var(--gold);
 
-color:var(--dorado);
+margin-bottom:15px;
 
 font-size:1.2rem;
 
@@ -559,15 +626,15 @@ line-height:2;
 
 }
 
-/******************************
+/*=====================
 FINAL
-******************************/
+=====================*/
 
 .final{
 
 padding:120px 0;
 
-background:var(--verde2);
+background:var(--olive-light);
 
 text-align:center;
 
@@ -597,9 +664,7 @@ margin-bottom:25px;
 
 max-width:700px;
 
-margin:auto;
-
-margin-bottom:25px;
+margin:0 auto 25px;
 
 line-height:2;
 
@@ -615,15 +680,37 @@ font-weight:400;
 
 }
 
-/******************************
+/*=====================
+ANIMACIONES
+=====================*/
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:all .8s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/*=====================
 RESPONSIVE
-******************************/
+=====================*/
 
 @media(max-width:900px){
 
 .hero-content h1{
 
-font-size:4rem;
+font-size:4.3rem;
 
 }
 
@@ -651,12 +738,6 @@ grid-template-columns:1fr;
 
 @media(max-width:600px){
 
-.hero-content{
-
-width:92%;
-
-}
-
 .hero-content h1{
 
 font-size:3.2rem;
@@ -673,7 +754,7 @@ letter-spacing:4px;
 
 .fecha{
 
-font-size:.8rem;
+font-size:.85rem;
 
 letter-spacing:3px;
 
@@ -714,17 +795,17 @@ gap:15px;
 
 .countdown span{
 
-font-size:2.4rem;
+font-size:2.3rem;
 
 }
 
-.container h2,
 .mensaje h2,
+.contador h2,
 .recepcion h2,
 .dress h2,
 .faq h2{
 
-font-size:2.2rem;
+font-size:2.3rem;
 
 }
 
