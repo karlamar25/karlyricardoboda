@@ -281,7 +281,7 @@ PROGRAMACIÓN
 
     display:grid;
 
-    grid-template-columns:130px 1fr;
+    grid-template-columns:120px 1fr;
 
     gap:35px;
 
@@ -829,7 +829,7 @@ FINAL
 
 .avion{
 
-    width:220px;
+    width:250px;
 
     margin:20px auto 35px;
 
@@ -1032,5 +1032,135 @@ width:180px;
     font-size:.7rem;
 
 }
+
+}
+
+/*======================================
+RESPONSIVE
+======================================*/
+
+@media screen and (max-width:768px){
+
+    /* PORTADA */
+
+    .hero{
+
+        height:100vh;
+
+    }
+
+    .hero-content h1{
+
+        font-size:5rem;
+
+    }
+
+    .hero-content h2{
+
+        font-size:1.15rem;
+
+        letter-spacing:5px;
+
+    }
+
+    .fecha{
+
+        font-size:.75rem;
+
+    }
+
+    /* PROGRAMACIÓN */
+
+    .programacion{
+
+        padding:90px 25px;
+
+    }
+
+    .programacion h2{
+
+        font-size:2.4rem;
+
+        margin-bottom:40px;
+
+    }
+
+    .timeline{
+
+        width:100%;
+
+    }
+
+    .evento{
+
+        display:block;
+
+        text-align:center;
+
+        padding:22px 0;
+
+    }
+
+    .hora{
+
+        display:block;
+
+        margin-bottom:8px;
+
+        font-size:1rem;
+
+    }
+
+    .actividad{
+
+        font-size:1.35rem;
+
+    }
+
+    .despedida{
+
+        font-size:1rem;
+
+    }
+
+}
+
+/*======================================
+CELULAR
+======================================*/
+
+@media screen and (max-width:768px){
+
+    .final h2{
+
+        font-size:2.3rem;
+
+    }
+
+    .final p{
+
+        font-size:1.4rem;
+
+    }
+
+    .final h3{
+
+        font-size:3rem;
+
+    }
+
+    .fecha-final{
+
+        font-size:.70rem;
+
+        letter-spacing:3px;
+
+    }
+
+    .avion{
+
+        width:150px;
+
+    }
 
 }
