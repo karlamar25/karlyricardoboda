@@ -1,4 +1,70 @@
 /*======================================
+KARLA & RICARDO
+======================================*/
+
+:root{
+
+    --verde:#2F3B2D;
+    --verde2:#3D4D39;
+    --marfil:#F8F4EC;
+    --dorado:#D5B676;
+    --gris:#ECECEC;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Montserrat',sans-serif;
+
+    background:var(--verde);
+
+    color:var(--marfil);
+
+    overflow-x:hidden;
+
+    line-height:1.8;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+.container{
+
+    width:min(1100px,90%);
+
+    margin:auto;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/*======================================
 PORTADA
 ======================================*/
 
@@ -126,60 +192,6 @@ PORTADA
 
 }
 
-.scroll-indicator{
-
-    position:absolute;
-
-    left:50%;
-    bottom:30px;
-
-    transform:translateX(-50%);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    width:45px;
-    height:45px;
-
-    color:var(--marfil);
-
-    font-size:2rem;
-
-    animation:scroll 2s infinite;
-
-    z-index:2;
-
-}
-
-@keyframes scroll{
-
-    0%{
-
-        transform:translate(-50%,0);
-
-        opacity:.45;
-
-    }
-
-    50%{
-
-        transform:translate(-50%,12px);
-
-        opacity:1;
-
-    }
-
-    100%{
-
-        transform:translate(-50%,0);
-
-        opacity:.45;
-
-    }
-
-}
-
 /*======================================
 MENSAJE
 ======================================*/
@@ -272,7 +284,7 @@ PROGRAMACIÓN
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.20rem;
+    font-size:1.35rem;
 
     font-weight:400;
 
@@ -498,16 +510,6 @@ DRESS CODE
     display:block;
 
     padding:12px;
-
-    cursor:zoom-in;
-
-    transition:.35s;
-
-}
-
-.zoom-img:hover{
-
-    transform:scale(1.03);
 
 }
 
