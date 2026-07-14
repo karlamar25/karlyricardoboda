@@ -1009,17 +1009,29 @@ DESPLEGAR CONFIRMACIÓN
 
     padding:24px 30px;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+    text-align:center;
 
     font-family:'Cormorant Garamond',serif;
 
     font-size:2rem;
 
     font-weight:400;
+
+    color:var(--dorado);
+
+}
+
+.confirmacion-toggle summary::after{
+
+    content:"+";
+
+    float:right;
+
+    font-size:2rem;
+
+    transition:.3s;
+
+    color:var(--dorado);
 
 }
 
