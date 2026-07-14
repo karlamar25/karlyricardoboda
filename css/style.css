@@ -945,39 +945,43 @@ CONFIRMACIÓN
 
 }
 
-.btn-confirmar{
+.confirmacion .btn{
 
-    display:inline-block;
+    display:block;
 
-    margin-top:30px;
+    width:100%;
 
-    padding:18px 45px;
+    margin-top:20px;
 
-    border-radius:40px;
-
-    border:1px solid rgba(255,255,255,.8);
+    padding:18px;
 
     background:transparent;
 
-    color:var(--marfil);
+    border:1px solid rgba(255,255,255,.8);
 
-    text-decoration:none;
+    border-radius:40px;
+
+    color:#D5B676;
 
     font-family:'Montserrat',sans-serif;
 
     font-size:1rem;
 
-    font-weight:500;
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
 
     transition:.35s;
 
 }
 
-.btn-confirmar:hover{
+.confirmacion .btn:hover{
 
-    background:var(--marfil);
+    background:#D5B676;
 
-    color:var(--verde);
+    color:#2F3B2D;
 
 }
 
@@ -1071,7 +1075,7 @@ FINAL
 
 .final{
 
-    padding:120px 0;
+    padding:50px 0 120px;
 
     background:var(--verde);
 
@@ -1083,13 +1087,13 @@ FINAL
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:3.5rem;
+    font-size:2.8rem;
 
     font-weight:400;
 
     line-height:1.3;
 
-    margin-bottom:35px;
+    margin-bottom:25px;
 
 }
 
@@ -1101,7 +1105,7 @@ FINAL
 
     font-weight:400;
 
-    margin-bottom:30px;
+    margin-bottom:20px;
 
 }
 
@@ -1360,7 +1364,7 @@ RESPONSIVE
 
     .final h3{
 
-        font-size:3rem;
+        font-size:2.5rem;
 
     }
 
