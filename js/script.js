@@ -136,3 +136,45 @@ dress.forEach(item=>{
     });
 
 });
+
+//======================================
+// CONFIRMACIÓN
+//======================================
+
+const boton = document.getElementById("btn-confirmar");
+
+if(boton){
+
+    boton.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const nombre = document.getElementById("nombre").value.trim();
+
+        if(nombre===""){
+
+            alert("Por favor escribe tu nombre y apellido.");
+
+            return;
+
+        }
+
+        const respuesta = document.querySelector('input[name="respuesta"]:checked').value;
+
+        const mensaje = `Hola Karla y Ricardo 👋
+
+Mi nombre es:
+${nombre}
+
+Confirmación:
+${respuesta}
+
+¡Nos vemos pronto!`;
+
+        const enlace = `https://wa.me/50370473421?text=${encodeURIComponent(mensaje)}`;
+
+        window.open(enlace,"_blank");
+
+    });
+
+}

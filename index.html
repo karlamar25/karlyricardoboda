@@ -25,7 +25,7 @@ PORTADA
 
 <header class="hero">
 
-    <img src="img/portada.jpeg"
+    <img src="img/portada.png"
          alt="Karla y Ricardo"
          class="hero-img">
 
@@ -408,8 +408,60 @@ CONFIRMAR ASISTENCIA
 
         </p>
 
-        <a href="https://wa.me/50370473421?text=Hola%20Karla%20y%20Ricardo,%20quiero%20confirmar%20mi%20asistencia%20a%20su%20boda."
-           target="_blank"
+        <div class="campo">
+
+            <label for="nombre">
+
+                Nombre y apellido
+
+            </label>
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Escribe tu nombre completo">
+
+        </div>
+
+        <div class="campo">
+
+            <label>
+
+                Confirmación
+
+            </label>
+
+            <div class="opciones">
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="respuesta"
+                        value="Confirmo mi asistencia"
+                        checked>
+
+                    Confirmo mi asistencia
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="respuesta"
+                        value="Lamentablemente no podré asistir">
+
+                    Lamentablemente no podré asistir
+
+                </label>
+
+            </div>
+
+        </div>
+
+        <a href="#"
+           id="btn-confirmar"
            class="btn-confirmar">
 
             💬 Confirmar por WhatsApp

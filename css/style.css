@@ -855,7 +855,7 @@ CONFIRMACIÓN
 
     max-width:700px;
 
-    margin:0 auto 50px;
+    margin:0 auto 45px;
 
     font-family:'Montserrat',sans-serif;
 
@@ -865,27 +865,109 @@ CONFIRMACIÓN
 
 }
 
+.campo{
+
+    max-width:650px;
+
+    margin:0 auto 25px;
+
+    text-align:left;
+
+}
+
+.campo label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.45rem;
+
+}
+
+.campo input[type="text"]{
+
+    width:100%;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.05);
+
+    color:var(--marfil);
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1rem;
+
+}
+
+.campo input::placeholder{
+
+    color:rgba(248,244,236,.45);
+
+}
+
+.opciones{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.opciones label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+}
+
+.opciones input{
+
+    accent-color:#F8F4EC;
+
+}
+
 .btn-confirmar{
 
     display:inline-block;
 
-    padding:18px 45px;
+    margin-top:30px;
 
-    border:1px solid rgba(255,255,255,.8);
+    padding:18px 45px;
 
     border-radius:40px;
 
-    color:var(--marfil);
+    border:1px solid rgba(255,255,255,.8);
 
     background:transparent;
+
+    color:var(--marfil);
+
+    text-decoration:none;
 
     font-family:'Montserrat',sans-serif;
 
     font-size:1rem;
 
     font-weight:500;
-
-    text-decoration:none;
 
     transition:.35s;
 
@@ -1215,6 +1297,8 @@ RESPONSIVE
 
 }
 
+/* CONFIRMACIÓN */
+
 .confirmacion{
 
     padding:90px 25px;
@@ -1224,5 +1308,19 @@ RESPONSIVE
 .confirmacion h2{
 
     font-size:2.4rem;
+
+}
+
+.campo{
+
+    width:100%;
+
+}
+
+.btn-confirmar{
+
+    width:100%;
+
+    text-align:center;
 
 }
