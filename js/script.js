@@ -191,9 +191,9 @@ const enlace =
 
 `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
 
-alert(enlace);
+console.log(enlace);
 
-window.open(enlace, "_blank");
+alert(enlace);
 
     });
 
