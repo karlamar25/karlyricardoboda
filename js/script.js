@@ -171,7 +171,7 @@ ${mensaje}`;
 
 ¡Muchas gracias!`;
 
-        window.location.href=`https://wa.me/50370473421?text=${encodeURIComponent(texto)}`;
+        location.assign(`https://wa.me/50370473421?text=${encodeURIComponent(texto)}`);
 
     });
 
