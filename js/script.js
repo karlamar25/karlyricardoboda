@@ -161,19 +161,19 @@ if(boton){
 
         const respuesta = document.querySelector('input[name="respuesta"]:checked').value;
 
-        const mensaje = `Hola Karla y Ricardo 👋
+const mensaje = `Hola Karla y Ricardo 👋
 
 Mi nombre es:
+
 ${nombre}
 
-Confirmación:
 ${respuesta}
 
-¡Nos vemos pronto!`;
+Nos vemos pronto! Saludos`;
 
-        const enlace = `https://wa.me/50370473421?text=${encodeURIComponent(mensaje)}`;
+const enlace = `https://wa.me/50370473421?text=${encodeURIComponent(mensaje)}`;
 
-        window.open(enlace,"_blank");
+window.open(enlace,"_blank");
 
     });
 
