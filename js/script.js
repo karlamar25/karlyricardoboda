@@ -17,19 +17,27 @@ function updateCountdown(){
 
     if(distance <= 0){
 
-        days.textContent="00";
-        hours.textContent="00";
-        minutes.textContent="00";
-        seconds.textContent="00";
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
 
         return;
 
     }
 
-    days.textContent=Math.floor(distance/(1000*60*60*24));
-    hours.textContent=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-    minutes.textContent=Math.floor((distance%(1000*60*60))/(1000*60));
-    seconds.textContent=Math.floor((distance%(1000*60))/1000);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = String(days).padStart(2,"0");
+    document.getElementById("hours").textContent = String(hours).padStart(2,"0");
+    document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
+    document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
 
 }
 
@@ -39,48 +47,52 @@ setInterval(updateCountdown,1000);
 
 
 //======================================
-// ANIMACIÓN
+// ANIMACIÓN AL HACER SCROLL
 //======================================
 
-const observer=new IntersectionObserver(entries=>{
+const sections = document.querySelectorAll("section");
+
+sections.forEach(section=>{
+
+    section.style.opacity="0";
+    section.style.transform="translateY(40px)";
+    section.style.transition="all .8s ease";
+
+});
+
+const observer = new IntersectionObserver((entries)=>{
 
     entries.forEach(entry=>{
 
         if(entry.isIntersecting){
 
-            entry.target.style.opacity=1;
+            entry.target.style.opacity="1";
             entry.target.style.transform="translateY(0)";
 
         }
 
     });
 
-},{threshold:.15});
-
-document.querySelectorAll("section").forEach(sec=>{
-
-    sec.style.opacity=0;
-
-    sec.style.transform="translateY(40px)";
-
-    sec.style.transition=".8s";
-
-    observer.observe(sec);
-
+},{
+    threshold:.15
 });
 
+sections.forEach(section=>observer.observe(section));
+
 
 //======================================
-// FAQ
+// PREGUNTAS FRECUENTES
 //======================================
 
-document.querySelectorAll(".faq details").forEach(item=>{
+const faqs = document.querySelectorAll(".faq details");
+
+faqs.forEach(item=>{
 
     item.addEventListener("toggle",()=>{
 
         if(item.open){
 
-            document.querySelectorAll(".faq details").forEach(other=>{
+            faqs.forEach(other=>{
 
                 if(other!==item){
 
@@ -101,13 +113,15 @@ document.querySelectorAll(".faq details").forEach(item=>{
 // DRESS CODE
 //======================================
 
-document.querySelectorAll(".dress details").forEach(item=>{
+const dress = document.querySelectorAll(".dress details");
+
+dress.forEach(item=>{
 
     item.addEventListener("toggle",()=>{
 
         if(item.open){
 
-            document.querySelectorAll(".dress details").forEach(other=>{
+            dress.forEach(other=>{
 
                 if(other!==item){
 
@@ -122,57 +136,3 @@ document.querySelectorAll(".dress details").forEach(item=>{
     });
 
 });
-
-
-//======================================
-// CONFIRMAR POR WHATSAPP
-//======================================
-
-const boton=document.getElementById("btn-confirmar");
-
-if(boton){
-
-    boton.addEventListener("click",()=>{
-
-        const nombre=document.getElementById("nombre").value.trim();
-
-        if(nombre===""){
-
-            alert("Por favor escribe tu nombre y apellido.");
-
-            return;
-
-        }
-
-        const respuesta=document.querySelector('input[name="respuesta"]:checked').value;
-
-        const mensaje=document.getElementById("mensaje").value.trim();
-
-        let texto=`Hola Karla y Ricardo 👋
-
-Quiero responder a su invitación de boda.
-
-Nombre:
-${nombre}
-
-Confirmación:
-${respuesta}`;
-
-        if(mensaje!==""){
-
-            texto+=`
-
-Mensaje:
-${mensaje}`;
-
-        }
-
-        texto+=`
-
-¡Muchas gracias!`;
-
-        location.assign(`https://wa.me/50370473421?text=${encodeURIComponent(texto)}`);
-
-    });
-
-}
