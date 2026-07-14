@@ -187,10 +187,10 @@ ${mensaje}`;
 
         const telefono = "50370473421";
 
-        const enlace =
-`https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(texto)}`;
+const enlace =
+`https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
 
-        window.location.href = enlace;
+window.open(enlace, "_blank");
 
     });
 
