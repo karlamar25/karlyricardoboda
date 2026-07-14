@@ -408,85 +408,80 @@ CONFIRMAR ASISTENCIA
 
         </p>
 
-        <form id="rsvp-form">
+        <div class="campo">
 
-            <div class="campo">
+            <label for="nombre">
 
-                <label for="nombre">
+                Nombre y apellido
 
-                    Nombre y apellido
+            </label>
 
-                </label>
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Escribe tu nombre completo">
 
-                <input
-                    type="text"
-                    id="nombre"
-                    placeholder="Escribe tu nombre completo"
-                    required>
+        </div>
 
-            </div>
+        <div class="campo">
 
-            <div class="campo">
+            <label>
+
+                Confirmación
+
+            </label>
+
+            <div class="opciones">
 
                 <label>
 
-                    Confirmación
+                    <input
+                        type="radio"
+                        name="respuesta"
+                        value="Confirmo mi asistencia"
+                        checked>
+
+                    Confirmo mi asistencia
 
                 </label>
 
-                <div class="opciones">
+                <label>
 
-                    <label>
+                    <input
+                        type="radio"
+                        name="respuesta"
+                        value="Lamentablemente no podré asistir">
 
-                        <input
-                            type="radio"
-                            name="respuesta"
-                            value="Confirmo mi asistencia"
-                            checked>
-
-                        Confirmo mi asistencia
-
-                    </label>
-
-                    <label>
-
-                        <input
-                            type="radio"
-                            name="respuesta"
-                            value="Lamentablemente no podré asistir">
-
-                        Lamentablemente no podré asistir
-
-                    </label>
-
-                </div>
-
-            </div>
-
-            <div class="campo">
-
-                <label for="mensaje">
-
-                    Mensaje (opcional)
+                    Lamentablemente no podré asistir
 
                 </label>
 
-                <textarea
-                    id="mensaje"
-                    rows="4"
-                    placeholder="Escribe aquí tu mensaje..."></textarea>
-
             </div>
 
-            <button
-                type="submit"
-                class="btn">
+        </div>
 
-                Confirmar por WhatsApp
+        <div class="campo">
 
-            </button>
+            <label for="mensaje">
 
-        </form>
+                Mensaje (opcional)
+
+            </label>
+
+            <textarea
+                id="mensaje"
+                rows="4"
+                placeholder="Escribe aquí tu mensaje..."></textarea>
+
+        </div>
+
+        <button
+            id="btn-confirmar"
+            class="btn-confirmar">
+
+            Confirmar por WhatsApp
+
+        </button>
 
     </div>
 

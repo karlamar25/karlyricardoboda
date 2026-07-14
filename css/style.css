@@ -826,20 +826,20 @@ PREGUNTAS FRECUENTES
 }
 
 /*======================================
-CONFIRMAR ASISTENCIA
+CONFIRMACIÓN
 ======================================*/
 
 .confirmacion{
 
-    padding:120px 0;
+    padding:130px 0;
 
     background:var(--verde);
-
-    text-align:center;
 
 }
 
 .confirmacion h2{
+
+    text-align:center;
 
     font-family:'Cormorant Garamond',serif;
 
@@ -847,37 +847,29 @@ CONFIRMAR ASISTENCIA
 
     font-weight:400;
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
 }
 
 .confirmacion-texto{
 
-    max-width:700px;
+    text-align:center;
+
+    max-width:650px;
 
     margin:0 auto 50px;
 
     font-family:'Montserrat',sans-serif;
 
-    font-size:1rem;
-
     line-height:1.9;
-
-}
-
-#rsvp-form{
-
-    width:min(700px,90%);
-
-    margin:auto;
-
-    text-align:left;
 
 }
 
 .campo{
 
-    margin-bottom:28px;
+    max-width:700px;
+
+    margin:0 auto 28px;
 
 }
 
@@ -889,22 +881,22 @@ CONFIRMAR ASISTENCIA
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.5rem;
+    font-size:1.45rem;
 
 }
 
-.campo input[type="text"],
+.campo input[type=text],
 .campo textarea{
 
     width:100%;
 
-    padding:16px 18px;
+    padding:16px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:14px;
 
     background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.10);
-
-    border-radius:15px;
 
     color:var(--marfil);
 
@@ -912,14 +904,12 @@ CONFIRMAR ASISTENCIA
 
     font-size:1rem;
 
-    outline:none;
-
 }
 
 .campo input::placeholder,
 .campo textarea::placeholder{
 
-    color:rgba(248,244,236,.55);
+    color:rgba(248,244,236,.45);
 
 }
 
@@ -927,7 +917,7 @@ CONFIRMAR ASISTENCIA
 
     resize:vertical;
 
-    min-height:130px;
+    min-height:120px;
 
 }
 
@@ -937,9 +927,7 @@ CONFIRMAR ASISTENCIA
 
     flex-direction:column;
 
-    gap:15px;
-
-    margin-top:10px;
+    gap:12px;
 
 }
 
@@ -949,7 +937,7 @@ CONFIRMAR ASISTENCIA
 
     align-items:center;
 
-    gap:12px;
+    gap:10px;
 
     font-family:'Montserrat',sans-serif;
 
@@ -957,33 +945,33 @@ CONFIRMAR ASISTENCIA
 
     cursor:pointer;
 
-    margin-bottom:0;
-
 }
 
 .opciones input{
 
-    accent-color:var(--marfil);
+    accent-color:#F8F4EC;
 
 }
 
-.confirmacion .btn{
+.btn-confirmar{
 
     display:block;
 
-    width:100%;
+    width:700px;
 
-    margin-top:20px;
+    max-width:100%;
+
+    margin:40px auto 0;
 
     padding:18px;
 
-    background:transparent;
+    border-radius:40px;
 
     border:1px solid rgba(255,255,255,.8);
 
-    border-radius:40px;
+    background:transparent;
 
-    color:var(--marfil) !important;
+    color:var(--marfil);
 
     font-family:'Montserrat',sans-serif;
 
@@ -991,19 +979,17 @@ CONFIRMAR ASISTENCIA
 
     font-weight:500;
 
-    letter-spacing:1px;
-
     cursor:pointer;
 
     transition:.35s;
 
 }
 
-.confirmacion .btn:hover{
+.btn-confirmar:hover{
 
     background:var(--marfil);
 
-    color:var(--verde) !important;
+    color:var(--verde);
 
 }
 
@@ -1319,5 +1305,24 @@ RESPONSIVE
         width:350px;
 
     }
+
+
+}
+
+.confirmacion{
+
+    padding:90px 25px;
+
+}
+
+.confirmacion h2{
+
+    font-size:2.4rem;
+
+}
+
+.btn-confirmar{
+
+    width:100%;
 
 }
