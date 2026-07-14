@@ -188,7 +188,10 @@ ${mensaje}`;
         const telefono = "50370473421";
 
 const enlace =
+
 `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
+
+alert(enlace);
 
 window.open(enlace, "_blank");
 
