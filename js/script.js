@@ -169,7 +169,8 @@ ${nombre}
 
 ${respuesta}
 
-Nos vemos pronto! Saludos`;
+Nos vemos pronto!
+Saludos...`;
 
 const enlace = `https://wa.me/50370473421?text=${encodeURIComponent(mensaje)}`;
 
