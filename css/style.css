@@ -982,6 +982,78 @@ CONFIRMACIÓN
 }
 
 /*======================================
+DESPLEGAR CONFIRMACIÓN
+======================================*/
+
+.confirmacion-toggle{
+
+    max-width:850px;
+
+    margin:auto;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+}
+
+.confirmacion-toggle summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+    padding:24px 30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    font-weight:400;
+
+}
+
+.confirmacion-toggle summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.confirmacion-toggle summary::after{
+
+    content:"+";
+
+    margin-left:15px;
+
+    font-size:2rem;
+
+    transition:.3s;
+
+}
+
+.confirmacion-toggle[open] summary::after{
+
+    content:"−";
+
+}
+
+.confirmacion-contenido{
+
+    padding:10px 40px 40px;
+
+}
+
+/*======================================
 FINAL
 ======================================*/
 

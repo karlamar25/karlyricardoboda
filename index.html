@@ -399,75 +399,90 @@ CONFIRMAR ASISTENCIA
 
     <div class="container">
 
-        <h2>Confirma tu asistencia</h2>
+        <details class="confirmacion-toggle">
 
-        <p class="confirmacion-texto">
+            <summary>Confirmar asistencia</summary>
 
-    Agradeceremos mucho que confirmes tu asistencia antes del
-    <strong>5 de octubre de 2026</strong>, ya que el evento contará
-    con cupos limitados y deseamos preparar cada detalle para recibirte.
+            <div class="confirmacion-contenido">
 
-</p>
+                <h2>Confirma tu asistencia</h2>
 
-        <div class="campo">
+                <p class="confirmacion-texto">
 
-            <label for="nombre">
+                    Agradeceremos mucho que confirmes tu asistencia antes del
+                    <strong>5 de octubre de 2026.</strong>
+                    ya que el evento contará con cupos limitados.
 
-                Nombre y apellido
+                </p>
 
-            </label>
+                <form id="rsvp-form">
 
-            <input
-                type="text"
-                id="nombre"
-                placeholder="Escribe tu nombre completo">
+                    <div class="campo">
 
-        </div>
+                        <label for="nombre">
 
-        <div class="campo">
+                            Nombre y apellido
 
-            <label>
+                        </label>
 
-                Confirmación
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Escribe tu nombre completo"
+                            required>
 
-            </label>
+                    </div>
 
-            <div class="opciones">
+                    <div class="campo">
 
-                <label>
+                        <label>
 
-                    <input
-                        type="radio"
-                        name="respuesta"
-                        value="Confirmo mi asistencia"
-                        checked>
+                            Confirmación
 
-                    Confirmo mi asistencia
+                        </label>
 
-                </label>
+                        <div class="opciones">
 
-                <label>
+                            <label>
 
-                    <input
-                        type="radio"
-                        name="respuesta"
-                        value="Lamentablemente no podré asistir">
+                                <input
+                                    type="radio"
+                                    name="respuesta"
+                                    value="Confirmo mi asistencia."
+                                    checked>
 
-                    Lamentablemente no podré asistir
+                                Confirmar mi asistencia
 
-                </label>
+                            </label>
+
+                            <label>
+
+                                <input
+                                    type="radio"
+                                    name="respuesta"
+                                    value="Lamentablemente no podré asistir.">
+
+                                Lamentablemente no podré asistir
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn">
+
+                        Enviar Confirmación por WhatsApp
+
+                    </button>
+
+                </form>
 
             </div>
 
-        </div>
-
-        <a href="#"
-           id="btn-confirmar"
-           class="btn-confirmar">
-
-            💬 Confirmar por WhatsApp
-
-        </a>
+        </details>
 
     </div>
 
