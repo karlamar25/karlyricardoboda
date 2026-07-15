@@ -328,7 +328,7 @@ RECEPCIÓN
 
 .recepcion{
 
-    padding:130px 0;
+    padding:80px 0;
 
     background:var(--verde);
 
@@ -365,7 +365,7 @@ RECEPCIÓN
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:2rem;
+    font-size:1.7rem;
 
     font-weight:400;
 
@@ -383,7 +383,7 @@ RECEPCIÓN
 
     font-family:'Montserrat',sans-serif;
 
-    font-size:1.5rem;
+    font-size:1.2rem;
 
     line-height:2;
 
@@ -441,7 +441,7 @@ DRESS CODE
 
 .dress{
 
-    padding:120px 0;
+    padding:65px 0;
 
     background:var(--verde);
 
@@ -645,7 +645,7 @@ CUENTA REGRESIVA
 
 .contador{
 
-    padding:70px 0;
+    padding:65px 0;
 
     background:var(--verde);
 
@@ -729,7 +729,7 @@ PREGUNTAS FRECUENTES
 
 .faq{
 
-    padding:120px 0;
+    padding:65px 0;
 
     background:var(--verde);
 
@@ -831,7 +831,7 @@ CONFIRMACIÓN
 
 .confirmacion{
 
-    padding:120px 0;
+    padding:65px 0;
 
     background:var(--verde);
 
