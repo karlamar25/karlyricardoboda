@@ -159,7 +159,8 @@ if(boton){
 
         }
 
-        const respuesta = document.querySelector('input[name="respuesta"]:checked').value;
+        const respuesta = 
+        document.querySelector('input[name="respuesta"]:checked').value;
 
 const mensaje = `Hola Karla y Ricardo 👋
 
