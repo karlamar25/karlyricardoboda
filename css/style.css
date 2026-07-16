@@ -90,7 +90,7 @@ PORTADA
 
     filter:brightness(.42);
 
-    animation:kenburns 18s ease-in-out infinite alternate;
+    animation:heroMove 24s linear infinite alternate;
 
 }
 
@@ -98,13 +98,13 @@ PORTADA
 
     0%{
 
-        transform:scale(1);
+        transform:scale(1) 
 
     }
 
     100%{
 
-        transform:scale(1.03);
+        transform:scale(1.05)
 
     }
 
