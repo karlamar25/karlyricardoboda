@@ -141,11 +141,70 @@ dress.forEach(item=>{
 // CONFIRMACIÓN
 //======================================
 
-const boton = document.getElementById("btn-confirmar");
+const formulario = document.getElementById("rsvp-form");
+const contenedorInvitados = document.getElementById("invitados-extra");
+const btnAgregar = document.getElementById("agregar-invitado");
 
-if(boton){
+let totalInvitados = 1;
 
-    boton.addEventListener("click",function(e){
+if(btnAgregar){
+
+    btnAgregar.addEventListener("click",function(){
+
+        if(totalInvitados>=4){
+
+            alert("Solo puedes agregar un máximo de 4 invitados.");
+
+            return;
+
+        }
+
+        totalInvitados++;
+
+        const bloque = document.createElement("div");
+
+        bloque.className="campo invitado-extra";
+
+        bloque.innerHTML=`
+
+            <label>
+
+                Invitado ${totalInvitados}
+
+            </label>
+
+            <input
+                type="text"
+                class="nombre-extra"
+                placeholder="Nombre y apellido">
+
+            <button
+                type="button"
+                class="eliminar-invitado btn">
+
+                Eliminar invitado
+
+            </button>
+
+        `;
+
+        contenedorInvitados.appendChild(bloque);
+
+        bloque.querySelector(".eliminar-invitado").addEventListener("click",function(){
+
+            bloque.remove();
+
+            totalInvitados--;
+
+        });
+
+    });
+
+}
+
+if(formulario){
+
+    formulario.addEventListener("submit",function(e){
 
         e.preventDefault();
 
@@ -159,23 +218,39 @@ if(boton){
 
         }
 
-        const respuesta = 
-        document.querySelector('input[name="respuesta"]:checked').value;
+        const invitados = [];
 
-const mensaje = `Hola Karla y Ricardo 👋
+        invitados.push(nombre);
 
-Mi nombre es:
+        document.querySelectorAll(".nombre-extra").forEach(campo=>{
 
-${nombre}
+            if(campo.value.trim()!==""){
 
-${respuesta}
+                invitados.push(campo.value.trim());
 
-Nos vemos pronto!
-Saludos...`;
+            }
 
-const enlace = `https://wa.me/50370473421?text=${encodeURIComponent(mensaje)}`;
+        });
 
-window.open(enlace,"_blank");
+        const respuesta = document.querySelector('input[name="respuesta"]:checked').value;
+
+        let mensaje = `💍 *CONFIRMACIÓN DE ASISTENCIA*%0A%0A`;
+
+        invitados.forEach((persona,index)=>{
+
+            mensaje += `👤 Invitado ${index+1}%0A${persona}%0A%0A`;
+
+        });
+
+        mensaje += `${respuesta}%0A%0A`;
+
+        mensaje += `Muchas gracias.%0A`;
+
+        mensaje += `Karla & Ricardo ❤️`;
+
+        const enlace = `https://wa.me/50370473421?text=${mensaje}`;
+
+        window.open(enlace,"_blank");
 
     });
 
