@@ -929,7 +929,9 @@ CONFIRMACIÓN
 
     font-family:'Montserrat',sans-serif;
 
-    font: size 0.90rem
+    font-size:.95rem;
+
+    font-weight:400;
 
     cursor:pointer;
 
@@ -1007,31 +1009,19 @@ DESPLEGAR CONFIRMACIÓN
 
     cursor:pointer;
 
-    padding:24px 30px;
+    padding:20px 30px;
 
     text-align:center;
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1rem;
+    font-size:1.15rem;
 
-    font-weight:400;
+    font-weight:500;
 
     color:var(--dorado);
-
-}
-
-.confirmacion-toggle summary::after{
-
-    content:"+";
-
-    float:right;
-
-    font-size:1rem;
 
     transition:.3s;
-
-    color:var(--dorado);
 
 }
 
@@ -1045,9 +1035,11 @@ DESPLEGAR CONFIRMACIÓN
 
     content:"+";
 
-    margin-left:15px;
+    float:right;
 
-    font-size:1rem;
+    font-size:1.2rem;
+
+    color:var(--dorado);
 
     transition:.3s;
 
@@ -1061,7 +1053,7 @@ DESPLEGAR CONFIRMACIÓN
 
 .confirmacion-contenido{
 
-    padding:10px 40px 40px;
+    padding:0 40px 35px;
 
 }
 
@@ -1162,249 +1154,163 @@ FINAL
 }
 
 /*======================================
-RESPONSIVE
+CONFIRMACIÓN
 ======================================*/
-
-@media screen and (max-width:768px){
-
-    /* PORTADA */
-
-    .hero{
-
-        height:100vh;
-
-    }
-
-    .hero-content{
-
-        top:27%;
-
-        width:92%;
-
-    }
-
-    .hero-content h1{
-
-        font-size:5rem;
-
-        word-spacing:8px;
-
-    }
-
-    .hero-content h2{
-
-        font-size:1.15rem;
-
-        letter-spacing:5px;
-
-    }
-
-    .fecha{
-
-        font-size:.70rem;
-
-        letter-spacing:3px;
-
-    }
-
-    /* SECCIONES */
-
-    .mensaje,
-    .programacion,
-    .recepcion,
-    .dress,
-    .contador,
-    .faq,
-    .confirmacion,
-    .final{
-
-        padding:60px 25px;
-
-    }
-
-    .programacion h2,
-    .recepcion h2,
-    .dress h2,
-    .contador h2,
-    .faq h2,
-    .confirmacion h2,
-    .final h2{
-
-        font-size:2.4rem;
-
-    }
-
-    /* PROGRAMACIÓN */
-
-    .evento{
-
-        grid-template-columns:1fr;
-
-        gap:10px;
-
-        text-align:center;
-
-    }
-
-    .hora{
-
-        font-size:1.15rem;
-
-    }
-
-    .actividad{
-
-        font-size:1.35rem;
-
-    }
-
-    /* RECEPCIÓN */
-
-    .foto-finca{
-
-        width:90%;
-
-        max-width:340px;
-
-    }
-
-    /* DRESS CODE */
-
-    .dress-grid{
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:35px;
-
-    }
-
-    .dress-card{
-
-        width:100%;
-
-        max-width:320px;
-
-    }
-
-    .dress-card img{
-
-        height:240px;
-
-    }
-
-    /* CUENTA REGRESIVA */
-
-    .countdown{
-
-        grid-template-columns:repeat(2,1fr);
-
-        gap:18px;
-
-    }
-
-    .count-item{
-
-        padding:25px 15px;
-
-    }
-
-    .count-item span{
-
-        font-size:2.4rem;
-
-    }
-
-    /* PREGUNTAS */
-
-    .faq summary{
-
-        font-size:1.25rem;
-
-    }
-
-    /* CONFIRMACIÓN */
-
-    #rsvp-form{
-
-        width:100%;
-
-    }
-
-    .campo label{
-
-        font-size:1.3rem;
-
-    }
-
-    .opciones{
-
-        gap:12px;
-
-    }
-
-    .confirmacion .btn{
-
-        width:100%;
-
-    }
-
-    /* FINAL */
-
-    .despedida{
-
-        font-size:1.5rem;
-
-    }
-
-    .final h3{
-
-        font-size:2.5rem;
-
-    }
-
-    .fecha-final{
-
-        font-size:.70rem;
-
-        letter-spacing:3px;
-
-    }
-
-    .avion{
-
-        width:350px;
-
-    }
-
-
-}
-
-/* CONFIRMACIÓN */
 
 .confirmacion{
 
-    padding:90px 25px;
+    padding:50px 0;
+
+    background:var(--verde);
+
+    text-align:center;
 
 }
 
 .confirmacion h2{
 
-    font-size:1.5;
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    font-weight:400;
+
+    margin-bottom:20px;
+
+}
+
+.confirmacion-texto{
+
+    max-width:700px;
+
+    margin:0 auto 45px;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1rem;
+
+    line-height:1.9;
 
 }
 
 .campo{
 
-    width:100%;
+    max-width:650px;
+
+    margin:0 auto 25px;
+
+    text-align:left;
 
 }
 
-.btn-confirmar{
+.campo label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.45rem;
+
+}
+
+.campo input[type="text"]{
 
     width:100%;
 
-    text-align:center;
+    padding:16px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.05);
+
+    color:var(--marfil);
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1rem;
+
+}
+
+.campo input::placeholder{
+
+    color:rgba(248,244,236,.45);
+
+}
+
+.opciones{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.opciones label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:.95rem;
+
+    font-weight:400;
+
+    cursor:pointer;
+
+}
+
+.opciones input{
+
+    accent-color:#F8F4EC;
+
+}
+
+.confirmacion .btn{
+
+    display:block;
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:18px;
+
+    background:transparent;
+
+    border:1px solid rgba(255,255,255,.8);
+
+    border-radius:40px;
+
+    color:#D5B676;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.confirmacion .btn:hover{
+
+    background:#D5B676;
+
+    color:#2F3B2D;
 
 }
