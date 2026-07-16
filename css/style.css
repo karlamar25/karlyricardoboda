@@ -379,7 +379,7 @@ RECEPCIÓN
 
     font-family:'Montserrat',sans-serif;
 
-    font-size:1.2rem;
+    font-size:1.03rem;
 
     line-height:2;
 
@@ -393,7 +393,7 @@ RECEPCIÓN
 
     font-family:'Montserrat',sans-serif;
 
-    font-size:1.05rem;
+    font-size:1rem;
 
     line-height:2;
 
@@ -541,7 +541,7 @@ DRESS CODE
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.8rem;
+    font-size:1.4rem;
 
     font-weight:400;
 
@@ -827,7 +827,7 @@ CONFIRMACIÓN
 
 .confirmacion{
 
-    padding:65px 0;
+    padding:50px 0;
 
     background:var(--verde);
 
@@ -839,7 +839,7 @@ CONFIRMACIÓN
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:3rem;
+    font-size:2rem;
 
     font-weight:400;
 
@@ -1013,7 +1013,7 @@ DESPLEGAR CONFIRMACIÓN
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:2rem;
+    font-size:1rem;
 
     font-weight:400;
 
@@ -1027,7 +1027,7 @@ DESPLEGAR CONFIRMACIÓN
 
     float:right;
 
-    font-size:2rem;
+    font-size:1rem;
 
     transition:.3s;
 
@@ -1047,7 +1047,7 @@ DESPLEGAR CONFIRMACIÓN
 
     margin-left:15px;
 
-    font-size:2rem;
+    font-size:1rem;
 
     transition:.3s;
 
@@ -1391,7 +1391,7 @@ RESPONSIVE
 
 .confirmacion h2{
 
-    font-size:2.4rem;
+    font-size:1.5;
 
 }
 
