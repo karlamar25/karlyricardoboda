@@ -1314,3 +1314,20 @@ CONFIRMACIÓN
     color:#2F3B2D;
 
 }
+.nota-invitados{
+
+    margin-top:12px;
+
+    margin-bottom:25px;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:.82rem;
+
+    color:rgba(248,244,236,.70);
+
+    text-align:left;
+
+    line-height:1.5;
+
+}
