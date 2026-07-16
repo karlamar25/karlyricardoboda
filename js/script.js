@@ -1,26 +1,31 @@
-//======================================
-// KARLA & RICARDO
-//======================================
-
-
-//======================================
-// CUENTA REGRESIVA
-//======================================
+/*======================================================
+CONFIGURACIÓN
+======================================================*/
 
 const weddingDate = new Date("2026-12-05T17:00:00").getTime();
 
-function updateCountdown(){
+/*======================================================
+CUENTA REGRESIVA
+======================================================*/
+
+const daysElement = document.getElementById("days");
+const hoursElement = document.getElementById("hours");
+const minutesElement = document.getElementById("minutes");
+const secondsElement = document.getElementById("seconds");
+
+function updateCountdown() {
 
     const now = new Date().getTime();
-
     const distance = weddingDate - now;
 
-    if(distance <= 0){
+    if (distance <= 0) {
 
-        document.getElementById("days").textContent = "00";
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
+        daysElement.textContent = "00";
+        hoursElement.textContent = "00";
+        minutesElement.textContent = "00";
+        secondsElement.textContent = "00";
+
+        clearInterval(countdownInterval);
 
         return;
 
@@ -28,150 +33,79 @@ function updateCountdown(){
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
 
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
 
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const seconds = Math.floor(
+        (distance % (1000 * 60)) /
+        1000
+    );
 
-    document.getElementById("days").textContent = String(days).padStart(2,"0");
-    document.getElementById("hours").textContent = String(hours).padStart(2,"0");
-    document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
-    document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
+    daysElement.textContent = String(days).padStart(2, "0");
+    hoursElement.textContent = String(hours).padStart(2, "0");
+    minutesElement.textContent = String(minutes).padStart(2, "0");
+    secondsElement.textContent = String(seconds).padStart(2, "0");
 
 }
 
 updateCountdown();
 
-setInterval(updateCountdown,1000);
+const countdownInterval = setInterval(updateCountdown, 1000);
 
+/*======================================================
+ELEMENTOS DEL FORMULARIO
+======================================================*/
 
-//======================================
-// ANIMACIÓN AL HACER SCROLL
-//======================================
+const form = document.getElementById("rsvp-form");
 
-const sections = document.querySelectorAll("section");
+const nombrePrincipal = document.getElementById("nombre");
 
-sections.forEach(section=>{
+const invitadosExtra = document.getElementById("invitados-extra");
 
-    section.style.opacity="0";
-    section.style.transform="translateY(40px)";
-    section.style.transition="all .8s ease";
+const botonAgregar = document.getElementById("agregar-invitado");
 
-});
+const MAX_INVITADOS = 4;
 
-const observer = new IntersectionObserver((entries)=>{
+let invitadosAgregados = 0;
 
-    entries.forEach(entry=>{
+/*======================================================
+INVITADOS DINÁMICOS
+======================================================*/
 
-        if(entry.isIntersecting){
+botonAgregar.addEventListener("click", () => {
 
-            entry.target.style.opacity="1";
-            entry.target.style.transform="translateY(0)";
+    if (invitadosAgregados >= MAX_INVITADOS - 1) {
 
-        }
+        alert("Solo puedes agregar hasta 4 invitados en total.");
 
-    });
+        return;
 
-},{
-    threshold:.15
-});
+    }
 
-sections.forEach(section=>observer.observe(section));
+    invitadosAgregados++;
 
+    const numero = invitadosAgregados + 1;
 
-//======================================
-// PREGUNTAS FRECUENTES
-//======================================
+    const bloque = document.createElement("div");
 
-const faqs = document.querySelectorAll(".faq details");
+    bloque.className = "campo invitado-extra";
 
-faqs.forEach(item=>{
+    bloque.innerHTML = `
 
-    item.addEventListener("toggle",()=>{
+        <label>
 
-        if(item.open){
+            Invitado ${numero}
 
-            faqs.forEach(other=>{
+        </label>
 
-                if(other!==item){
-
-                    other.open=false;
-
-                }
-
-            });
-
-        }
-
-    });
-
-});
-
-
-//======================================
-// DRESS CODE
-//======================================
-
-const dress = document.querySelectorAll(".dress details");
-
-dress.forEach(item=>{
-
-    item.addEventListener("toggle",()=>{
-
-        if(item.open){
-
-            dress.forEach(other=>{
-
-                if(other!==item){
-
-                    other.open=false;
-
-                }
-
-            });
-
-        }
-
-    });
-
-});
-
-//======================================
-// CONFIRMACIÓN
-//======================================
-
-const formulario = document.getElementById("rsvp-form");
-const contenedorInvitados = document.getElementById("invitados-extra");
-const btnAgregar = document.getElementById("agregar-invitado");
-
-let totalInvitados = 1;
-
-if(btnAgregar){
-
-    btnAgregar.addEventListener("click",function(){
-
-        if(totalInvitados>=4){
-
-            alert("Solo puedes agregar un máximo de 4 invitados.");
-
-            return;
-
-        }
-
-        totalInvitados++;
-
-        const bloque = document.createElement("div");
-
-        bloque.className="campo invitado-extra";
-
-        bloque.innerHTML=`
-
-            <label>
-
-                Invitado ${totalInvitados}
-
-            </label>
+        <div class="invitado-grupo">
 
             <input
                 type="text"
@@ -180,78 +114,160 @@ if(btnAgregar){
 
             <button
                 type="button"
-                class="eliminar-invitado btn">
+                class="eliminar-invitado"
+                aria-label="Eliminar invitado">
 
-                Eliminar invitado
+                <i class="fa-solid fa-trash"></i>
 
             </button>
 
-        `;
+        </div>
 
-        contenedorInvitados.appendChild(bloque);
+    `;
 
-        bloque.querySelector(".eliminar-invitado").addEventListener("click",function(){
+    invitadosExtra.appendChild(bloque);
 
-            bloque.remove();
+    actualizarBoton();
 
-            totalInvitados--;
+});
 
-        });
+/*======================================================
+ELIMINAR INVITADOS
+======================================================*/
+
+invitadosExtra.addEventListener("click", (e) => {
+
+    const boton = e.target.closest(".eliminar-invitado");
+
+    if (!boton) return;
+
+    const bloque = boton.closest(".invitado-extra");
+
+    bloque.remove();
+
+    invitadosAgregados--;
+
+    renumerarInvitados();
+
+    actualizarBoton();
+
+});
+
+/*======================================================
+RENUMERAR INVITADOS
+======================================================*/
+
+function renumerarInvitados() {
+
+    const invitados = invitadosExtra.querySelectorAll(".invitado-extra");
+
+    invitados.forEach((item, index) => {
+
+        item.querySelector("label").textContent = `Invitado ${index + 2}`;
 
     });
 
 }
 
-if(formulario){
+/*======================================================
+ACTUALIZAR BOTÓN
+======================================================*/
 
-    formulario.addEventListener("submit",function(e){
+function actualizarBoton() {
 
-        e.preventDefault();
+    if (invitadosAgregados >= MAX_INVITADOS - 1) {
 
-        const nombre = document.getElementById("nombre").value.trim();
+        botonAgregar.disabled = true;
 
-        if(nombre===""){
+        botonAgregar.style.opacity = ".6";
 
-            alert("Por favor escribe tu nombre y apellido.");
+        botonAgregar.style.cursor = "not-allowed";
 
-            return;
+    } else {
+
+        botonAgregar.disabled = false;
+
+        botonAgregar.style.opacity = "1";
+
+        botonAgregar.style.cursor = "pointer";
+
+    }
+
+}
+
+/*======================================================
+ENVÍO POR WHATSAPP
+======================================================*/
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const nombre = nombrePrincipal.value.trim();
+
+    if (nombre === "") {
+
+        alert("Por favor ingresa tu nombre.");
+
+        nombrePrincipal.focus();
+
+        return;
+
+    }
+
+    const respuesta = document.querySelector(
+        'input[name="respuesta"]:checked'
+    ).value;
+
+    let invitados = `1. ${nombre}`;
+
+    const extras = document.querySelectorAll(".nombre-extra");
+
+    extras.forEach((input, index) => {
+
+        const valor = input.value.trim();
+
+        if (valor !== "") {
+
+            invitados += `\n${index + 2}. ${valor}`;
 
         }
 
-        const invitados = [];
-
-        invitados.push(nombre);
-
-        document.querySelectorAll(".nombre-extra").forEach(campo=>{
-
-            if(campo.value.trim()!==""){
-
-                invitados.push(campo.value.trim());
-
-            }
-
-        });
-
-        const respuesta = document.querySelector('input[name="respuesta"]:checked').value;
-
-        let mensaje = `💍 *CONFIRMACIÓN DE ASISTENCIA*%0A%0A`;
-
-        invitados.forEach((persona,index)=>{
-
-            mensaje += `👤 Invitado ${index+1}%0A${persona}%0A%0A`;
-
-        });
-
-        mensaje += `${respuesta}%0A%0A`;
-
-        mensaje += `Muchas gracias.%0A`;
-
-        mensaje += `Karla & Ricardo ❤️`;
-
-        const enlace = `https://wa.me/50370473421?text=${mensaje}`;
-
-        window.open(enlace,"_blank");
-
     });
 
-}
+    const mensaje =
+
+`¡Hola Karla y Ricardo! 💚
+
+Quiero confirmar mi asistencia a su boda.
+
+${respuesta}
+
+Invitados:
+
+${invitados}
+
+¡Nos vemos el 05 de diciembre de 2026! ✨`;
+
+    const telefono = "50370473421";
+
+    const url =
+        `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, "_blank");
+
+    form.reset();
+
+    invitadosExtra.innerHTML = "";
+
+    invitadosAgregados = 0;
+
+    actualizarBoton();
+
+});
+
+/*======================================================
+INICIALIZACIÓN
+======================================================*/
+
+actualizarBoton();
