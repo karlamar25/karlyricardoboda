@@ -90,26 +90,22 @@ PORTADA
 
     filter:brightness(.42);
 
-    animation:kenburns 20s linear infinite alternate;
+    animation:kenburns 10s linear infinite alternate;
 
 }
 
 @keyframes kenburns{
 
     0%{
-        transform:scale(1.08) translate(0,0);
-    }
-
-    50%{
-        transform:scale(1.12) translate(-8px,-12px);
+        transform:scale(1.12) translateY(0);
     }
 
     100%{
-        transform:scale(1.16) translate(-16px,-22px);
+        transform:scale(1.20) translateY(-35px);
     }
 
 }
-
+    
 .overlay{
 
     position:absolute;
@@ -128,7 +124,7 @@ PORTADA
 
     position:absolute;
 
-    top:28%;
+    top:25%;
     left:50%;
 
     transform:translate(-50%,-50%);
@@ -1181,7 +1177,7 @@ RESPONSIVE
 
     .hero-content{
 
-        top:32%;
+        top:27%;
 
         width:92%;
 
