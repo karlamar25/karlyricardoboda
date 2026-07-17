@@ -45,21 +45,25 @@ function updateCountdown() {
 
     }
 
-    daysElement.textContent = String(
-        Math.floor(distance / (1000 * 60 * 60 * 24))
-    ).padStart(2, "0");
+    // Calcular días, horas, minutos y segundos
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-    hoursElement.textContent = String(
-        Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-    ).padStart(2, "0");
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
 
-    minutesElement.textContent = String(
-        Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-    ).padStart(2, "0");
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) / (1000 * 60)
+    );
 
-    secondsElement.textContent = String(
-        Math.floor((distance % (1000 * 60)) / 1000)
-    ).padStart(2, "0");
+    const seconds = Math.floor(
+        (distance % (1000 * 60)) / 1000
+    );
+
+    daysElement.textContent = String(days).padStart(2, "0");
+    hoursElement.textContent = String(hours).padStart(2, "0");
+    minutesElement.textContent = String(minutes).padStart(2, "0");
+    secondsElement.textContent = String(seconds).padStart(2, "0");
 
 }
 
