@@ -820,7 +820,9 @@ FINAL
 
     text-align:center;
 
-    padding:25px 0 70px;
+    padding:0 0 70px;
+
+    margin-top:-30px;
 
 }
 
@@ -828,7 +830,7 @@ FINAL
 
     width:300px;
 
-    margin:40px auto 15px;
+    margin:10px auto 5px;
 
     animation:vuelo 8s ease-in-out infinite;
 
@@ -838,7 +840,9 @@ FINAL
 
     font-size:1.3rem;
 
-    margin-bottom:35px;
+    margin-top:0;
+    
+    margin-bottom:28px;
 
 }
 
