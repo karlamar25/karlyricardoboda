@@ -2,7 +2,8 @@
 CONFIGURACIÓN
 ======================================================*/
 
-const weddingDate = new Date("2026-12-05T17:00:00").getTime();
+// La cuenta regresiva finaliza al iniciar la ceremonia (4:00 PM)
+const weddingDate = new Date("2026-12-05T16:00:00").getTime();
 
 /*======================================================
 CUENTA REGRESIVA
@@ -20,17 +21,33 @@ function updateCountdown() {
 
     if (distance <= 0) {
 
-        daysElement.textContent = "00";
-        hoursElement.textContent = "00";
-        minutesElement.textContent = "00";
-        secondsElement.textContent = "00";
+        const countdown = document.querySelector(".countdown");
+
+        if (countdown) {
+
+            countdown.innerHTML = `
+
+                <div class="contador-final">
+
+                    <h3>¡Hoy es nuestro gran día!</h3>
+
+                    <p>Gracias por acompañarnos.</p>
+
+                </div>
+
+            `;
+
+        }
 
         clearInterval(countdownInterval);
 
         return;
+
     }
 
-    daysElement.textContent = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, "0");
+    daysElement.textContent = String(
+        Math.floor(distance / (1000 * 60 * 60 * 24))
+    ).padStart(2, "0");
 
     hoursElement.textContent = String(
         Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
@@ -48,7 +65,7 @@ function updateCountdown() {
 
 updateCountdown();
 
-const countdownInterval = setInterval(updateCountdown,1000);
+const countdownInterval = setInterval(updateCountdown, 1000);
 
 /*======================================================
 FORMULARIO
@@ -67,9 +84,9 @@ let invitadosAgregados = 0;
 AGREGAR INVITADOS
 ======================================================*/
 
-botonAgregar.addEventListener("click",()=>{
+botonAgregar.addEventListener("click", () => {
 
-    if(invitadosAgregados >= MAX_INVITADOS-1){
+    if (invitadosAgregados >= MAX_INVITADOS - 1) {
 
         alert("Solo puedes agregar hasta 4 invitados en total.");
         return;
@@ -78,34 +95,34 @@ botonAgregar.addEventListener("click",()=>{
 
     invitadosAgregados++;
 
-    const numero=invitadosAgregados+1;
+    const numero = invitadosAgregados + 1;
 
-    const bloque=document.createElement("div");
+    const bloque = document.createElement("div");
 
-    bloque.className="campo invitado-extra";
+    bloque.className = "campo invitado-extra";
 
-    bloque.innerHTML=`
+    bloque.innerHTML = `
 
-<label>Invitado ${numero}</label>
+        <label>Invitado ${numero}</label>
 
-<div class="invitado-grupo">
+        <div class="invitado-grupo">
 
-<input
-type="text"
-class="nombre-extra"
-placeholder="Nombre y apellido">
+            <input
+                type="text"
+                class="nombre-extra"
+                placeholder="Nombre y apellido">
 
-<button
-type="button"
-class="eliminar-invitado">
+            <button
+                type="button"
+                class="eliminar-invitado">
 
-<i class="fa-solid fa-trash"></i>
+                <i class="fa-solid fa-trash"></i>
 
-</button>
+            </button>
 
-</div>
+        </div>
 
-`;
+    `;
 
     invitadosExtra.appendChild(bloque);
 
@@ -114,14 +131,14 @@ class="eliminar-invitado">
 });
 
 /*======================================================
-ELIMINAR
+ELIMINAR INVITADOS
 ======================================================*/
 
-invitadosExtra.addEventListener("click",(e)=>{
+invitadosExtra.addEventListener("click", (e) => {
 
-    const boton=e.target.closest(".eliminar-invitado");
+    const boton = e.target.closest(".eliminar-invitado");
 
-    if(!boton) return;
+    if (!boton) return;
 
     boton.closest(".invitado-extra").remove();
 
@@ -133,23 +150,23 @@ invitadosExtra.addEventListener("click",(e)=>{
 
 });
 
-function renumerar(){
+function renumerar() {
 
-    document.querySelectorAll(".invitado-extra").forEach((item,index)=>{
+    document.querySelectorAll(".invitado-extra").forEach((item, index) => {
 
-        item.querySelector("label").textContent=`Invitado ${index+2}`;
+        item.querySelector("label").textContent = `Invitado ${index + 2}`;
 
     });
 
 }
 
 /*======================================================
-BOTÓN
+BOTÓN AGREGAR INVITADO
 ======================================================*/
 
-function actualizarBoton(){
+function actualizarBoton() {
 
-    botonAgregar.disabled=invitadosAgregados>=MAX_INVITADOS-1;
+    botonAgregar.disabled = invitadosAgregados >= MAX_INVITADOS - 1;
 
 }
 
@@ -157,39 +174,48 @@ function actualizarBoton(){
 WHATSAPP
 ======================================================*/
 
-form.addEventListener("submit",function(e){
+form.addEventListener("submit", function (e) {
 
     e.preventDefault();
 
-    const nombre=nombrePrincipal.value.trim();
+    const nombre = nombrePrincipal.value.trim();
 
-    if(nombre===""){
+    if (nombre === "") {
 
         alert("Por favor escribe tu nombre.");
-
         nombrePrincipal.focus();
+        return;
+
+    }
+
+    // Verificar que haya seleccionado una respuesta
+    const respuestaSeleccionada = document.querySelector(
+        'input[name="respuesta"]:checked'
+    );
+
+    if (!respuestaSeleccionada) {
+
+        alert("Por favor selecciona si asistirás o no.");
 
         return;
 
     }
 
-    const respuesta=document.querySelector(
-        'input[name="respuesta"]:checked'
-    ).value;
+    const respuesta = respuestaSeleccionada.value;
 
-    let invitados=`1. ${nombre}`;
+    let invitados = `1. ${nombre}`;
 
-    document.querySelectorAll(".nombre-extra").forEach((input,index)=>{
+    document.querySelectorAll(".nombre-extra").forEach((input, index) => {
 
-        if(input.value.trim()!==""){
+        if (input.value.trim() !== "") {
 
-            invitados+=`\n${index+2}. ${input.value.trim()}`;
+            invitados += `\n${index + 2}. ${input.value.trim()}`;
 
         }
 
     });
 
-    const mensaje=`Hola Karla y Ricardo.
+    const mensaje = `Hola Karla y Ricardo.
 
 Quiero confirmar mi asistencia a su boda.
 
@@ -201,23 +227,24 @@ ${invitados}
 
 Nos vemos el 05 de diciembre de 2026.`;
 
-    const telefono="50370473421";
+    const telefono = "50370473421";
 
     window.open(
-
-`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`,
-
-"_blank"
-
+        `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`,
+        "_blank"
     );
+
+    // Limpiar formulario
 
     form.reset();
 
-    invitadosExtra.innerHTML="";
+    invitadosExtra.innerHTML = "";
 
-    invitadosAgregados=0;
+    invitadosAgregados = 0;
 
     actualizarBoton();
+
+    nombrePrincipal.focus();
 
 });
 
