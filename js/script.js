@@ -3,7 +3,7 @@ CONFIGURACIÓN
 ======================================================*/
 
 // La cuenta regresiva finaliza al iniciar la ceremonia (4:00 PM)
-const weddingDate = new Date("2026-12-05T16:00:00").getTime();
+const weddingDate = new Date("2026-12-05T20:00:00").getTime();
 
 /*======================================================
 CUENTA REGRESIVA
