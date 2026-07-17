@@ -494,15 +494,15 @@ DRESS CODE
 
     width:300px;
 
-    background:rgba(248,244,236,.08);
+    background:var(--marfil);
 
-    border:1px solid rgba(248,244,236,.15);
+    border:none;
 
     border-radius:20px;
 
     overflow:hidden;
 
-    box-shadow:none;
+    box-shadow:var(--sombra);
 
 }
 
