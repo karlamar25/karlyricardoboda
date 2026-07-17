@@ -573,7 +573,7 @@ DRESS CODE
 
 .dress-text{
 
-    max-width:460px;
+    max-width:760px;
 
     margin:40px auto 0;
 
@@ -581,13 +581,7 @@ DRESS CODE
 
 .dress-text details{
 
-    background:var(--marfil);
-
-    border-radius:16px;
-
-    overflow:hidden;
-
-    box-shadow:var(--sombra);
+   margin-bottom:18px;
 
 }
 
@@ -599,17 +593,17 @@ DRESS CODE
 
     align-items:center;
 
-    padding:12px 24px;
+    padding:18px 0;
 
     cursor:pointer;
 
     list-style:none;
 
-    color:var(--verde);
+    color:var(--marfil);
 
     font-weight:500;
 
-    font-size:1rem;
+    font-size:1.15rem;
 
 }
 
@@ -623,7 +617,7 @@ DRESS CODE
 
     content:"+";
 
-    font-size:1.8rem;
+    font-size:2rem;
 
     font-weight:300;
 
@@ -639,9 +633,15 @@ DRESS CODE
 
 .dress-text p{
 
+    background:var(--marfil);
+
     color:var(--verde);
 
-    padding:0 28px 22px;
+    border-radius:20px;
+
+    padding:24px 28px;
+
+    margin-top:12px;
 
     line-height:1.9;
 
@@ -840,8 +840,6 @@ FINAL
 
     font-size:1.3rem;
 
-    margin-top:-15PX;
-    
     margin-bottom:35px;
 
 }
