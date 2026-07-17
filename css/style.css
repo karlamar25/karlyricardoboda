@@ -489,7 +489,7 @@ DRESS CODE
     grid-template-columns:repeat(2,minmax(280px,420px));
     justify-content:center;
     gap:30px;
-    margin:0 auto 22px;
+    margin:0 auto 18px;
 
 }
 
@@ -557,7 +557,7 @@ DRESS CODE
 
 .nota-novia{
 
-    margin:40px auto 22px;
+    margin:50px auto 32px;
 
     text-align:center;
 
@@ -575,7 +575,7 @@ DRESS CODE
 
     max-width:460px;
 
-    margin:22px auto 0;
+    margin:40px auto 0;
 
 }
 
@@ -599,7 +599,7 @@ DRESS CODE
 
     align-items:center;
 
-    padding:16px 24px;
+    padding:12px 24px;
 
     cursor:pointer;
 
