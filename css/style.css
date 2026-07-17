@@ -188,9 +188,17 @@ PORTADA
     position:relative;
     z-index:2;
 
-    padding:20px;
-
     color:var(--marfil);
+
+    width:100%;
+
+    padding:0 20px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    transform:translateY(-90px);
 
 }
 
@@ -201,9 +209,9 @@ PORTADA
     font-size:7.5rem;
     font-weight:400;
 
-    line-height:1;
+    line-height:95;
 
-    margin-bottom:18px;
+    margin-bottom:12px;
 
     text-shadow:0 6px 20px rgba(0,0,0,.35);
 
@@ -220,7 +228,7 @@ PORTADA
 
     color:var(--marfil);
 
-    margin-bottom:16px;
+    margin-bottom:10px;
 
 }
 
