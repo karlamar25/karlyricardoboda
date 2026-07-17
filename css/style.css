@@ -714,15 +714,15 @@ PREGUNTAS FRECUENTES
 
     background:var(--verde);
 
+    margin-bottom:35px;
+
 }
 
 .faq details{
 
-    background:var(--marfil);
-
     border-radius:20px;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
     overflow:hidden;
 
@@ -733,20 +733,24 @@ PREGUNTAS FRECUENTES
 .faq summary{
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
-    padding:22px 28px;
+    padding:18px 0;
 
     cursor:pointer;
 
     list-style:none;
 
+    background:transparent;
+
     color:var(--verde);
 
     font-size:1.05rem;
 
-    font-weight:500;
+    font-weight:400;
 
 }
 
@@ -760,11 +764,13 @@ PREGUNTAS FRECUENTES
 
     content:"+";
 
-    font-size:1.8rem;
+    font-size:1.6rem;
 
     font-weight:300;
 
     transition:.25s;
+
+    color:var(--marfil);
 
 }
 
@@ -776,9 +782,15 @@ PREGUNTAS FRECUENTES
 
 .faq p{
 
-    padding:0 28px 24px;
+    background:var(--marfil);
 
     color:var(--verde);
+
+    border-radius:18px;
+
+    padding:22px 26px;
+
+    margin-top:12px;
 
     line-height:1.9;
 
