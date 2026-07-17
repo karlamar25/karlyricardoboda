@@ -428,7 +428,8 @@ RECEPCIÓN
 
 .foto-finca{
 
-    width:min(100%,620px);
+    width:min(100%,480px);
+
     margin:0 auto 35px;
 
     border-radius:24px;
@@ -503,7 +504,9 @@ DRESS CODE
 
     border-radius:24px;
 
-    overflow:hidden;
+    padding:22px;
+
+    text-align:center;
 
     box-shadow:var(--sombra);
 
@@ -511,13 +514,21 @@ DRESS CODE
 
 .dress-card img{
 
-    display:block;
+    width:78%;
+
+    margin:auto;
+
+}
+
+.dress-card img{
 
     width:100%;
 
-    aspect-ratio:4/5;
+    height:auto;
 
-    object-fit:cover;
+    object-fit:contain;
+
+    display:block;
 
 }
 
@@ -551,21 +562,17 @@ DRESS CODE
 
 .nota-novia{
 
-    max-width:720px;
-
-    margin:0 auto 40px;
-
-    background:var(--marfil);
-
-    color:var(--verde);
-
-    border-radius:22px;
-
-    padding:30px;
+    margin:35px auto 40px;
 
     text-align:center;
 
-    box-shadow:var(--sombra);
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.8rem;
+
+    color:#D5B676;
+
+    line-height:1.7;
 
 }
 
