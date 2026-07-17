@@ -501,7 +501,8 @@ DRESS CODE
 
     gap:35px;
 
-    margin-bottom:45px;
+    margin-top:20px;
+    margin-bottom:40px;
 
 }
 
@@ -529,13 +530,11 @@ DRESS CODE
 
 .dress-card img{
 
-    width:100%;
-
+    width:85%;
+    max-width:240px;
     height:auto;
-
-    object-fit:contain;
-
     display:block;
+    margin:0 auto 20px;
 
 }
 
@@ -569,7 +568,7 @@ DRESS CODE
 
 .nota-novia{
 
-    margin:35px auto 40px;
+    margin:20px auto 25px;
 
     text-align:center;
 
@@ -603,7 +602,7 @@ DRESS CODE
 
 .dress-text{
 
-    max-width:760px;
+    max-width:560px;
 
     margin:auto;
 
