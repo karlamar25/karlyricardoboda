@@ -486,27 +486,33 @@ DRESS CODE
 
 .dress-card{
 
-    background:transparent;
+    width:300px;
 
-    border:none;
+    background:rgba(248,244,236,.08);
+
+    border:1px solid rgba(248,244,236,.15);
+
+    border-radius:20px;
+
+    overflow:hidden;
 
     box-shadow:none;
-
-    padding:0;
-
-    text-align:center;
 
 }
 
 .dress-card img{
 
-    width:85%;
-    max-width:240px;
-    height:auto;
-    display:block;
-    margin:0 auto 20px;
+    width:100%;
 
-    border-radius:18px;
+    height:260px;
+
+    object-fit:contain;
+
+    background:transparent;
+
+    display:block;
+
+    padding:10px;
 
 }
 
