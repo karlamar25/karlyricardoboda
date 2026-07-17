@@ -714,13 +714,19 @@ PREGUNTAS FRECUENTES
 
     background:var(--verde);
 
-    margin-bottom:35px;
+    margin-bottom:20px;
 
 }
 
 .faq details{
 
-    margin-bottom:20px;
+    max-width:820px;
+
+    margin:0 auto 20px;
+
+    border-radius:20px;
+
+    overflow:hidden;
 
 }
 
@@ -731,6 +737,10 @@ PREGUNTAS FRECUENTES
     justify-content:space-between;
 
     align-items:center;
+
+    max-width:820px;
+
+    margin:0 auto;
 
     padding:18px 0;
 
