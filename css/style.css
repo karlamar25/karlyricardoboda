@@ -494,15 +494,15 @@ DRESS CODE
 
     width:300px;
 
-    background:var(--marfil);
+    background:rgba(248,244,236,.10);
 
-    border:none;
+    border:1px solid rgba(248,244,236,.12);
 
     border-radius:20px;
 
     overflow:hidden;
 
-    box-shadow:var(--sombra);
+    box-shadow:0 4px 12px rgba(0,0,0,.10);
 
 }
 
@@ -536,7 +536,7 @@ DRESS CODE
 
     font-size:2rem;
 
-    color:var(--verde);
+    color:var(--marfil);
 
     margin-bottom:12px;
 
@@ -544,9 +544,11 @@ DRESS CODE
 
 .dress-info p{
 
-    color:var(--verde);
+    color:var(--marfil);
 
     line-height:1.8;
+
+    opacity:.90;
 
 }
 
