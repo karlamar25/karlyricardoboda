@@ -573,7 +573,7 @@ DRESS CODE
 
 .dress-text{
 
-    max-width:500px;
+    max-width:520px;
 
     margin:40px auto 0;
 
@@ -581,7 +581,11 @@ DRESS CODE
 
 .dress-text details{
 
-   margin-bottom:18px;
+    border:1px solid rgba(248,244,236,.35);
+
+    border-radius:18px;
+
+    overflow:hidden;
 
 }
 
@@ -593,7 +597,7 @@ DRESS CODE
 
     align-items:center;
 
-    padding:18px 12px 18px 0;
+    padding:18px 22px;
 
     cursor:pointer;
 
@@ -621,8 +625,6 @@ DRESS CODE
 
     font-weight:300;
 
-    margin-left:20px;
-
     transition:.25s;
 
 }
@@ -639,11 +641,9 @@ DRESS CODE
 
     color:var(--verde);
 
-    border-radius:20px;
+    border-top:1px solid rgba(47,59,45,.12);
 
     padding:24px 28px;
-
-    margin-top:12px;
 
     line-height:1.9;
 
