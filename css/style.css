@@ -820,7 +820,7 @@ FINAL
 
     text-align:center;
 
-    padding:100px 0 70px;
+    padding:65px 0 70px;
 
 }
 
@@ -834,7 +834,7 @@ FINAL
 
 .despedida{
 
-    font-size:1.15rem;
+    font-size:1.50rem;
 
     margin-bottom:35px;
 
@@ -842,7 +842,7 @@ FINAL
 
 .avion{
 
-    width:110px;
+    width:125px;
 
     margin:0 auto 35px;
 
@@ -852,9 +852,9 @@ FINAL
 
     font-family:'Great Vibes',cursive;
 
-    font-size:3.8rem;
+    font-size:3.2rem;
 
-    font-weight:400;
+    font-weight:350;
 
     margin-bottom:12px;
 
@@ -863,6 +863,8 @@ FINAL
 .fecha-final{
 
     letter-spacing:3px;
+
+    margin-top:8px;
 
 }
 
