@@ -486,23 +486,15 @@ DRESS CODE
 
 .dress-card{
 
-    background:var(--marfil);
+    background:transparent;
 
-    border-radius:24px;
+    border:none;
 
-    padding:22px;
+    box-shadow:none;
+
+    padding:0;
 
     text-align:center;
-
-    box-shadow:var(--sombra);
-
-}
-
-.dress-card img{
-
-    width:78%;
-
-    margin:auto;
 
 }
 
@@ -512,13 +504,16 @@ DRESS CODE
     max-width:240px;
     height:auto;
     display:block;
-    margin:0 auto 15px;
+    margin:0 auto 20px;
+
+    border-radius:18px;
+    border:3px solid rgba(248,244,236,.35);
 
 }
 
 .dress-info{
 
-    padding:28px;
+    padding:14px 0 0;
 
     text-align:center;
 
@@ -557,24 +552,6 @@ DRESS CODE
     color:#D5B676;
 
     line-height:1.7;
-
-}
-
-.nota-novia h3{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:1.8rem;
-
-    margin-bottom:12px;
-
-}
-
-.nota-novia p{
-
-    letter-spacing:2px;
-
-    font-weight:500;
 
 }
 
