@@ -322,7 +322,7 @@ PROGRAMACIÓN
 
     background:var(--verde);
 
-    padding-top:20px;
+    padding-top:15px;
     padding-bottom:90px;
 
 }
@@ -367,7 +367,7 @@ PROGRAMACIÓN
 
     font-family:'Montserrat',sans-serif;
 
-    font-size:1.2rem;
+    font-size:1rem;
 
     font-weight:500;
 
@@ -402,7 +402,11 @@ RECEPCIÓN
 .recepcion{
 
     background:var(--verde);
+
     text-align:center;
+
+    padding-top:40px;
+    padding-bottom:90px;
 
 }
 
@@ -410,7 +414,7 @@ RECEPCIÓN
 
     width:min(100%,340px);
 
-    margin:0 auto 25px;
+    margin:0 auto 18px;
 
     border-radius:24px;
 
@@ -423,19 +427,15 @@ RECEPCIÓN
 .recepcion h3{
 
     font-family:'Cormorant Garamond',serif;
+
     font-size:2rem;
+
     font-weight:500;
 
     color:var(--marfil);
 
-   margin-top:18px;
-   margin-bottom:14px;
-
-}
-
-.recepcion .btn{
-
-    margin-top:10px;
+    margin-top:18px;
+    margin-bottom:14px;
 
 }
 
@@ -443,7 +443,7 @@ RECEPCIÓN
 
     max-width:650px;
 
-    margin:0 auto 50px;
+    margin:0 auto 32px;
 
     color:var(--marfil);
 
@@ -451,11 +451,18 @@ RECEPCIÓN
 
 }
 
+.recepcion .btn{
+
+    margin-top:8px;
+    margin-bottom:40px;
+
+}
+
 .indicaciones{
 
     max-width:620px;
 
-    margin:0 auto 40px;
+    margin:0 auto;
 
     color:var(--marfil);
 
