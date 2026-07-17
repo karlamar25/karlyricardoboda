@@ -824,15 +824,13 @@ FINAL
 
 }
 
-.final h2{
+.avion{
 
-    color:var(--marfil);
+    width:300px;
 
-    font-size:2.2rem;
+    margin:40px auto 15px;
 
-    line-height:1.45;
-
-    margin-bottom:22px;
+    animation:vuelo 8s ease-in-out infinite;
 
 }
 
@@ -841,16 +839,6 @@ FINAL
     font-size:1.3rem;
 
     margin-bottom:35px;
-
-    animation: vuelo 8s ease-in-out infinite;
-
-}
-
-.avion{
-
-    width:300px;
-
-    margin:0 auto 35px;
 
 }
 
@@ -877,23 +865,33 @@ FINAL
 @keyframes vuelo{
 
     0%{
+
         transform:translateX(-12px) translateY(0);
+
     }
 
     25%{
+
         transform:translateX(-6px) translateY(-3px);
+
     }
 
     50%{
+
         transform:translateX(12px) translateY(0);
+
     }
 
     75%{
+
         transform:translateX(6px) translateY(3px);
+
     }
 
     100%{
+
         transform:translateX(-12px) translateY(0);
+
     }
 
 }
@@ -934,7 +932,7 @@ CONFIRMACIÓN
 
     color:var(--verde);
 
-    padding:24px;
+     padding:20px 24px;
 
     cursor:pointer;
 
