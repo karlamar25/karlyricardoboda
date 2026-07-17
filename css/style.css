@@ -842,6 +842,8 @@ FINAL
 
     margin-bottom:35px;
 
+    animation: vuelo 8s ease-in-out infinite;
+
 }
 
 .avion{
@@ -869,6 +871,30 @@ FINAL
     letter-spacing:3px;
 
     margin-top:8px;
+
+}
+
+@keyframes vuelo{
+
+    0%{
+        transform:translateX(-12px) translateY(0);
+    }
+
+    25%{
+        transform:translateX(-6px) translateY(-3px);
+    }
+
+    50%{
+        transform:translateX(12px) translateY(0);
+    }
+
+    75%{
+        transform:translateX(6px) translateY(3px);
+    }
+
+    100%{
+        transform:translateX(-12px) translateY(0);
+    }
 
 }
 
