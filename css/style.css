@@ -342,7 +342,7 @@ PROGRAMACIÓN
 
     display:grid;
 
-    grid-template-columns:120px 1fr;
+    grid-template-columns:135px 1fr;
 
     gap:24px;
 
@@ -364,7 +364,7 @@ PROGRAMACIÓN
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.5rem;
+    font-size:.9rem;
 
     font-weight:500;
 
@@ -387,6 +387,8 @@ PROGRAMACIÓN
     font-size:1.55rem;
 
     font-weight:400;
+
+    letter-spacing:.2px;
 
 }
 
