@@ -1234,7 +1234,7 @@ CELULARES
 
         font-size:1rem;
 
-        text-align:left;
+        text-align:center;
 
     }
 
@@ -1246,9 +1246,11 @@ CELULARES
 
     .detalle{
 
-        padding-left:18px;
+    padding-left:0;
 
-    }
+    text-align:center;
+
+}
 
     /*==================================================
     RECEPCIÓN
@@ -1262,7 +1264,7 @@ CELULARES
 
     .recepcion h3{
 
-        font-size:1.6rem;
+        font-size:1.35rem;
 
     }
 
@@ -1278,6 +1280,12 @@ CELULARES
     DRESS CODE
     ==================================================*/
 
+    .dress{
+
+    padding-bottom:45px;
+
+}
+    
     .dress-grid{
 
         grid-template-columns:1fr;
@@ -1334,7 +1342,7 @@ CELULARES
 
         max-width:330px;
 
-        margin:35px auto 0;
+        margin:20px auto 0;
 
     }
 
