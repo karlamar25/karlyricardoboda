@@ -820,7 +820,7 @@ FINAL
 
     text-align:center;
 
-    padding:65px 0 70px;
+    padding:50px 0 70px;
 
 }
 
@@ -828,13 +828,17 @@ FINAL
 
     color:var(--marfil);
 
+    font-size:1.5rem;
+
+    line-height:1.45;
+
     margin-bottom:22px;
 
 }
 
 .despedida{
 
-    font-size:1.50rem;
+    font-size:1.3rem;
 
     margin-bottom:35px;
 
