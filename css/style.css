@@ -428,7 +428,7 @@ RECEPCIÓN
 
 .foto-finca{
 
-    width:min(100%,380x);
+    width:min(100%,340px);
 
     margin:0 auto 35px;
 
@@ -448,7 +448,8 @@ RECEPCIÓN
 
     color:var(--marfil);
 
-    margin-bottom:14px;
+    margin-top:22px;
+    margin-bottom:18px;
 
 }
 
@@ -456,11 +457,11 @@ RECEPCIÓN
 
     max-width:650px;
 
-    margin:0 auto 35px;
+    margin:0 auto 50px;
 
     color:var(--marfil);
 
-    line-height:2;
+    line-height:1.8;
 
 }
 
