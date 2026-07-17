@@ -715,7 +715,6 @@ PREGUNTAS FRECUENTES
 .faq{
 
     background:var(--verde);
-
     margin-bottom:20px;
 
 }
@@ -723,26 +722,17 @@ PREGUNTAS FRECUENTES
 .faq details{
 
     max-width:820px;
-
-    margin:0 auto 20px;
-
-    border-radius:20px;
-
-    overflow:hidden;
+    margin:0 auto 18px;
 
 }
 
 .faq summary{
 
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 
-    max-width:820px;
-
-    margin:0 auto;
+    width:100%;
 
     padding:18px 0;
 
@@ -750,9 +740,9 @@ PREGUNTAS FRECUENTES
 
     list-style:none;
 
-    background:transparent;
-
     color:var(--marfil);
+
+    background:transparent;
 
     font-size:1.05rem;
 
@@ -807,6 +797,14 @@ PREGUNTAS FRECUENTES
     color:var(--verde);
 
     font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.contacto a:hover{
+
+    text-decoration:underline;
 
 }
 
