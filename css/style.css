@@ -430,7 +430,7 @@ RECEPCIÓN
 
     width:min(100%,340px);
 
-    margin:0 auto 35px;
+    margin:0 auto 25px;
 
     border-radius:24px;
 
@@ -448,8 +448,14 @@ RECEPCIÓN
 
     color:var(--marfil);
 
-    margin-top:22px;
-    margin-bottom:18px;
+   margin-top:18px;
+   margin-bottom:14px;
+
+}
+
+.recepcion .btn{
+
+    margin-top:10px;
 
 }
 
@@ -467,7 +473,7 @@ RECEPCIÓN
 
 .indicaciones{
 
-    max-width:720px;
+    max-width:620px;
 
     margin:0 auto 40px;
 
