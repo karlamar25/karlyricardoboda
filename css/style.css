@@ -364,7 +364,7 @@ PROGRAMACIÓN
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.01rem;
+    font-size:1.5rem;
 
     font-weight:500;
 
@@ -382,9 +382,9 @@ PROGRAMACIÓN
 
 .actividad{
 
-    color:var(--marfil);
+    font-family:'Cormorant Garamond',serif;
 
-    font-size:1.08rem;
+    font-size:1.55rem;
 
     font-weight:400;
 
