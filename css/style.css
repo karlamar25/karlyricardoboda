@@ -1102,19 +1102,21 @@ TABLETS
 
     h2{
 
-        font-size:2.6rem;
+        font-size:2.5rem;
 
     }
 
     .hero-content h1{
 
-        font-size:5.8rem;
+        font-size:5.5rem;
+
+        white-space:nowrap;
 
     }
 
     .hero-content h2{
 
-        font-size:1.8rem;
+        font-size:1.7rem;
 
         letter-spacing:4px;
 
@@ -1122,7 +1124,7 @@ TABLETS
 
     .dress-grid{
 
-        gap:25px;
+        gap:24px;
 
     }
 
@@ -1148,81 +1150,109 @@ CELULARES
 
     h2{
 
-        font-size:2.2rem;
+        font-size:2rem;
 
-        margin-bottom:40px;
+        margin-bottom:36px;
 
     }
 
-    /* HERO */
+    /*==================================================
+    HERO
+    ==================================================*/
 
     .hero{
 
         min-height:100svh;
 
-        padding:20px;
+        padding:18px;
+
+    }
+
+    .hero-content{
+
+        transform:translateY(-70px);
 
     }
 
     .hero-content h1{
 
-        font-size:4.3rem;
+        font-size:3.2rem;
 
-        line-height:.95;
+        line-height:1;
+
+        white-space:nowrap;
 
     }
 
     .hero-content h2{
 
-        font-size:1.3rem;
-
-        letter-spacing:3px;
-
-    }
-
-    .fecha{
-
-        font-size:.90rem;
+        font-size:1.2rem;
 
         letter-spacing:2px;
 
     }
 
-    /* MENSAJE */
+    .fecha{
+
+        font-size:.85rem;
+
+        letter-spacing:2px;
+
+    }
+
+    /*==================================================
+    MENSAJE
+    ==================================================*/
+
+    .mensaje h2{
+
+        font-size:1.65rem;
+
+    }
 
     .mensaje-texto{
 
-        font-size:1.05rem;
+        font-size:1rem;
 
         line-height:1.9;
 
     }
 
-    /* PROGRAMACIÓN */
+    /*==================================================
+    PROGRAMACIÓN
+    ==================================================*/
 
     .evento{
 
         grid-template-columns:1fr;
 
-        gap:8px;
+        gap:6px;
 
     }
 
     .hora{
 
+        font-size:1rem;
+
         text-align:left;
 
-        font-size:1.3rem;
+    }
+
+    .actividad{
+
+        font-size:1.45rem;
 
     }
 
     .detalle{
 
-        padding-left:20px;
+        padding-left:18px;
 
     }
 
-    /* RECEPCIÓN */
+    /*==================================================
+    RECEPCIÓN
+    ==================================================*/
 
     .foto-finca{
 
@@ -1232,30 +1262,35 @@ CELULARES
 
     .recepcion h3{
 
-        font-size:1.7rem;
+        font-size:1.6rem;
 
     }
 
     .direccion,
+
     .indicaciones{
 
-        font-size:.96rem;
+        font-size:.95rem;
 
     }
 
-    /* DRESS CODE */
+    /*==================================================
+    DRESS CODE
+    ==================================================*/
 
     .dress-grid{
 
         grid-template-columns:1fr;
 
-        gap:28px;
+        gap:26px;
 
     }
 
     .dress-card{
 
-        max-width:420px;
+        width:100%;
+
+        max-width:320px;
 
         margin:auto;
 
@@ -1263,101 +1298,89 @@ CELULARES
 
     .dress-card img{
 
-        aspect-ratio:4/5;
+        height:250px;
 
-        object-fit:cover;
+        object-fit:contain;
+
+        padding:8px;
 
     }
 
     .dress-info{
 
-        padding:22px;
+        padding:18px;
 
     }
 
-    /* CONTADOR */
+    .dress-info h3{
 
-    .countdown{
-
-        gap:18px;
+        font-size:1.7rem;
 
     }
 
-    .count-item{
+    .dress-info p{
 
-        width:105px;
-
-        height:105px;
+        font-size:.95rem;
 
     }
 
-    .count-item span{
+    .nota-novia{
 
-        font-size:2.2rem;
+        font-size:1.35rem;
 
     }
 
-    /* FAQ */
+    .dress-text{
 
-    .faq summary{
+        max-width:330px;
+
+        margin:35px auto 0;
+
+    }
+
+    .dress-text summary{
+
+        padding:15px 18px;
+
+        font-size:1rem;
+
+    }
+
+    .dress-text p{
 
         padding:18px 20px;
 
-    }
+        font-size:.95rem;
 
-    .faq p{
-
-        padding:0 20px 20px;
+        line-height:1.8;
 
     }
 
-    /* CONFIRMACIÓN */
+    /*==================================================
+    CUENTA REGRESIVA
+    ==================================================*/
 
-    .confirmacion-contenido{
+    .countdown{
 
-        padding:25px;
+        display:flex;
 
-    }
+        justify-content:space-between;
 
-}
+        align-items:center;
 
-/*=========================
-IPHONE PEQUEÑOS
-=========================*/
+        flex-wrap:nowrap;
 
-@media (max-width:480px){
-
-    .hero-content h1{
-
-        font-size:3.3rem;
-
-    }
-
-    .hero-content h2{
-
-        font-size:1.05rem;
-
-        letter-spacing:2px;
-
-    }
-
-    .fecha{
-
-        font-size:.82rem;
-
-    }
-
-    h2{
-
-        font-size:1.9rem;
+        gap:8px;
 
     }
 
     .count-item{
 
-        width:88px;
+        width:78px;
 
-        height:88px;
+        height:78px;
+
+        flex:0 0 auto;
 
     }
 
@@ -1369,7 +1392,91 @@ IPHONE PEQUEÑOS
 
     .count-item small{
 
-        font-size:.72rem;
+        font-size:.60rem;
+
+        letter-spacing:1px;
+
+    }
+
+        /*==================================================
+    PREGUNTAS FRECUENTES
+    ==================================================*/
+
+    .faq summary{
+
+        padding:18px 15px;
+
+        font-size:.98rem;
+
+    }
+
+    .faq p{
+
+        padding:18px;
+
+        font-size:.95rem;
+
+        line-height:1.8;
+
+    }
+
+    /*==================================================
+    FINAL
+    ==================================================*/
+
+    .avion{
+
+        width:240px;
+
+    }
+
+    .despedida{
+
+        font-size:1.15rem;
+
+    }
+
+    .final h3{
+
+        font-size:2.7rem;
+
+    }
+
+    .fecha-final{
+
+        font-size:.85rem;
+
+        letter-spacing:2px;
+
+    }
+
+    /*==================================================
+    CONFIRMACIÓN
+    ==================================================*/
+
+    .confirmacion-toggle{
+
+        border-radius:20px;
+
+    }
+
+    .confirmacion-toggle summary{
+
+        padding:18px;
+
+        font-size:1rem;
+
+    }
+
+    .confirmacion-contenido{
+
+        padding:22px;
+
+    }
+
+    .campo input[type="text"]{
+
+        padding:13px 16px;
 
     }
 
@@ -1382,26 +1489,132 @@ IPHONE PEQUEÑOS
 }
 
 /*=========================
-PANTALLAS BAJAS
+IPHONES PEQUEÑOS
 =========================*/
 
-@media (max-height:650px){
+@media (max-width:480px){
+
+    .hero-content{
+
+        transform:translateY(-60px);
+
+    }
 
     .hero-content h1{
 
-        font-size:3.8rem;
+        font-size:2.75rem;
 
     }
 
     .hero-content h2{
 
-        font-size:1.2rem;
+        font-size:1rem;
 
     }
 
-    .scroll-down{
+    .fecha{
 
-        bottom:18px;
+        font-size:.78rem;
+
+    }
+
+    h2{
+
+        font-size:1.75rem;
+
+    }
+
+    .mensaje h2{
+
+        font-size:1.45rem;
+
+    }
+
+    .hora{
+
+        font-size:.95rem;
+
+    }
+
+    .actividad{
+
+        font-size:1.30rem;
+
+    }
+
+    .dress-card{
+
+        max-width:290px;
+
+    }
+
+    .dress-card img{
+
+        height:220px;
+
+    }
+
+    .dress-text{
+
+        max-width:290px;
+
+    }
+
+    .count-item{
+
+        width:70px;
+
+        height:70px;
+
+    }
+
+    .count-item span{
+
+        font-size:1.5rem;
+
+    }
+
+    .count-item small{
+
+        font-size:.55rem;
+
+    }
+
+    .avion{
+
+        width:210px;
+
+    }
+
+    .final h3{
+
+        font-size:2.4rem;
+
+    }
+
+}
+
+/*=========================
+PANTALLAS BAJAS
+=========================*/
+
+@media (max-height:650px){
+
+    .hero-content{
+
+        transform:translateY(-50px);
+
+    }
+
+    .hero-content h1{
+
+        font-size:3rem;
+
+    }
+
+    .hero-content h2{
+
+        font-size:1.1rem;
 
     }
 
