@@ -364,13 +364,11 @@ PROGRAMACIÓN
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.45rem;
+    font-size:2rem;
 
-    font-weight:600;
+    font-weight:500;
 
-    color:var(--marfil);
-
-    text-align:right;
+    letter-spacing:.4px;
 
 }
 
@@ -378,27 +376,7 @@ PROGRAMACIÓN
 
     position:relative;
 
-    padding-left:26px;
-
-}
-
-.detalle::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:10px;
-    height:10px;
-
-    border-radius:50%;
-
-    background:var(--marfil);
+    padding-left:0;
 
 }
 
@@ -406,7 +384,9 @@ PROGRAMACIÓN
 
     color:var(--marfil);
 
-    font-size:1.05rem;
+    font-size:1.08rem;
+
+    font-weight:400;
 
 }
 
