@@ -477,13 +477,10 @@ DRESS CODE
 .dress-grid{
 
     display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:35px;
-
-    margin-top:20px;
-    margin-bottom:40px;
+    grid-template-columns:repeat(2,minmax(280px,420px));
+    justify-content:center;
+    gap:30px;
+    margin:20px auto 40px;
 
 }
 
@@ -515,7 +512,7 @@ DRESS CODE
     max-width:240px;
     height:auto;
     display:block;
-    margin:0 auto 20px;
+    margin:0 auto 15px;
 
 }
 
@@ -549,7 +546,7 @@ DRESS CODE
 
 .nota-novia{
 
-    margin:20px auto 25px;
+    margin:18px auto 22px;
 
     text-align:center;
 
@@ -655,7 +652,7 @@ DRESS CODE
 
     line-height:1.9;
 
-
+}
 
 /*======================================================
 CUENTA REGRESIVA
