@@ -557,13 +557,13 @@ DRESS CODE
 
 .nota-novia{
 
-    margin:28px auto 30px;
+    margin:40px auto 22px;
 
     text-align:center;
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.5rem;
+    font-size:1.6rem;
 
     color:#D5B676;
 
@@ -583,7 +583,7 @@ DRESS CODE
 
     background:var(--marfil);
 
-    border-radius:20px;
+    border-radius:16px;
 
     overflow:hidden;
 
@@ -599,7 +599,7 @@ DRESS CODE
 
     align-items:center;
 
-    padding:22px 28px;
+    padding:16px 24px;
 
     cursor:pointer;
 
@@ -609,7 +609,7 @@ DRESS CODE
 
     font-weight:500;
 
-    font-size:1.05rem;
+    font-size:1rem;
 
 }
 
