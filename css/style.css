@@ -720,13 +720,7 @@ PREGUNTAS FRECUENTES
 
 .faq details{
 
-    border-radius:20px;
-
     margin-bottom:20px;
-
-    overflow:hidden;
-
-    box-shadow:var(--sombra);
 
 }
 
@@ -746,7 +740,7 @@ PREGUNTAS FRECUENTES
 
     background:transparent;
 
-    color:var(--verde);
+    color:var(--marfil);
 
     font-size:1.05rem;
 
