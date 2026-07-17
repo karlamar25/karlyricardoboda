@@ -146,6 +146,7 @@ PORTADA
     position:relative;
 
     width:100%;
+    min-height:100svh;
     height:100svh;
 
     display:flex;
@@ -166,6 +167,7 @@ PORTADA
     height:100%;
 
     object-fit:cover;
+    object-position:center center;
 
     animation:kenburns 18s ease-in-out infinite alternate;
 
@@ -186,6 +188,7 @@ PORTADA
 .hero-content{
 
     position:relative;
+
     z-index:2;
 
     color:var(--marfil);
@@ -209,7 +212,7 @@ PORTADA
     font-size:7.5rem;
     font-weight:400;
 
-    line-height:95;
+    line-height:.95;
 
     margin-bottom:12px;
 
