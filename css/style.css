@@ -1,15 +1,29 @@
 /*======================================================
+FUENTES
+======================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/*======================================================
 VARIABLES
 ======================================================*/
 
 :root{
 
     --verde:#2F3B2D;
-    --verde-claro:#3D4D39;
+    --verde-claro:#435441;
+
     --marfil:#F8F4EC;
-    --gris:#ECECEC;
-    --texto:#FFFFFF;
-    --sombra:0 10px 35px rgba(0,0,0,.15);
+    --marfil-2:#EFE8DD;
+
+    --texto-claro:#F8F4EC;
+    --texto-verde:#2F3B2D;
+
+    --sombra:0 12px 35px rgba(0,0,0,.18);
+
+    --radio:20px;
+
+    --transicion:.35s ease;
 
 }
 
@@ -17,40 +31,37 @@ VARIABLES
 RESET
 ======================================================*/
 
-*,
-*::before,
-*::after{
-
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
-
 }
 
 html{
 
     scroll-behavior:smooth;
-    overflow-x:hidden;
 
 }
 
 body{
 
+    background:var(--verde);
+
+    color:var(--texto-claro);
+
     font-family:'Montserrat',sans-serif;
-    background:var(--marfil);
-    color:var(--verde);
+
     overflow-x:hidden;
+
     line-height:1.7;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
 
 }
 
 img{
 
     display:block;
-    width:100%;
-    height:auto;
+
+    max-width:100%;
 
 }
 
@@ -60,94 +71,140 @@ a{
 
 }
 
-button,
-input{
+ul{
 
-    font-family:inherit;
-
-}
-
-/*======================================================
-CONTENEDOR
-======================================================*/
-
-.container{
-
-    width:min(92%,1100px);
-    margin:auto;
+    list-style:none;
 
 }
 
 section{
 
-    padding:90px 0;
+    padding:90px 20px;
+
+    background:transparent;
+
+}
+
+.container{
+
+    width:min(1100px,92%);
+
+    margin:auto;
+
+}
+
+/*======================================================
+TÍTULOS
+======================================================*/
+
+h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-weight:400;
 
 }
 
 h2{
 
     font-family:'Cormorant Garamond',serif;
+
     font-size:3rem;
-    font-weight:500;
-    color:var(--verde);
+
+    font-weight:600;
+
     text-align:center;
-    margin-bottom:55px;
+
+    color:var(--marfil);
+
+    margin-bottom:45px;
+
     letter-spacing:1px;
 
 }
 
+h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:var(--marfil);
+
+    font-size:2rem;
+
+    font-weight:600;
+
+}
+
+p{
+
+    color:rgba(248,244,236,.92);
+
+}
+
 /*======================================================
-BOTÓN
+BOTONES
 ======================================================*/
 
 .btn{
 
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
-    padding:15px 38px;
-    background:var(--verde);
-    color:#fff;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    background:var(--marfil);
+
+    color:var(--verde);
+
+    font-weight:600;
+
+    transition:var(--transicion);
+
     border:none;
-    border-radius:40px;
+
     cursor:pointer;
-    transition:.30s;
-    font-size:.95rem;
-    letter-spacing:.5px;
 
 }
 
 .btn:hover{
 
-    background:var(--verde-claro);
+    background:var(--marfil-2);
+
     transform:translateY(-2px);
 
 }
 
 /*======================================================
-HERO
+PORTADA
 ======================================================*/
 
 .hero{
 
     position:relative;
-    width:100%;
-    height:100svh;
+
+    height:100vh;
+
     overflow:hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
 
 }
 
 .hero-img{
 
     position:absolute;
+
     inset:0;
+
     width:100%;
+
     height:100%;
+
     object-fit:cover;
+
     animation:kenburns 18s ease-in-out infinite alternate;
 
 }
@@ -155,49 +212,71 @@ HERO
 .overlay{
 
     position:absolute;
+
     inset:0;
-    background:linear-gradient(
-        rgba(0,0,0,.30),
-        rgba(0,0,0,.55)
-    );
+
+    background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.55));
 
 }
 
 .hero-content{
 
     position:relative;
-    z-index:2;
+
+    z-index:5;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
     color:#fff;
+
     padding:20px;
 
 }
 
-.hero-content h1{
+.hero h1{
 
-    font-family:'Great Vibes',cursive;
-    font-size:8rem;
-    font-weight:400;
-    line-height:1;
-    margin-bottom:18px;
-    text-shadow:0 5px 18px rgba(0,0,0,.35);
+    font-size:5.4rem;
+
+    color:#fff;
+
+    margin-bottom:10px;
+
+    text-shadow:0 5px 18px rgba(0,0,0,.45);
 
 }
 
-.hero-content h2{
+.hero h2{
 
-    font-family:'Cormorant Garamond',serif;
-    color:#fff;
     font-size:2rem;
-    font-weight:400;
+
+    color:#fff;
+
+    margin-bottom:20px;
+
     letter-spacing:5px;
-    margin-bottom:18px;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-weight:500;
 
 }
 
 .fecha{
 
-    font-size:1rem;
-    letter-spacing:4px;
+    font-size:1.15rem;
+
+    letter-spacing:5px;
+
     color:#fff;
 
 }
@@ -205,15 +284,26 @@ HERO
 .scroll-down{
 
     position:absolute;
+
     bottom:35px;
+
     left:50%;
+
     transform:translateX(-50%);
+
     color:#fff;
+
     font-size:1.6rem;
-    z-index:2;
-    animation:flecha 2s infinite;
+
+    animation:flecha 1.8s infinite;
+
+    z-index:10;
 
 }
+
+/*======================================================
+ANIMACIONES
+======================================================*/
 
 @keyframes kenburns{
 
@@ -253,19 +343,23 @@ MENSAJE
 
 .mensaje{
 
-    background:#fff;
+    text-align:center;
 
 }
 
 .mensaje-texto{
 
-    max-width:780px;
+    max-width:760px;
+
     margin:auto;
-    text-align:center;
-    font-size:1.2rem;
-    line-height:2;
-    color:var(--verde);
+
+    font-size:1.25rem;
+
     font-weight:300;
+
+    line-height:2;
+
+    color:var(--marfil);
 
 }
 
@@ -275,50 +369,56 @@ PROGRAMACIÓN
 
 .programacion{
 
-    background:var(--marfil);
+    text-align:center;
 
 }
 
 .timeline{
 
-    max-width:760px;
+    max-width:750px;
+
     margin:auto;
-    display:flex;
-    flex-direction:column;
-    gap:28px;
 
 }
 
 .evento{
 
-    display:grid;
-    grid-template-columns:120px 1fr;
-    align-items:center;
-    gap:25px;
-    padding-bottom:22px;
-    border-bottom:1px solid rgba(47,59,45,.12);
+    display:flex;
 
-}
+    align-items:flex-start;
 
-.evento:last-child{
+    gap:35px;
 
-    border-bottom:none;
+    padding:22px 0;
+
+    border-bottom:1px solid rgba(248,244,236,.15);
 
 }
 
 .hora{
 
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.45rem;
-    color:var(--verde);
+    min-width:110px;
+
     text-align:right;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.6rem;
+
     font-weight:600;
+
+    color:var(--marfil);
 
 }
 
 .detalle{
 
+    flex:1;
+
+    text-align:left;
+
     position:relative;
+
     padding-left:28px;
 
 }
@@ -326,22 +426,28 @@ PROGRAMACIÓN
 .detalle::before{
 
     content:"";
+
     position:absolute;
+
     left:0;
-    top:50%;
-    transform:translateY(-50%);
+
+    top:11px;
+
     width:10px;
+
     height:10px;
+
     border-radius:50%;
-    background:var(--verde);
+
+    background:var(--marfil);
 
 }
 
 .actividad{
 
-    font-size:1.05rem;
-    color:var(--verde);
-    font-weight:400;
+    font-size:1.08rem;
+
+    color:var(--marfil);
 
 }
 
@@ -351,44 +457,53 @@ RECEPCIÓN
 
 .recepcion{
 
-    background:#fff;
     text-align:center;
 
 }
 
 .foto-finca{
 
-    width:min(100%,650px);
-    margin:0 auto 35px;
-    border-radius:18px;
+    width:100%;
+
+    max-width:520px;
+
+    margin:35px auto;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
     box-shadow:var(--sombra);
 
 }
 
 .recepcion h3{
 
-    font-family:'Cormorant Garamond',serif;
-    font-size:2rem;
-    font-weight:500;
+    color:var(--marfil);
+
+    margin-top:10px;
+
     margin-bottom:12px;
 
 }
 
 .direccion{
 
-    max-width:600px;
-    margin:0 auto 35px;
-    line-height:2;
     font-size:1.05rem;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
 
 }
 
 .indicaciones{
 
-    max-width:700px;
-    margin:0 auto 40px;
+    max-width:720px;
+
+    margin:0 auto 35px;
+
     line-height:1.9;
-    font-size:1rem;
 
 }
 
@@ -398,24 +513,30 @@ DRESS CODE
 
 .dress{
 
-    background:var(--marfil);
+    text-align:center;
 
 }
 
 .dress-grid{
 
     display:grid;
+
     grid-template-columns:repeat(2,1fr);
+
     gap:35px;
-    margin-bottom:45px;
+
+    margin-top:45px;
 
 }
 
 .dress-card{
 
-    background:#fff;
+    background:var(--marfil);
+
     border-radius:22px;
+
     overflow:hidden;
+
     box-shadow:var(--sombra);
 
 }
@@ -423,7 +544,9 @@ DRESS CODE
 .dress-card img{
 
     width:100%;
-    aspect-ratio:4/5;
+
+    height:290px;
+
     object-fit:cover;
 
 }
@@ -436,14 +559,15 @@ DRESS CODE
 
 .dress-info h3{
 
-    font-family:'Cormorant Garamond',serif;
-    font-size:2rem;
-    margin-bottom:12px;
     color:var(--verde);
+
+    margin-bottom:12px;
 
 }
 
 .dress-info p{
+
+    color:var(--verde);
 
     line-height:1.8;
 
@@ -451,53 +575,77 @@ DRESS CODE
 
 .nota-novia{
 
-    max-width:700px;
-    margin:0 auto 40px;
-    padding:30px;
-    border:1px solid rgba(47,59,45,.12);
+    margin:45px auto;
+
+    max-width:520px;
+
+    background:var(--marfil);
+
+    color:var(--verde);
+
     border-radius:20px;
-    background:#fff;
-    text-align:center;
+
+    padding:28px;
+
+    box-shadow:var(--sombra);
 
 }
 
 .nota-novia h3{
 
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.8rem;
-    margin-bottom:10px;
+    color:var(--verde);
+
+    margin-bottom:12px;
 
 }
 
 .nota-novia p{
 
-    letter-spacing:2px;
-    font-weight:500;
+    color:var(--verde);
+
+    font-weight:600;
 
 }
 
+/*======================================================
+RECOMENDACIONES
+======================================================*/
+
 .dress-text{
 
-    max-width:760px;
+    max-width:820px;
+
     margin:auto;
 
 }
 
 .dress-text details{
 
-    background:#fff;
+    background:var(--marfil);
+
     border-radius:18px;
+
     padding:22px 28px;
+
     box-shadow:var(--sombra);
 
 }
 
 .dress-text summary{
 
-    cursor:pointer;
     list-style:none;
-    font-weight:500;
-    font-size:1.05rem;
+
+    cursor:pointer;
+
+    color:var(--verde);
+
+    font-size:1.25rem;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
 
 }
 
@@ -507,9 +655,30 @@ DRESS CODE
 
 }
 
+.dress-text summary::before{
+
+    content:"+";
+
+    font-size:1.8rem;
+
+    margin-right:14px;
+
+    transition:.3s;
+
+}
+
+.dress-text details[open] summary::before{
+
+    content:"−";
+
+}
+
 .dress-text p{
 
     margin-top:18px;
+
+    color:var(--verde);
+
     line-height:1.9;
 
 }
@@ -520,7 +689,6 @@ CUENTA REGRESIVA
 
 .contador{
 
-    background:#fff;
     text-align:center;
 
 }
@@ -528,33 +696,47 @@ CUENTA REGRESIVA
 .countdown{
 
     display:flex;
+
     justify-content:center;
-    align-items:center;
-    gap:30px;
+
     flex-wrap:wrap;
+
+    gap:28px;
+
+    margin-top:40px;
 
 }
 
 .count-item{
 
-    width:140px;
-    height:140px;
+    width:125px;
+
+    height:125px;
+
     border-radius:50%;
-    background:var(--verde);
-    color:#fff;
+
+    background:var(--marfil);
+
     display:flex;
+
     flex-direction:column;
-    justify-content:center;
+
     align-items:center;
+
+    justify-content:center;
+
     box-shadow:var(--sombra);
 
 }
 
 .count-item span{
 
-    font-family:'Cormorant Garamond',serif;
-    font-size:3rem;
-    font-weight:600;
+    font-size:2.8rem;
+
+    font-weight:700;
+
+    color:var(--verde);
+
     line-height:1;
 
 }
@@ -562,8 +744,13 @@ CUENTA REGRESIVA
 .count-item small{
 
     margin-top:10px;
-    font-size:.9rem;
-    letter-spacing:2px;
+
+    font-size:.95rem;
+
+    color:var(--verde);
+
+    letter-spacing:1px;
+
     text-transform:uppercase;
 
 }
@@ -574,26 +761,43 @@ PREGUNTAS FRECUENTES
 
 .faq{
 
-    background:var(--marfil);
+    text-align:center;
 
 }
 
 .faq details{
 
-    background:#fff;
+    max-width:850px;
+
+    margin:18px auto;
+
+    background:var(--marfil);
+
     border-radius:18px;
-    margin-bottom:18px;
+
     padding:22px 28px;
+
     box-shadow:var(--sombra);
+
+    text-align:left;
 
 }
 
 .faq summary{
 
-    cursor:pointer;
     list-style:none;
-    font-size:1.05rem;
-    font-weight:500;
+
+    cursor:pointer;
+
+    color:var(--verde);
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
 
 }
 
@@ -603,16 +807,40 @@ PREGUNTAS FRECUENTES
 
 }
 
+.faq summary::before{
+
+    content:"+";
+
+    font-size:2rem;
+
+    width:28px;
+
+    margin-right:14px;
+
+    transition:.3s;
+
+}
+
+.faq details[open] summary::before{
+
+    content:"−";
+
+}
+
 .faq p{
 
     margin-top:18px;
+
+    color:var(--verde);
+
     line-height:1.9;
 
 }
 
-.contacto a{
+.faq a{
 
     color:var(--verde);
+
     font-weight:600;
 
 }
@@ -623,47 +851,65 @@ FINAL
 
 .final{
 
-    background:var(--verde);
-    color:#fff;
     text-align:center;
-    padding:100px 0 70px;
 
 }
 
 .final h2{
 
-    color:#fff;
     margin-bottom:20px;
 
 }
 
 .despedida{
 
-    font-size:1.15rem;
-    margin-bottom:35px;
+    font-size:1.2rem;
+
+    margin-bottom:30px;
 
 }
 
 .avion{
 
-    width:90px;
-    margin:0 auto 35px;
+    width:230px;
 
-}
+    margin:45px auto;
 
-.final h3{
-
-    font-family:'Great Vibes',cursive;
-    font-size:3.6rem;
-    font-weight:400;
-    margin-bottom:10px;
+    animation:volar 5s ease-in-out infinite;
 
 }
 
 .fecha-final{
 
-    letter-spacing:3px;
-    font-size:.95rem;
+    letter-spacing:4px;
+
+    margin-top:12px;
+
+}
+
+/*======================================================
+ANIMACIÓN AVIÓN
+======================================================*/
+
+@keyframes volar{
+
+    0%{
+
+        transform:translateX(-12px);
+
+    }
+
+    50%{
+
+        transform:translateX(12px);
+
+    }
+
+    100%{
+
+        transform:translateX(-12px);
+
+    }
 
 }
 
@@ -673,30 +919,43 @@ CONFIRMACIÓN
 
 .confirmacion{
 
-    background:#fff;
+    text-align:center;
 
 }
 
 .confirmacion-toggle{
 
-    max-width:760px;
-    margin:auto;
+    background:var(--marfil);
+
     border-radius:22px;
-    overflow:hidden;
+
+    max-width:760px;
+
+    margin:auto;
+
     box-shadow:var(--sombra);
+
+    overflow:hidden;
 
 }
 
 .confirmacion-toggle summary{
 
-    background:var(--verde);
-    color:#fff;
-    padding:22px 28px;
-    cursor:pointer;
     list-style:none;
-    text-align:center;
-    font-size:1.15rem;
-    font-weight:500;
+
+    cursor:pointer;
+
+    padding:24px;
+
+    font-size:1.35rem;
+
+    font-weight:600;
+
+    color:var(--verde);
+
+    display:flex;
+
+    align-items:center;
 
 }
 
@@ -706,118 +965,148 @@ CONFIRMACIÓN
 
 }
 
+.confirmacion-toggle summary::before{
+
+    content:"+";
+
+    font-size:2rem;
+
+    width:30px;
+
+    margin-right:14px;
+
+}
+
+.confirmacion-toggle[open] summary::before{
+
+    content:"−";
+
+}
+
 .confirmacion-contenido{
 
-    padding:40px 35px;
+    padding:35px;
 
 }
 
 .confirmacion-texto{
 
-    text-align:center;
-    margin-bottom:35px;
+    color:var(--verde);
+
+    margin-bottom:28px;
+
     line-height:1.9;
 
 }
 
 .campo{
 
-    margin-bottom:28px;
+    margin-bottom:24px;
+
+    text-align:left;
 
 }
 
 .campo label{
 
     display:block;
-    margin-bottom:10px;
-    font-weight:500;
+
+    margin-bottom:8px;
+
+    color:var(--verde);
+
+    font-weight:600;
 
 }
 
 .campo input[type="text"]{
 
     width:100%;
-    padding:14px 18px;
-    border:1px solid rgba(47,59,45,.20);
+
+    padding:15px;
+
     border-radius:12px;
+
+    border:1px solid #d8d0c4;
+
     font-size:1rem;
-    outline:none;
 
 }
 
-.campo input[type="text"]:focus{
+.invitado-grupo{
 
-    border-color:var(--verde);
+    display:flex;
+
+    gap:10px;
+
+}
+
+.eliminar-invitado{
+
+    width:48px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#d9534f;
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+.nota-invitados{
+
+    color:var(--verde);
+
+    font-size:.95rem;
+
+    margin:18px 0 25px;
 
 }
 
 .opciones{
 
     display:flex;
+
     flex-direction:column;
-    gap:14px;
+
+    gap:12px;
 
 }
 
 .opciones label{
 
+    color:var(--verde);
+
     display:flex;
+
     align-items:center;
+
     gap:10px;
-    font-weight:400;
 
-}
-
-#invitados-extra{
-
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-    margin-bottom:20px;
-
-}
-
-.nota-invitados{
-
-    margin:18px 0 30px;
-    font-size:.85rem;
-    color:#666;
-    line-height:1.6;
+    font-weight:500;
 
 }
 
 #btn-confirmar{
 
     width:100%;
+
     margin-top:15px;
-
 }
 
 /*======================================================
-FOOTER
+TABLETS
 ======================================================*/
-
-footer{
-
-    text-align:center;
-    padding:30px 0;
-    background:var(--verde);
-    color:#fff;
-    font-size:.9rem;
-
-}
-
-/*======================================================
-RESPONSIVE
-======================================================*/
-
-/* ---------- Tablets ---------- */
 
 @media (max-width:992px){
 
     section{
 
-        padding:75px 0;
+        padding:75px 20px;
 
     }
 
@@ -827,139 +1116,169 @@ RESPONSIVE
 
     }
 
-    .hero-content h1{
+    .hero h1{
 
-        font-size:5.8rem;
+        font-size:4.4rem;
 
     }
 
-    .hero-content h2{
+    .hero h2{
 
         font-size:1.8rem;
-        letter-spacing:4px;
 
     }
 
     .dress-grid{
 
-        gap:25px;
+        grid-template-columns:1fr;
+        max-width:520px;
+        margin:40px auto 0;
+
+    }
+
+    .foto-finca{
+
+        max-width:430px;
+
+    }
+
+    .count-item{
+
+        width:110px;
+        height:110px;
 
     }
 
 }
 
-/* ---------- Celulares ---------- */
+/*======================================================
+CELULARES
+======================================================*/
 
 @media (max-width:768px){
 
-    .container{
+    section{
 
-        width:min(92%,560px);
+        padding:65px 18px;
 
     }
 
-    section{
+    .container{
 
-        padding:65px 0;
+        width:95%;
 
     }
 
     h2{
 
-        font-size:2.15rem;
-        margin-bottom:40px;
+        font-size:2.2rem;
+        margin-bottom:35px;
 
     }
 
-    /* HERO */
+    h3{
 
-    .hero{
-
-        min-height:100svh;
-        padding:25px;
+        font-size:1.6rem;
 
     }
 
-    .hero-content{
+    p{
 
-        width:100%;
-        max-width:100%;
-
-    }
-
-    .hero-content h1{
-
-        font-size:4.2rem;
-        line-height:.95;
+        font-size:.98rem;
 
     }
 
-    .hero-content h2{
+    /*=====================
+    HERO
+    =====================*/
+
+    .hero h1{
+
+        font-size:3.6rem;
+
+    }
+
+    .hero h2{
 
         font-size:1.35rem;
         letter-spacing:3px;
-        margin-bottom:14px;
 
     }
 
     .fecha{
 
-        font-size:.90rem;
+        font-size:.95rem;
         letter-spacing:2px;
 
     }
 
-    /* MENSAJE */
+    /*=====================
+    MENSAJE
+    =====================*/
 
     .mensaje-texto{
 
-        font-size:1.05rem;
+        font-size:1.08rem;
         line-height:1.9;
 
     }
 
-    /* PROGRAMACIÓN */
+    /*=====================
+    PROGRAMACIÓN
+    =====================*/
 
     .evento{
 
-        grid-template-columns:1fr;
-        gap:8px;
+        gap:18px;
 
     }
 
     .hora{
 
-        text-align:left;
-        font-size:1.3rem;
+        min-width:78px;
+        font-size:1.25rem;
 
     }
 
     .detalle{
 
-        padding-left:22px;
+        padding-left:20px;
 
     }
 
-    /* RECEPCIÓN */
+    /*=====================
+    RECEPCIÓN
+    =====================*/
 
-    .recepcion h3{
+    .foto-finca{
 
-        font-size:1.7rem;
+        width:78%;
+        max-width:320px;
+        border-radius:18px;
 
     }
 
     .direccion,
     .indicaciones{
 
-        font-size:.96rem;
+        font-size:.95rem;
 
     }
 
-    /* DRESS CODE */
+    /*=====================
+    DRESS CODE
+    =====================*/
 
     .dress-grid{
 
-        grid-template-columns:1fr;
+        max-width:340px;
+
+    }
+
+    .dress-card img{
+
+        height:190px;
+        object-fit:cover;
 
     }
 
@@ -969,79 +1288,107 @@ RESPONSIVE
 
     }
 
-    /* CONTADOR */
+    /*=====================
+    CONTADOR
+    =====================*/
 
     .countdown{
 
-        gap:18px;
+        gap:16px;
 
     }
 
     .count-item{
 
-        width:105px;
-        height:105px;
+        width:82px;
+        height:82px;
 
     }
 
     .count-item span{
 
-        font-size:2.2rem;
+        font-size:1.7rem;
 
     }
 
-    /* FAQ */
+    .count-item small{
+
+        font-size:.72rem;
+
+    }
+
+    /*=====================
+    FAQ
+    =====================*/
 
     .faq details{
 
-        padding:18px 20px;
+        padding:18px;
 
     }
 
-    /* FINAL */
+    .faq summary{
 
-    .final h3{
-
-        font-size:3rem;
+        font-size:1rem;
 
     }
 
-    .avion{
-
-        width:70px;
-
-    }
-
-    /* CONFIRMACIÓN */
+    /*=====================
+    CONFIRMACIÓN
+    =====================*/
 
     .confirmacion-contenido{
 
-        padding:28px 22px;
+        padding:22px;
 
     }
 
-    .confirmacion-toggle summary{
+    .invitado-grupo{
 
-        font-size:1.05rem;
+        flex-direction:column;
+
+    }
+
+    .eliminar-invitado{
+
+        width:100%;
+        height:46px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
+
+    /*=====================
+    AVIÓN
+    =====================*/
+
+    .avion{
+
+        width:280px;
 
     }
 
 }
 
-/* ---------- iPhone pequeños ---------- */
+/*======================================================
+IPHONE PEQUEÑOS
+======================================================*/
 
-@media (max-width:480px){
+@media (max-width:390px){
 
-    .hero-content h1{
+    .hero h1{
 
-        font-size:3.2rem;
+        font-size:3rem;
 
     }
 
-    .hero-content h2{
+    .hero h2{
 
-        font-size:1.05rem;
-        letter-spacing:2px;
+        font-size:1.1rem;
 
     }
 
@@ -1053,75 +1400,58 @@ RESPONSIVE
 
     h2{
 
-        font-size:1.9rem;
+        font-size:2rem;
+
+    }
+
+    .foto-finca{
+
+        width:85%;
+        max-width:280px;
+
+    }
+
+    .dress-card img{
+
+        height:170px;
 
     }
 
     .count-item{
 
-        width:88px;
-        height:88px;
+        width:74px;
+        height:74px;
 
     }
 
     .count-item span{
 
-        font-size:1.9rem;
+        font-size:1.45rem;
 
     }
 
     .count-item small{
 
-        font-size:.72rem;
+        font-size:.65rem;
 
     }
 
-    .btn{
+    .avion{
 
-        width:100%;
-
-    }
-
-}
-
-/* ---------- Pantallas muy bajas ---------- */
-
-@media (max-height:650px){
-
-    .hero-content h1{
-
-        font-size:3.8rem;
-
-    }
-
-    .hero-content h2{
-
-        font-size:1.2rem;
-
-    }
-
-    .scroll-down{
-
-        bottom:18px;
+        width:240px;
 
     }
 
 }
 
 /*======================================================
-SEGURIDAD CONTRA OVERFLOW
+CORRECCIONES GENERALES
 ======================================================*/
 
-.hero,
-.hero-content,
-.timeline,
-.dress-grid,
-.countdown,
-.confirmacion,
-.confirmacion-contenido,
-.container{
+html,
+body{
 
-    max-width:100%;
+    overflow-x:hidden;
 
 }
 
@@ -1132,9 +1462,21 @@ img{
 
 }
 
-iframe{
+button,
+input{
 
-    max-width:100%;
-    border:0;
+    font-family:inherit;
+
+}
+
+summary{
+
+    user-select:none;
+
+}
+
+details{
+
+    overflow:hidden;
 
 }
