@@ -229,7 +229,7 @@ Invitados:
 
 ${invitados}
 
-Nos vemos el 05 de diciembre de 2026.`;
+Saludos.`;
 
     const telefono = "50370473421";
 
