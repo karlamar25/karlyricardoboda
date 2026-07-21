@@ -167,7 +167,7 @@ PORTADA
     height:100%;
 
     object-fit:cover;
-    object-position:center center;
+    object-position: center 10%;
 
     animation:kenburns 18s ease-in-out infinite alternate;
 
@@ -1168,7 +1168,7 @@ CELULARES
 
     .hero-content{
 
-        transform:translateY(-70px);
+        transform:translateY(-40px);
 
     }
 
