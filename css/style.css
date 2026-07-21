@@ -167,7 +167,7 @@ PORTADA
     height:100%;
 
     object-fit:cover;
-    object-position: center 10%;
+    object-position: center center;
 
     animation:kenburns 18s ease-in-out infinite alternate;
 
@@ -255,7 +255,7 @@ PORTADA
 
     to{
 
-        transform:scale(1.10);
+        transform:scale(1.05);
 
     }
 
@@ -1321,7 +1321,7 @@ CELULARES
 
     .dress-info h3{
 
-        font-size:1.4rem;
+        font-size:1.7rem;
 
     }
 
@@ -1669,5 +1669,28 @@ iframe{
     max-width:100%;
 
     border:0;
+
+}
+
+@media (min-width:1200px){
+
+.hero-img{
+
+    object-position:center 15%;
+    animation:kenburnsDesktop 18s ease-in-out infinite alternate;
+
+}
+
+}
+
+@keyframes kenburnsDesktop{
+
+    from{
+        transform:scale(.92);
+    }
+
+    to{
+        transform:scale(.98);
+    }
 
 }
