@@ -167,10 +167,18 @@ PORTADA
     height:100%;
 
     object-fit:cover;
-    object-position: center center;
+    object-position:center center;
 
     animation:kenburns 18s ease-in-out infinite alternate;
 
+}
+
+.hero-desktop{
+    display:block;
+}
+
+.hero-mobile{
+    display:none;
 }
 
 .overlay{
@@ -1139,6 +1147,14 @@ CELULARES
         width:min(92%,560px);
 
     }
+
+    .hero-desktop{
+    display:none;
+}
+
+.hero-mobile{
+    display:block;
+}
 
     section{
 
