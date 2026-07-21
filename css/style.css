@@ -42,7 +42,7 @@ html{
 body{
 
     font-family:'Montserrat',sans-serif;
-    background:red;
+    background: var(--verde);
     color:var(--texto-claro);
     line-height:1.8;
     overflow-x:hidden;
@@ -146,7 +146,7 @@ PORTADA
     position:relative;
 
     width:100%;
-    min-height:100svh;
+    min-height:100vh;
     height:100svh;
 
     display:flex;
