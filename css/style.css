@@ -194,7 +194,7 @@ PORTADA
 
     z-index:2;
 
-    color:var(--marfil);
+    color:var(--verde);
 
     width:100%;
 
@@ -232,7 +232,7 @@ PORTADA
 
     letter-spacing:5px;
 
-    color:var(--marfil);
+    color:var(--verde);
 
     margin-bottom:10px;
 
@@ -240,7 +240,7 @@ PORTADA
 
 .fecha{
 
-    color:var(--marfil);
+    color:var(--verde);
 
     font-size:1rem;
 
