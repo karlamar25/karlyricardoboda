@@ -167,7 +167,7 @@ PORTADA
     height:100%;
 
     object-fit:cover;
-    object-position: center 35%;
+    object-position: center center;
 
     animation:kenburns 18s ease-in-out infinite alternate;
 
@@ -255,7 +255,7 @@ PORTADA
 
     to{
 
-        transform:scale(1.04);
+        transform:scale(1.10);
 
     }
 
