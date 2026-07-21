@@ -229,7 +229,7 @@ Invitados:
 
 ${invitados}
 
-Saludos.`;
+Saludos, nos vemos pronto.`;
 
     const telefono = "50370473421";
 
