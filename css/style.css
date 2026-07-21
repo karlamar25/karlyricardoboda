@@ -1165,13 +1165,13 @@ CELULARES
 
    .hero-content{
 
-    transform:translateY(-200px) !important;
+    transform:translateY(-190px) !important;
 
 }
 
     .hero-content h1{
 
-        font-size:3.6rem;
+        font-size:3.9rem;
 
         line-height:1;
 
@@ -1514,7 +1514,7 @@ IPHONES PEQUEÑOS
 
     .hero-content h1{
 
-        font-size:3rem;
+        font-size:3.3rem;
         line-height:1;
         white-space:nowrap;
         margin-bottom:10px;
