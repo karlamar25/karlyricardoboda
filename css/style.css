@@ -1671,26 +1671,3 @@ iframe{
     border:0;
 
 }
-
-@media (min-width:1200px){
-
-.hero-img{
-
-    object-position:center 15%;
-    animation:kenburnsDesktop 18s ease-in-out infinite alternate;
-
-}
-
-}
-
-@keyframes kenburnsDesktop{
-
-    from{
-        transform:scale(.92);
-    }
-
-    to{
-        transform:scale(.98);
-    }
-
-}
