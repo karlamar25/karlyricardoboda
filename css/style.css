@@ -937,7 +937,7 @@ CONFIRMACIÓN
 
     color:var(--verde);
 
-     padding:20px 24px;
+    padding:20px 24px;
 
     cursor:pointer;
 
@@ -969,13 +969,41 @@ CONFIRMACIÓN
 
     line-height:1.9;
 
-    margin-bottom:35px;
+    margin-bottom:25px;
 
 }
 
+/*=============================
+NOTA IMPORTANTE
+=============================*/
+
+.nota-invitados{
+
+    margin:0 0 30px;
+
+    padding:16px 20px;
+
+    background:#F8F4EC;
+
+    border-left:5px solid var(--verde);
+
+    border-radius:12px;
+
+    color:#666;
+
+    font-size:.92rem;
+
+    line-height:1.7;
+
+}
+
+/*=============================
+CAMPOS
+=============================*/
+
 .campo{
 
-    margin-bottom:25px;
+    margin-bottom:28px;
 
 }
 
@@ -995,7 +1023,7 @@ CONFIRMACIÓN
 
     width:100%;
 
-    padding:14px 18px;
+    padding:15px 18px;
 
     border:1px solid rgba(47,59,45,.20);
 
@@ -1005,33 +1033,15 @@ CONFIRMACIÓN
 
     font-size:1rem;
 
+    transition:.25s;
+
 }
 
 .campo input[type="text"]:focus{
 
     border-color:var(--verde);
 
-}
-
-.opciones{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:14px;
-
-    color:var(--verde);
-
-}
-
-.opciones label{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
+    box-shadow:0 0 0 3px rgba(47,59,45,.08);
 
 }
 
@@ -1047,23 +1057,109 @@ CONFIRMACIÓN
 
 }
 
-.nota-invitados{
+/*=============================
+AGREGAR INVITADO
+=============================*/
 
-    margin:18px 0 30px;
+.btn-agregar{
 
-    color:#666;
+    width:100%;
 
-    font-size:.85rem;
+    padding:16px;
 
-    line-height:1.6;
+    margin-bottom:35px;
+
+    background:#fff;
+
+    border:2px dashed var(--verde);
+
+    border-radius:14px;
+
+    color:var(--verde);
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s;
 
 }
+
+.btn-agregar:hover{
+
+    background:#f6f6f6;
+
+    transform:translateY(-2px);
+
+}
+
+/*=============================
+OPCIONES
+=============================*/
+
+.opciones{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    color:var(--verde);
+
+}
+
+.opciones label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+/*=============================
+BOTÓN ENVIAR
+=============================*/
 
 #btn-confirmar{
 
     width:100%;
 
-    margin-top:15px;
+    margin-top:18px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--verde);
+
+    color:#fff;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+#btn-confirmar:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.92;
 
 }
 
