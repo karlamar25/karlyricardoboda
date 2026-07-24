@@ -110,3 +110,21 @@ function verificarEventoFinalizado() {
 }
 
 verificarEventoFinalizado();
+
+/*======================================================
+CONFIRMACIÓN
+======================================================*/
+
+const botonConfirmacion = document.getElementById("toggle-confirmacion");
+
+const panelConfirmacion = document.getElementById("panel-confirmacion");
+
+if (botonConfirmacion && panelConfirmacion){
+
+    botonConfirmacion.addEventListener("click",()=>{
+
+        panelConfirmacion.classList.toggle("abierto");
+
+    });
+
+}
