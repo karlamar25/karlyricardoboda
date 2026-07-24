@@ -45,7 +45,6 @@ function updateCountdown() {
 
     }
 
-    // Calcular días, horas, minutos y segundos
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
     const hours = Math.floor(
@@ -165,7 +164,7 @@ function renumerar() {
 }
 
 /*======================================================
-BOTÓN AGREGAR INVITADO
+BOTÓN AGREGAR
 ======================================================*/
 
 function actualizarBoton() {
@@ -187,25 +186,12 @@ form.addEventListener("submit", function (e) {
     if (nombre === "") {
 
         alert("Por favor escribe tu nombre.");
+
         nombrePrincipal.focus();
-        return;
-
-    }
-
-    // Verificar que haya seleccionado una respuesta
-    const respuestaSeleccionada = document.querySelector(
-        'input[name="respuesta"]:checked'
-    );
-
-    if (!respuestaSeleccionada) {
-
-        alert("Por favor selecciona si asistirás o no.");
 
         return;
 
     }
-
-    const respuesta = respuestaSeleccionada.value;
 
     let invitados = `1. ${nombre}`;
 
@@ -223,13 +209,11 @@ form.addEventListener("submit", function (e) {
 
 Quiero confirmar mi asistencia a su boda.
 
-${respuesta}
-
 Invitados:
 
 ${invitados}
 
-Saludos, nos vemos pronto.`;
+¡Nos vemos pronto!`;
 
     const telefono = "50370473421";
 
@@ -237,8 +221,6 @@ Saludos, nos vemos pronto.`;
         `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`,
         "_blank"
     );
-
-    // Limpiar formulario
 
     form.reset();
 
@@ -256,4 +238,4 @@ Saludos, nos vemos pronto.`;
 INICIO
 ======================================================*/
 
-actualizarBoton();
+actualizarBoton();;

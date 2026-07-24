@@ -638,12 +638,6 @@ CONFIRMACIÓN
 
                     </p>
 
-                    <p class="nota-invitados">
-
-                        <strong>Importante:</strong> Agrega únicamente a las personas incluidas en tu invitación.
-
-                    </p>
-
                     <div class="campo">
 
                         <label for="nombre">
@@ -655,65 +649,36 @@ CONFIRMACIÓN
                         <input
                             type="text"
                             id="nombre"
-                            placeholder="Escribe tu nombre "
+                            placeholder="Escribe tu nombre"
                             required>
 
                     </div>
+
+                    <p class="nota-invitados">
+
+                        👥 <strong>¿Tu invitación incluye más personas?</strong><br>
+
+                        Agrega únicamente a los invitados incluidos en tu invitación.
+
+                    </p>
 
                     <div id="invitados-extra"></div>
 
                     <button
                         type="button"
-                        id="Agregar otro invitado incluido en mi reservación"
+                        id="agregar-invitado"
                         class="btn-agregar">
 
-                        + Agregar invitado
+                        ➕ Agregar invitado de tu invitación
 
                     </button>
-
-                    <div class="campo">
-
-                        <label>
-
-                            ¿Podrán acompañarnos?
-
-                        </label>
-
-                        <div class="opciones">
-
-                            <label>
-
-                                <input
-                                    type="radio"
-                                    name="respuesta"
-                                    value="Con mucho gusto asistiremos."
-                                    checked>
-
-                                Con mucho gusto asistiremos
-
-                            </label>
-
-                            <label>
-
-                                <input
-                                    type="radio"
-                                    name="respuesta"
-                                    value="Lamentablemente no podremos asistir.">
-
-                                Lamentablemente no podremos asistir
-
-                            </label>
-
-                        </div>
-
-                    </div>
 
                     <button
                         type="submit"
                         id="btn-confirmar"
                         class="btn">
 
-                        Enviar confirmación
+                        Confirmar asistencia
 
                     </button>
 

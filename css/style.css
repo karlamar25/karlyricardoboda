@@ -947,6 +947,14 @@ CONFIRMACIÓN
 
     font-weight:500;
 
+    transition:.3s;
+
+}
+
+.confirmacion-toggle summary:hover{
+
+    background:#f6f3ec;
+
 }
 
 .confirmacion-toggle summary::-webkit-details-marker{
@@ -969,19 +977,21 @@ CONFIRMACIÓN
 
     line-height:1.9;
 
-    margin-bottom:25px;
+    margin-bottom:35px;
+
+    font-size:1rem;
 
 }
 
 /*=============================
-NOTA IMPORTANTE
+NOTA
 =============================*/
 
 .nota-invitados{
 
     margin:0 0 30px;
 
-    padding:16px 20px;
+    padding:18px 20px;
 
     background:#F8F4EC;
 
@@ -1003,7 +1013,7 @@ CAMPOS
 
 .campo{
 
-    margin-bottom:28px;
+    margin-bottom:30px;
 
 }
 
@@ -1045,6 +1055,10 @@ CAMPOS
 
 }
 
+/*=============================
+INVITADOS
+=============================*/
+
 #invitados-extra{
 
     display:flex;
@@ -1053,12 +1067,54 @@ CAMPOS
 
     gap:18px;
 
-    margin-bottom:20px;
+    margin-bottom:22px;
+
+}
+
+.invitado-grupo{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+}
+
+.nombre-extra{
+
+    flex:1;
+
+}
+
+.eliminar-invitado{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#d9534f;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.eliminar-invitado:hover{
+
+    background:#c9302c;
 
 }
 
 /*=============================
-AGREGAR INVITADO
+BOTÓN AGREGAR
 =============================*/
 
 .btn-agregar{
@@ -1067,7 +1123,7 @@ AGREGAR INVITADO
 
     padding:16px;
 
-    margin-bottom:35px;
+    margin-bottom:30px;
 
     background:#fff;
 
@@ -1098,40 +1154,12 @@ AGREGAR INVITADO
 }
 
 /*=============================
-OPCIONES
-=============================*/
-
-.opciones{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:16px;
-
-    color:var(--verde);
-
-}
-
-.opciones label{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-}
-
-/*=============================
-BOTÓN ENVIAR
+BOTÓN CONFIRMAR
 =============================*/
 
 #btn-confirmar{
 
     width:100%;
-
-    margin-top:18px;
 
     padding:16px;
 
@@ -1157,9 +1185,9 @@ BOTÓN ENVIAR
 
 #btn-confirmar:hover{
 
-    transform:translateY(-2px);
-
     opacity:.92;
+
+    transform:translateY(-2px);
 
 }
 
