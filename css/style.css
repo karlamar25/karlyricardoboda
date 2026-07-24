@@ -908,6 +908,7 @@ CONFIRMACIÓN
 .confirmacion{
 
     background:var(--verde);
+
     text-align:center;
 
 }
@@ -918,11 +919,41 @@ CONFIRMACIÓN
 
     margin:0 auto;
 
+    background:var(--marfil);
+
+    border-radius:20px;
+
+    box-shadow:var(--sombra);
+
+    overflow:hidden;
+
 }
 
 .confirmacion-toggle summary{
 
     list-style:none;
+
+    cursor:pointer;
+
+    padding:18px 30px;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.35rem;
+
+    font-weight:600;
+
+    color:var(--verde);
+
+    transition:.30s;
+
+}
+
+.confirmacion-toggle summary:hover{
+
+    background:rgba(0,0,0,.03);
 
 }
 
@@ -932,51 +963,9 @@ CONFIRMACIÓN
 
 }
 
-.btn-confirmacion{
+.confirmacion-contenido{
 
-    display:block;
-
-    width:100%;
-
-    padding:18px 30px;
-
-    background:var(--marfil);
-
-    color:var(--verde);
-
-    border-radius:20px;
-
-    cursor:pointer;
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:1.2rem;
-
-    font-weight:600;
-
-    box-shadow:var(--sombra);
-
-    transition:.30s;
-
-}
-
-.btn-confirmacion:hover{
-
-    transform:translateY(-2px);
-
-}
-
-.panel-confirmacion{
-
-    margin-top:20px;
-
-    background:var(--marfil);
-
-    border-radius:20px;
-
-    padding:30px;
-
-    box-shadow:var(--sombra);
+    padding:0 30px 30px;
 
 }
 
@@ -988,6 +977,10 @@ CONFIRMACIÓN
 
     margin-bottom:28px;
 
+    text-align:center;
+
+    font-size:1rem;
+
 }
 
 .btn-whatsapp{
@@ -998,7 +991,7 @@ CONFIRMACIÓN
 
     gap:8px;
 
-    padding:12px 24px;
+    padding:12px 22px;
 
     background:#25D366;
 
@@ -1020,11 +1013,57 @@ CONFIRMACIÓN
 
     transform:translateY(-2px);
 
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
 }
 
 .btn-whatsapp i{
 
     font-size:1rem;
+
+}
+
+/*======================================================
+MÓVIL
+======================================================*/
+
+@media (max-width:768px){
+
+    .confirmacion-toggle{
+
+        max-width:290px;
+
+    }
+
+    .confirmacion-toggle summary{
+
+        font-size:1.15rem;
+
+        padding:16px 20px;
+
+    }
+
+    .confirmacion-contenido{
+
+        padding:0 22px 22px;
+
+    }
+
+    .confirmacion-texto{
+
+        font-size:.92rem;
+
+        line-height:1.7;
+
+    }
+
+    .btn-whatsapp{
+
+        padding:10px 18px;
+
+        font-size:.82rem;
+
+    }
 
 }
 
