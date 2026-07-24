@@ -71,171 +71,42 @@ updateCountdown();
 const countdownInterval = setInterval(updateCountdown, 1000);
 
 /*======================================================
-FORMULARIO
+EVENTO FINALIZADO
 ======================================================*/
 
-const form = document.getElementById("rsvp-form");
-const nombrePrincipal = document.getElementById("nombre");
-const invitadosExtra = document.getElementById("invitados-extra");
-const botonAgregar = document.getElementById("agregar-invitado");
+const botonWhatsapp = document.querySelector(".btn-whatsapp");
 
-const MAX_INVITADOS = 4;
+function verificarEventoFinalizado() {
 
-let invitadosAgregados = 0;
+    if (!botonWhatsapp) return;
 
-/*======================================================
-AGREGAR INVITADOS
-======================================================*/
+    const ahora = new Date().getTime();
 
-botonAgregar.addEventListener("click", () => {
+    if (ahora >= weddingDate) {
 
-    if (invitadosAgregados >= MAX_INVITADOS - 1) {
+        botonWhatsapp.removeAttribute("href");
 
-        alert("Solo puedes agregar hasta 4 invitados en total.");
-        return;
+        botonWhatsapp.removeAttribute("target");
+
+        botonWhatsapp.style.background = "#7A7A7A";
+
+        botonWhatsapp.innerHTML = `
+            <i class="fa-solid fa-heart"></i>
+            Evento finalizado
+        `;
+
+        botonWhatsapp.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            alert(
+                "Nuestra boda ya se celebró.\n\n¡Gracias por visitar nuestra invitación! ❤️"
+            );
+
+        });
 
     }
 
-    invitadosAgregados++;
-
-    const numero = invitadosAgregados + 1;
-
-    const bloque = document.createElement("div");
-
-    bloque.className = "campo invitado-extra";
-
-    bloque.innerHTML = `
-
-        <label>Invitado ${numero}</label>
-
-        <div class="invitado-grupo">
-
-            <input
-                type="text"
-                class="nombre-extra"
-                placeholder="Nombre y apellido">
-
-            <button
-                type="button"
-                class="eliminar-invitado">
-
-                <i class="fa-solid fa-trash"></i>
-
-            </button>
-
-        </div>
-
-    `;
-
-    invitadosExtra.appendChild(bloque);
-
-    actualizarBoton();
-
-});
-
-/*======================================================
-ELIMINAR INVITADOS
-======================================================*/
-
-invitadosExtra.addEventListener("click", (e) => {
-
-    const boton = e.target.closest(".eliminar-invitado");
-
-    if (!boton) return;
-
-    boton.closest(".invitado-extra").remove();
-
-    invitadosAgregados--;
-
-    renumerar();
-
-    actualizarBoton();
-
-});
-
-function renumerar() {
-
-    document.querySelectorAll(".invitado-extra").forEach((item, index) => {
-
-        item.querySelector("label").textContent = `Invitado ${index + 2}`;
-
-    });
-
 }
 
-/*======================================================
-BOTÓN AGREGAR
-======================================================*/
-
-function actualizarBoton() {
-
-    botonAgregar.disabled = invitadosAgregados >= MAX_INVITADOS - 1;
-
-}
-
-/*======================================================
-WHATSAPP
-======================================================*/
-
-form.addEventListener("submit", function (e) {
-
-    e.preventDefault();
-
-    const nombre = nombrePrincipal.value.trim();
-
-    if (nombre === "") {
-
-        alert("Por favor escribe tu nombre.");
-
-        nombrePrincipal.focus();
-
-        return;
-
-    }
-
-    let invitados = `1. ${nombre}`;
-
-    document.querySelectorAll(".nombre-extra").forEach((input, index) => {
-
-        if (input.value.trim() !== "") {
-
-            invitados += `\n${index + 2}. ${input.value.trim()}`;
-
-        }
-
-    });
-
-    const mensaje = `Hola Karla y Ricardo.
-
-Quiero confirmar mi asistencia a su boda.
-
-Invitados:
-
-${invitados}
-
-¡Nos vemos pronto!`;
-
-    const telefono = "50370473421";
-
-    window.open(
-        `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`,
-        "_blank"
-    );
-
-    form.reset();
-
-    invitadosExtra.innerHTML = "";
-
-    invitadosAgregados = 0;
-
-    actualizarBoton();
-
-    nombrePrincipal.focus();
-
-});
-
-/*======================================================
-INICIO
-======================================================*/
-
-actualizarBoton();;
+verificarEventoFinalizado();

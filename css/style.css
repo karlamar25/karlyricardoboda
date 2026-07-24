@@ -908,286 +908,57 @@ CONFIRMACIÓN
 .confirmacion{
 
     background:var(--verde);
+    text-align:center;
 
 }
 
-.confirmacion-toggle{
+.confirmacion .section-title{
 
-    max-width:760px;
-
-    margin:auto;
-
-    background:var(--marfil);
-
-    border-radius:24px;
-
-    overflow:hidden;
-
-    box-shadow:var(--sombra);
-
-}
-
-.confirmacion-toggle summary{
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:var(--marfil);
-
-    color:var(--verde);
-
-    padding:20px 24px;
-
-    cursor:pointer;
-
-    list-style:none;
-
-    font-size:1.15rem;
-
-    font-weight:500;
-
-    transition:.3s;
-
-}
-
-.confirmacion-toggle summary:hover{
-
-    background:#f6f3ec;
-
-}
-
-.confirmacion-toggle summary::-webkit-details-marker{
-
-    display:none;
-
-}
-
-.confirmacion-contenido{
-
-    padding:35px;
+    color:#fff;
 
 }
 
 .confirmacion-texto{
 
-    color:var(--verde);
-
-    text-align:center;
-
-    line-height:1.9;
-
-    margin-bottom:35px;
-
-    font-size:1rem;
+    max-width:650px;
+    margin:20px auto 40px;
+    color:#fff;
+    line-height:1.8;
 
 }
 
-/*=============================
-NOTA
-=============================*/
+.btn-whatsapp{
 
-.nota-invitados{
-
-    margin:0 0 30px;
-
-    padding:18px 20px;
-
-    background:#F8F4EC;
-
-    border-left:5px solid var(--verde);
-
-    border-radius:12px;
-
-    color:#666;
-
-    font-size:.92rem;
-
-    line-height:1.7;
-
-}
-
-/*=============================
-CAMPOS
-=============================*/
-
-.campo{
-
-    margin-bottom:30px;
-
-}
-
-.campo label{
-
-    display:block;
-
-    color:var(--verde);
-
-    margin-bottom:10px;
-
-    font-weight:500;
-
-}
-
-.campo input[type="text"]{
-
-    width:100%;
-
-    padding:15px 18px;
-
-    border:1px solid rgba(47,59,45,.20);
-
-    border-radius:12px;
-
-    outline:none;
-
-    font-size:1rem;
-
-    transition:.25s;
-
-}
-
-.campo input[type="text"]:focus{
-
-    border-color:var(--verde);
-
-    box-shadow:0 0 0 3px rgba(47,59,45,.08);
-
-}
-
-/*=============================
-INVITADOS
-=============================*/
-
-#invitados-extra{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
-
-    margin-bottom:22px;
-
-}
-
-.invitado-grupo{
-
-    display:flex;
-
-    gap:10px;
-
+    display:inline-flex;
     align-items:center;
+    justify-content:center;
+    gap:12px;
 
-}
+    padding:18px 40px;
 
-.nombre-extra{
-
-    flex:1;
-
-}
-
-.eliminar-invitado{
-
-    width:48px;
-
-    height:48px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:#d9534f;
-
+    background:#25D366;
     color:#fff;
 
-    cursor:pointer;
+    text-decoration:none;
 
-    transition:.25s;
-
-}
-
-.eliminar-invitado:hover{
-
-    background:#c9302c;
-
-}
-
-/*=============================
-BOTÓN AGREGAR
-=============================*/
-
-.btn-agregar{
-
-    width:100%;
-
-    padding:16px;
-
-    margin-bottom:30px;
-
-    background:#fff;
-
-    border:2px dashed var(--verde);
-
-    border-radius:14px;
-
-    color:var(--verde);
-
-    font-family:'Montserrat',sans-serif;
-
-    font-size:.95rem;
+    border-radius:50px;
 
     font-weight:600;
 
-    cursor:pointer;
-
-    transition:.30s;
+    transition:.3s;
 
 }
 
-.btn-agregar:hover{
+.btn-whatsapp:hover{
 
-    background:#f6f6f6;
-
-    transform:translateY(-2px);
-
-}
-
-/*=============================
-BOTÓN CONFIRMAR
-=============================*/
-
-#btn-confirmar{
-
-    width:100%;
-
-    padding:16px;
-
-    border:none;
-
-    border-radius:14px;
-
-    background:var(--verde);
-
-    color:#fff;
-
-    font-family:'Montserrat',sans-serif;
-
-    font-size:1rem;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.30s;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
 
 }
 
-#btn-confirmar:hover{
+.btn-whatsapp i{
 
-    opacity:.92;
-
-    transform:translateY(-2px);
+    font-size:1.2rem;
 
 }
 
