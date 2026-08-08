@@ -576,6 +576,8 @@ PROGRAMACIÓN · AJUSTE PC
         width:600px;
 
         margin:0 auto;
+       
+        transform:translateX(50px);
 
     }
 
