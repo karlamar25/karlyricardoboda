@@ -493,7 +493,7 @@ PROGRAMACIÓN
 
 .timeline{
 
-    max-width:850px;
+    width:min(100%,760px);
 
     margin:0 auto;
 
@@ -503,7 +503,7 @@ PROGRAMACIÓN
 
     display:grid;
 
-    grid-template-columns:110px 20px 1fr;
+    grid-template-columns:125px 30px 1fr;
 
     align-items:center;
 
