@@ -295,6 +295,48 @@ AJUSTE PORTADA - PC
 }
 
 /*======================================================
+PORTADA - TEXTO A LA IZQUIERDA EN PC
+======================================================*/
+
+@media (min-width:769px){
+
+    .hero-content{
+
+        width:100%;
+
+        align-items:flex-start;
+
+        text-align:left;
+
+        padding-left:8%;
+
+        padding-right:20px;
+
+        transform:translateY(-90px);
+
+    }
+
+    .hero-content h1{
+
+        text-align:left;
+
+    }
+
+    .hero-content h2{
+
+        text-align:left;
+
+    }
+
+    .fecha{
+
+        text-align:left;
+
+    }
+
+}
+
+/*======================================================
 MENSAJE
 ======================================================*/
 
