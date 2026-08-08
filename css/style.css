@@ -137,9 +137,9 @@ BOTONES
 
 }
 
-/*======================================================
-PORTADA
-======================================================*/
+/*======================================================*
+*PORTADA*
+*======================================================*/
 
 .hero{
 
@@ -172,11 +172,15 @@ PORTADA
 }
 
 .hero-desktop{
+
     display:block;
+
 }
 
 .hero-mobile{
+
     display:none;
+
 }
 
 .overlay{
@@ -280,22 +284,9 @@ PORTADA
 
 }
 
-/*======================================================
-AJUSTE PORTADA - PC
-======================================================*/
 
-@media (min-width:769px){
-
-    .hero-content{
-
-        transform:translateY(-310px);
-
-    }
-
-}
-
-/*======================================================
-PORTADA - TEXTO A LA IZQUIERDA EN PC
+/*======================================================*
+*PORTADA - PC
 ======================================================*/
 
 @media (min-width:769px){
@@ -308,7 +299,7 @@ PORTADA - TEXTO A LA IZQUIERDA EN PC
 
         text-align:left;
 
-        padding-left:8%;
+        padding-left:7%;
 
         padding-right:20px;
 
@@ -316,18 +307,8 @@ PORTADA - TEXTO A LA IZQUIERDA EN PC
 
     }
 
-    .hero-content h1{
-
-        text-align:left;
-
-    }
-
-    .hero-content h2{
-
-        text-align:left;
-
-    }
-
+    .hero-content h1,
+    .hero-content h2,
     .fecha{
 
         text-align:left;
