@@ -491,26 +491,11 @@ CUENTA REGRESIVA
 PROGRAMACIÓN
 ======================================================*/
 
-.programacion{
-
-    background:var(--verde);
-
-    padding-top:15px;
-    padding-bottom:90px;
-
-}
-
 .timeline{
 
-    max-width:760px;
+    max-width:850px;
 
-    margin:auto;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:28px;
+    margin:0 auto;
 
 }
 
@@ -518,21 +503,13 @@ PROGRAMACIÓN
 
     display:grid;
 
-    grid-template-columns:135px 1fr;
-
-    gap:24px;
+    grid-template-columns:110px 20px 1fr;
 
     align-items:center;
 
-    padding-bottom:22px;
+    min-height:75px;
 
-    border-bottom:1px solid rgba(248,244,236,.15);
-
-}
-
-.evento:last-child{
-
-    border-bottom:none;
+    position:relative;
 
 }
 
@@ -540,19 +517,39 @@ PROGRAMACIÓN
 
     font-family:'Montserrat',sans-serif;
 
-    font-size:1rem;
+    font-size:.85rem;
 
-    font-weight:500;
+    letter-spacing:1px;
 
-    letter-spacing:.3px;
+    text-align:right;
+
+    color:var(--marfil);
+
+    padding-right:12px;
+
+}
+
+.punto{
+
+    width:9px;
+
+    height:9px;
+
+    border-radius:50%;
+
+    background:var(--marfil);
+
+    position:relative;
+
+    z-index:2;
 
 }
 
 .detalle{
 
-    position:relative;
+    padding-left:14px;
 
-    padding-left:0;
+    text-align:left;
 
 }
 
@@ -560,11 +557,36 @@ PROGRAMACIÓN
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.55rem;
+    font-size:1.45rem;
 
-    font-weight:400;
+    color:var(--marfil);
 
-    letter-spacing:.2px;
+    margin:0;
+
+}
+
+
+/*======================================================
+LÍNEA VERTICAL
+======================================================*/
+
+.evento:not(:last-child) .punto::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:9px;
+
+    left:50%;
+
+    width:1px;
+
+    height:75px;
+
+    background:rgba(248,244,236,.45);
+
+    transform:translateX(-50%);
 
 }
 
@@ -1629,39 +1651,75 @@ CELULARES
 
     }
 
-    /*==================================================*
-    *PROGRAMACIÓN*
-    *==================================================*/
+    /*======================================================
+    PROGRAMACIÓN · CELULAR
+    ======================================================*/
+
+    @media (max-width:768px){
+
+    .timeline{
+
+        width:100%;
+
+        margin:0 auto;
+
+    }
 
     .evento{
 
-    grid-template-columns:110px 1fr;
+        grid-template-columns:72px 20px 1fr;
 
-    gap:20px;
-
-    align-items:center;
+        min-height:78px;
 
     }
 
     .hora{
 
-    font-size:1rem;
+        font-size:.72rem;
 
-    text-align:left;
+        letter-spacing:.5px;
+
+        text-align:right;
+
+        padding-right:10px;
+
+        white-space:nowrap;
 
     }
 
-    .actividad{
+    .punto{
 
-    font-size:1.45rem;
+        width:8px;
+
+        height:8px;
+
+    }
+
+    .evento:not(:last-child) .punto::after{
+
+        top:8px;
+
+        height:78px;
 
     }
 
     .detalle{
 
-    padding-left:0;
+        padding-left:12px;
 
-    text-align:left;
+        text-align:left;
+
+    }
+
+    .actividad{
+
+        font-size:1.22rem;
+
+        line-height:1.15;
+
+        text-align:left;
+
+    }
 
 }
 
