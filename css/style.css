@@ -429,6 +429,65 @@ AGREGAR AL CALENDARIO
 }
 
 /*======================================================
+CUENTA REGRESIVA
+======================================================*/
+
+.contador{
+
+    background:var(--verde);
+    text-align:center;
+
+}
+
+.countdown{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+
+}
+
+.count-item{
+
+    width:140px;
+    height:140px;
+
+    border-radius:50%;
+
+    background:var(--marfil);
+
+    color:var(--verde);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:var(--sombra);
+
+}
+
+.count-item span{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
+    font-weight:600;
+    line-height:1;
+
+}
+
+.count-item small{
+
+    margin-top:10px;
+    font-size:.9rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+}
+
+/*======================================================
 PROGRAMACIÓN
 ======================================================*/
 
@@ -969,65 +1028,6 @@ DRESS CODE
     padding:24px 28px;
 
     line-height:1.9;
-
-}
-
-/*======================================================
-CUENTA REGRESIVA
-======================================================*/
-
-.contador{
-
-    background:var(--verde);
-    text-align:center;
-
-}
-
-.countdown{
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:30px;
-    flex-wrap:wrap;
-
-}
-
-.count-item{
-
-    width:140px;
-    height:140px;
-
-    border-radius:50%;
-
-    background:var(--marfil);
-
-    color:var(--verde);
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    box-shadow:var(--sombra);
-
-}
-
-.count-item span{
-
-    font-family:'Cormorant Garamond',serif;
-    font-size:3rem;
-    font-weight:600;
-    line-height:1;
-
-}
-
-.count-item small{
-
-    margin-top:10px;
-    font-size:.9rem;
-    letter-spacing:2px;
-    text-transform:uppercase;
 
 }
 
@@ -1588,6 +1588,48 @@ CELULARES
 }
 
     /*==================================================
+    CUENTA REGRESIVA
+    ==================================================*/
+
+    .countdown{
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        flex-wrap:nowrap;
+
+        gap:8px;
+
+    }
+
+    .count-item{
+
+        width:78px;
+
+        height:78px;
+
+        flex:0 0 auto;
+
+    }
+
+    .count-item span{
+
+        font-size:1.8rem;
+
+    }
+
+    .count-item small{
+
+        font-size:.60rem;
+
+        letter-spacing:1px;
+
+    }
+
+    /*==================================================
     PROGRAMACIÓN
     ==================================================*/
 
@@ -1733,49 +1775,9 @@ CELULARES
 
     }
 
+    
+
     /*==================================================
-    CUENTA REGRESIVA
-    ==================================================*/
-
-    .countdown{
-
-        display:flex;
-
-        justify-content:space-between;
-
-        align-items:center;
-
-        flex-wrap:nowrap;
-
-        gap:8px;
-
-    }
-
-    .count-item{
-
-        width:78px;
-
-        height:78px;
-
-        flex:0 0 auto;
-
-    }
-
-    .count-item span{
-
-        font-size:1.8rem;
-
-    }
-
-    .count-item small{
-
-        font-size:.60rem;
-
-        letter-spacing:1px;
-
-    }
-
-        /*==================================================
     PREGUNTAS FRECUENTES
     ==================================================*/
 
