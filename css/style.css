@@ -1481,29 +1481,31 @@ CELULARES
 
 }
 
-    /*======================================================
+/*======================================================
 AGREGAR AL CALENDARIO
 ======================================================*/
 
 .calendario-boda{
 
+    width:100%;
+
     text-align:center;
 
-    margin-top:32px;
+    margin-top:32px;   
 
 }
 
 .fecha-evento{
 
-    color:var(--verde);
+    color:var(--marfil);
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:1.15rem;
+    font-size:1rem;
 
     letter-spacing:3px;
 
-    margin-bottom:16px;
+    margin-bottom:0 0 16px;
 
 }
 
@@ -1519,13 +1521,13 @@ AGREGAR AL CALENDARIO
 
     padding:10px 20px;
 
-    border:1px solid var(--verde);
+    border:1px solid var(--marfil);
 
     border-radius:30px;
 
     background:transparent;
 
-    color:var(--verde);
+    color:var(--marfil);
 
     font-family:'Montserrat',sans-serif;
 
@@ -1541,9 +1543,9 @@ AGREGAR AL CALENDARIO
 
 .btn-calendario:hover{
 
-    background:var(--verde);
+    background:var(--marfil);
 
-    color:var(--marfil);
+    color:var(--verde);
 
 }
 
@@ -1562,12 +1564,10 @@ CALENDARIO - CELULAR
 
     .fecha-evento{
 
-        font-size:1rem;
+        font-size:9rem;
 
         letter-spacing:2px;
-
-        margin-bottom:14px;
-
+        
     }
 
     .btn-calendario{
