@@ -1457,6 +1457,12 @@ CELULARES
     MENSAJE
     ==================================================*/
 
+    .mensaje{
+
+    padding-top:80px;
+
+    }
+    
     .mensaje h2{
 
         font-size:1.60rem;
