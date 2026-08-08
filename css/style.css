@@ -355,6 +355,80 @@ MENSAJE
 }
 
 /*======================================================
+AGREGAR AL CALENDARIO
+======================================================*/
+
+.calendario{
+
+    background:var(--verde);
+
+    text-align:center;
+
+    padding:35px 0 50px;
+
+}
+
+.fecha-evento{
+
+    color:var(--marfil);
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:.9rem;
+
+    letter-spacing:3px;
+
+    margin:0 0 16px;
+
+}
+
+.btn-calendario{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:10px 20px;
+
+    border:1px solid var(--marfil);
+
+    border-radius:30px;
+
+    background:transparent;
+
+    color:var(--marfil);
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:.75rem;
+
+    font-weight:500;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    transition:.3s;
+
+}
+
+.btn-calendario:hover{
+
+    background:var(--marfil);
+
+    color:var(--verde);
+
+}
+
+/*======================================================
 PROGRAMACIÓN
 ======================================================*/
 
@@ -1481,120 +1555,29 @@ CELULARES
 
 }
 
-/*======================================================
-AGREGAR AL CALENDARIO
-======================================================*/
+    /*======================================================
+    CALENDARIO - CELULAR
+    ======================================================*/
 
-.mensaje .calendario-boda{
+    @media (max-width:768px){
 
-    width:100%;
+    .calendario{
 
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    margin:30px auto 10px;
-
-}
-
-.mensaje .fecha-evento{
-
-    display:block;
-
-    width:100%;
-
-    margin:0 0 15px;
-
-    text-align:center;
-
-    color:var(--marfil);
-
-    font-family:'Montserrat',sans-serif;
-
-    font-size:.9rem;
-
-    letter-spacing:3px;
-
-}
-
-.mensaje .btn-calendario{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:8px;
-
-    width:auto;
-
-    margin:0 auto;
-
-    padding:10px 20px;
-
-    border:1px solid var(--marfil);
-
-    border-radius:30px;
-
-    background:transparent;
-
-    color:var(--marfil);
-
-    font-family:'Montserrat',sans-serif;
-
-    font-size:.75rem;
-
-    font-weight:500;
-
-    line-height:1;
-
-    cursor:pointer;
-
-    box-shadow:none;
-
-    appearance:none;
-
-    -webkit-appearance:none;
-
-}
-
-.mensaje .btn-calendario:hover{
-
-    background:var(--marfil);
-
-    color:var(--verde);
-
-}
-
-
-/*======================================================
-CELULAR
-======================================================*/
-
-@media (max-width:768px){
-
-    .mensaje .calendario-boda{
-
-        margin-top:28px;
+        padding:25px 0 40px;
 
     }
 
-    .mensaje .fecha-evento{
+    .fecha-evento{
 
         font-size:.85rem;
 
         letter-spacing:2px;
 
+        margin-bottom:14px;
+
     }
 
-    .mensaje .btn-calendario{
+    .btn-calendario{
 
         padding:9px 17px;
 
@@ -1604,7 +1587,7 @@ CELULAR
 
 }
 
-/*==================================================
+    /*==================================================
     PROGRAMACIÓN
     ==================================================*/
 
