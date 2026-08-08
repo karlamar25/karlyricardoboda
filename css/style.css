@@ -1629,29 +1629,31 @@ CELULARES
 
     }
 
-    /*==================================================
-    PROGRAMACIÓN
-    ==================================================*/
+    /*==================================================*
+    *PROGRAMACIÓN*
+    *==================================================*/
 
     .evento{
 
-        grid-template-columns:1fr;
+    grid-template-columns:110px 1fr;
 
-        gap:6px;
+    gap:20px;
+
+    align-items:center;
 
     }
 
     .hora{
 
-        font-size:1rem;
+    font-size:1rem;
 
-        text-align:center;
+    text-align:left;
 
     }
 
     .actividad{
 
-        font-size:1.45rem;
+    font-size:1.45rem;
 
     }
 
@@ -1659,7 +1661,7 @@ CELULARES
 
     padding-left:0;
 
-    text-align:center;
+    text-align:left;
 
 }
 
