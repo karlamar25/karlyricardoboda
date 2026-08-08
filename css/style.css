@@ -1462,7 +1462,7 @@ CELULARES
     padding-top:80px;
 
     }
-    
+
     .mensaje h2{
 
         font-size:1.60rem;
@@ -1481,7 +1481,106 @@ CELULARES
 
 }
 
-    /*==================================================
+    /*======================================================
+AGREGAR AL CALENDARIO
+======================================================*/
+
+.calendario-boda{
+
+    text-align:center;
+
+    margin-top:32px;
+
+}
+
+.fecha-evento{
+
+    color:var(--verde);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.15rem;
+
+    letter-spacing:3px;
+
+    margin-bottom:16px;
+
+}
+
+.btn-calendario{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:10px 20px;
+
+    border:1px solid var(--verde);
+
+    border-radius:30px;
+
+    background:transparent;
+
+    color:var(--verde);
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:.75rem;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-calendario:hover{
+
+    background:var(--verde);
+
+    color:var(--marfil);
+
+}
+
+
+/*======================================================
+CALENDARIO - CELULAR
+======================================================*/
+
+@media (max-width:768px){
+
+    .calendario-boda{
+
+        margin-top:28px;
+
+    }
+
+    .fecha-evento{
+
+        font-size:1rem;
+
+        letter-spacing:2px;
+
+        margin-bottom:14px;
+
+    }
+
+    .btn-calendario{
+
+        padding:9px 17px;
+
+        font-size:.72rem;
+
+    }
+
+}
+
+/*==================================================
     PROGRAMACIÓN
     ==================================================*/
 
