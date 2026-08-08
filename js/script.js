@@ -110,3 +110,68 @@ function verificarEventoFinalizado() {
 }
 
 verificarEventoFinalizado();
+
+/*======================================================
+AGREGAR AL CALENDARIO
+======================================================*/
+
+const botonCalendario = document.getElementById("btn-calendario");
+
+if (botonCalendario) {
+
+    botonCalendario.addEventListener("click", function () {
+
+        const evento = [
+            "BEGIN:VCALENDAR",
+            "VERSION:2.0",
+            "PRODID:-//Karla y Ricardo//Boda//ES",
+            "CALSCALE:GREGORIAN",
+            "BEGIN:VEVENT",
+
+            "UID:karla-ricardo-boda-2026@karlyricardoboda.com",
+
+            "DTSTAMP:20260808T120000Z",
+
+            "DTSTART;TZID=America/El_Salvador:20261205T160000",
+
+            "DTEND;TZID=America/El_Salvador:20261205T220000",
+
+            "SUMMARY:Karla & Ricardo - Boda",
+
+            "DESCRIPTION:Karla & Ricardo se casan. Ceremonia religiosa en la Parroquia Nuestra Señora de Las Gracias - ONUVA. Recepción en Finca Anceluz.",
+
+            "LOCATION:Parroquia Nuestra Señora de Las Gracias 
+
+            "STATUS:CONFIRMED",
+
+            "END:VEVENT",
+            "END:VCALENDAR"
+
+        ].join("\r\n");
+
+
+        const archivo = new Blob(
+            [evento],
+            { type: "text/calendar;charset=utf-8" }
+        );
+
+
+        const url = URL.createObjectURL(archivo);
+
+        const enlace = document.createElement("a");
+
+        enlace.href = url;
+
+        enlace.download = "Karla-y-Ricardo-Boda.ics";
+
+        document.body.appendChild(enlace);
+
+        enlace.click();
+
+        document.body.removeChild(enlace);
+
+        URL.revokeObjectURL(url);
+
+    });
+
+}
