@@ -503,7 +503,7 @@ PROGRAMACIÓN
 
     display:grid;
 
-    grid-template-columns:125px 30px 1fr;
+    grid-template-columns:135px 30px 1fr;
 
     align-items:center;
 
@@ -525,7 +525,7 @@ PROGRAMACIÓN
 
     color:var(--marfil);
 
-    padding-right:12px;
+    padding-right:20px;
 
 }
 
@@ -547,7 +547,7 @@ PROGRAMACIÓN
 
 .detalle{
 
-    padding-left:14px;
+    padding-left:20px;
 
     text-align:left;
 
@@ -555,7 +555,7 @@ PROGRAMACIÓN
 
 .actividad{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:'Montserrat',sans-serif;
 
     font-size:1.45rem;
 
@@ -1667,7 +1667,7 @@ CELULARES
 
     .evento{
 
-        grid-template-columns:72px 20px 1fr;
+        grid-template-columns:85px 36px 1fr;
 
         min-height:78px;
 
@@ -1681,7 +1681,7 @@ CELULARES
 
         text-align:right;
 
-        padding-right:10px;
+        padding-right:18px;
 
         white-space:nowrap;
 
