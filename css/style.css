@@ -1713,7 +1713,7 @@ CELULARES
 
     .actividad{
 
-        font-size:.9rem;
+        font-size:.90rem !important;
 
         line-height:1.15;
 
