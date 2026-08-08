@@ -1682,7 +1682,7 @@ CELULARES
 
     .evento{
 
-        grid-template-columns:90px 50px 1fr;
+        grid-template-columns:85px 28px 1fr;
 
         min-height:78px;
 
@@ -1696,7 +1696,7 @@ CELULARES
 
         text-align:right;
 
-        padding-right:21px;
+        padding-right:14px;
 
         white-space:nowrap;
 
@@ -1720,7 +1720,7 @@ CELULARES
 
     .detalle{
 
-        padding-left:21px;
+        padding-left:10px;
 
         text-align:left;
 
