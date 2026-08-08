@@ -1485,20 +1485,33 @@ CELULARES
 AGREGAR AL CALENDARIO
 ======================================================*/
 
-.calendario-boda{
+.mensaje .calendario-boda{
 
     width:100%;
-    display:block;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
     text-align:center;
 
-    margin-top:30px;
-    margin-bottom:10px;
+    margin:30px auto 10px;
 
 }
 
-.calendario-boda .fecha-evento{
+.mensaje .fecha-evento{
 
     display:block;
+
+    width:100%;
+
+    margin:0 0 15px;
+
+    text-align:center;
 
     color:var(--marfil);
 
@@ -1508,22 +1521,21 @@ AGREGAR AL CALENDARIO
 
     letter-spacing:3px;
 
-    text-align:center;
-
-    margin:0 0 15px;
-
 }
 
-.calendario-boda .btn-calendario{
+.mensaje .btn-calendario{
 
     display:inline-flex;
 
     align-items:center;
+
     justify-content:center;
 
     gap:8px;
 
     width:auto;
+
+    margin:0 auto;
 
     padding:10px 20px;
 
@@ -1547,11 +1559,13 @@ AGREGAR AL CALENDARIO
 
     box-shadow:none;
 
-    transition:.3s;
+    appearance:none;
+
+    -webkit-appearance:none;
 
 }
 
-.calendario-boda .btn-calendario:hover{
+.mensaje .btn-calendario:hover{
 
     background:var(--marfil);
 
@@ -1561,28 +1575,26 @@ AGREGAR AL CALENDARIO
 
 
 /*======================================================
-CALENDARIO - CELULAR
+CELULAR
 ======================================================*/
 
 @media (max-width:768px){
 
-    .calendario-boda{
+    .mensaje .calendario-boda{
 
         margin-top:28px;
 
     }
 
-    .calendario-boda .fecha-evento{
+    .mensaje .fecha-evento{
 
         font-size:.85rem;
 
         letter-spacing:2px;
 
-        margin-bottom:14px;
-
     }
 
-    .calendario-boda .btn-calendario{
+    .mensaje .btn-calendario{
 
         padding:9px 17px;
 
