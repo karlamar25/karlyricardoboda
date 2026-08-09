@@ -970,9 +970,23 @@ TÍTULO DRESS CODE + / -
 
 .dress-icon{
 
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:24px;
+
+    height:24px;
+
+    border:1px solid rgba(248,244,236,.55);
+
+    border-radius:5px;
+
     font-family:'Montserrat',sans-serif;
 
-    font-size:1.8rem;
+    font-size:1rem;
 
     font-weight:300;
 
