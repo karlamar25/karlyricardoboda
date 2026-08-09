@@ -1386,7 +1386,7 @@ CONFIRMACIÓN
 
     background:transparent;
 
-    color:#D5B676;
+    color:blanchedalmond;
 
     border:none;
 
@@ -1477,14 +1477,14 @@ CONFIRMACIÓN
 
 }
 
-/*======================================================
-RESPONSIVE
-======================================================*/
+/*======================================================*
+* RESPONSIVE
+*======================================================*/
 
 
-/*======================================================
-TABLETS · HASTA 992PX
-======================================================*/
+/*======================================================*
+* TABLETS · HASTA 992PX
+*======================================================*/
 
 @media (max-width:992px){
 
@@ -1519,41 +1519,22 @@ TABLETS · HASTA 992PX
 
     }
 
-
-    .dress-grid{
-
-        gap:24px;
-
-    }
-
 }
 
 
-/*======================================================
-CELULARES · HASTA 768PX
-======================================================*/
+/*======================================================*
+* CELULARES · HASTA 768PX
+*======================================================*/
 
 @media (max-width:768px){
+
+    /*==================================================
+    GENERAL
+    ==================================================*/
 
     .container{
 
         width:min(92%,560px);
-
-    }
-
-
-    .hero-desktop{
-
-        display:none;
-
-    }
-
-
-    .hero-mobile{
-
-        display:block;
-
-        animation:kenburns 18s ease-in-out infinite alternate;
 
     }
 
@@ -1577,6 +1558,22 @@ CELULARES · HASTA 768PX
     /*==================================================
     HERO
     ==================================================*/
+
+    .hero-desktop{
+
+        display:none;
+
+    }
+
+
+    .hero-mobile{
+
+        display:block;
+
+        animation:kenburns 18s ease-in-out infinite alternate;
+
+    }
+
 
     .hero{
 
@@ -1904,26 +1901,34 @@ CELULARES · HASTA 768PX
 
 
     /*==================================================
-    DRESS CODE
+    VESTIMENTA · DENTRO DEL FAQ
     ==================================================*/
 
-    .dress{
+    .faq-vestimenta{
 
-        padding-bottom:45px;
+        width:100%;
 
     }
 
 
-    .dress-grid{
+    .faq-vestimenta .dress-grid{
 
-        grid-template-columns:1fr;
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
 
         gap:26px;
 
+        width:100%;
+
+        margin:0 auto;
+
     }
 
 
-    .dress-card{
+    .faq-vestimenta .dress-card{
 
         width:100%;
 
@@ -1934,7 +1939,9 @@ CELULARES · HASTA 768PX
     }
 
 
-    .dress-card img{
+    .faq-vestimenta .dress-card img{
+
+        width:100%;
 
         height:325px;
 
@@ -1945,35 +1952,37 @@ CELULARES · HASTA 768PX
     }
 
 
-    .dress-info{
+    .faq-vestimenta .dress-info{
 
         padding:18px;
+
+        text-align:center;
 
     }
 
 
-    .dress-info h3{
+    .faq-vestimenta .dress-info h3{
 
         font-size:1.7rem;
 
     }
 
 
-    .dress-info p{
+    .faq-vestimenta .dress-info p{
 
         font-size:.95rem;
 
     }
 
 
-    .nota-novia{
+    .faq-vestimenta .nota-novia{
 
         font-size:1.35rem;
 
     }
 
 
-    .dress-text{
+    .faq-vestimenta .dress-text{
 
         max-width:330px;
 
@@ -1982,24 +1991,51 @@ CELULARES · HASTA 768PX
     }
 
 
-    .dress-text summary{
-
-        padding:15px 18px;
-
-        font-size:1rem;
-
-    }
-
-
-    .dress-text p{
-
-        padding:18px 20px;
+    .faq-vestimenta .dress-text p{
 
         font-size:.95rem;
 
         line-height:1.8;
 
     }
+
+
+    /*==================================================
+    PREGUNTAS FRECUENTES
+    ==================================================*/
+
+    .faq details{
+
+        width:100%;
+
+        max-width:760px;
+
+    }
+
+
+    .faq summary{
+
+        padding:18px 15px;
+
+        font-size:.98rem;
+
+    }
+
+
+    .faq p{
+
+        width:100%;
+
+        max-width:760px;
+
+        padding:18px;
+
+        font-size:.95rem;
+
+        line-height:1.8;
+
+    }
+
 
     /*==================================================
     FINAL
@@ -2077,35 +2113,16 @@ CELULARES · HASTA 768PX
 
 }
 
-    /*==================================================
-    PREGUNTAS FRECUENTES
-    ==================================================*/
 
-    .faq summary{
-
-        padding:18px 15px;
-
-        font-size:.98rem;
-
-    }
-
-
-    .faq p{
-
-        padding:18px;
-
-        font-size:.95rem;
-
-        line-height:1.8;
-
-    }
-
-
-/*======================================================
-IPHONES PEQUEÑOS · HASTA 480PX
-======================================================*/
+/*======================================================*
+* IPHONES PEQUEÑOS · HASTA 480PX
+*======================================================*/
 
 @media (max-width:480px){
+
+    /*==================================================
+    HERO
+    ==================================================*/
 
     .hero{
 
@@ -2158,6 +2175,10 @@ IPHONES PEQUEÑOS · HASTA 480PX
     }
 
 
+    /*==================================================
+    TÍTULOS
+    ==================================================*/
+
     h2{
 
         font-size:1.75rem;
@@ -2171,6 +2192,10 @@ IPHONES PEQUEÑOS · HASTA 480PX
 
     }
 
+
+    /*==================================================
+    PROGRAMACIÓN
+    ==================================================*/
 
     .hora{
 
@@ -2186,26 +2211,34 @@ IPHONES PEQUEÑOS · HASTA 480PX
     }
 
 
-    .dress-card{
+    /*==================================================
+    VESTIMENTA · CELULAR PEQUEÑO
+    ==================================================*/
+
+    .faq-vestimenta .dress-card{
 
         max-width:340px;
 
     }
 
 
-    .dress-card img{
+    .faq-vestimenta .dress-card img{
 
         height:290px;
 
     }
 
 
-    .dress-text{
+    .faq-vestimenta .dress-text{
 
         max-width:290px;
 
     }
 
+
+    /*==================================================
+    CUENTA REGRESIVA
+    ==================================================*/
 
     .count-item{
 
@@ -2230,6 +2263,10 @@ IPHONES PEQUEÑOS · HASTA 480PX
     }
 
 
+    /*==================================================
+    FINAL
+    ==================================================*/
+
     .avion{
 
         width:270px;
@@ -2246,9 +2283,9 @@ IPHONES PEQUEÑOS · HASTA 480PX
 }
 
 
-/*======================================================
-PANTALLAS BAJAS
-======================================================*/
+/*======================================================*
+* PANTALLAS BAJAS
+*======================================================*/
 
 @media (max-height:650px){
 
@@ -2275,9 +2312,9 @@ PANTALLAS BAJAS
 }
 
 
-/*======================================================
-PROTECCIÓN CONTRA OVERFLOW
-======================================================*/
+/*======================================================*
+* PROTECCIÓN CONTRA OVERFLOW
+*======================================================*/
 
 .hero,
 .container,
