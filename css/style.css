@@ -623,273 +623,117 @@ CEREMONIA Y RECEPCIÓN
 
 }
 
-/*======================================================
-CEREMONIA RELIGIOSA
-======================================================*/
+<!-- ==================================================
+UBICACIÓN
+================================================== -->
 
-.ceremonia{
+<section class="recepcion">
 
-    max-width:700px;
+    <div class="container">
 
-    margin:0 auto;
+        <h2 class="titulo-ubicacion">
 
-    padding-bottom:45px;
+            Ubicación
 
-}
+        </h2>
 
-.ceremonia h2{
 
-    color:var(--marfil);
+        <!-- ==================================================
+        CEREMONIA RELIGIOSA
+        ================================================== -->
 
-    margin-bottom:25px;
+        <div class="ceremonia">
 
-}
+            <h3>
 
-.foto-capilla{
+                Ceremonia religiosa
 
-    display:block;
+            </h3>
 
-    width:min(100%,340px);
+            <p class="nombre-lugar">
 
-    height:auto;
+                Parroquia Nuestra Señora de Las Gracias
 
-    margin:0 auto 20px;
+            </p>
 
-    border-radius:24px;
+            <p class="lugar-subtitulo">
 
-    box-shadow:var(--sombra);
+                ONUVA · La Capilla
 
-}
+            </p>
 
-.ceremonia h3{
+            <p class="direccion">
 
-    font-family:'Cormorant Garamond',serif;
+                Km 12 ½ Carretera al Boquerón<br>
+                Santa Tecla, La Libertad
 
-    font-size:2rem;
+            </p>
 
-    font-weight:500;
+            <a
+                href="https://ul.waze.com/ul?ll=13.69129378%2C-89.28246617&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                target="_blank"
+                rel="noopener"
+                class="btn">
 
-    color:var(--marfil);
+                Cómo llegar
 
-    margin-top:18px;
+            </a>
 
-    margin-bottom:6px;
+        </div>
 
-}
 
-.lugar-subtitulo{
+        <!-- ==================================================
+        SEPARADOR
+        ================================================== -->
 
-    color:var(--marfil);
+        <div class="separador-lugares">
 
-    font-size:.95rem;
+            <span>y después...</span>
 
-    letter-spacing:1px;
+        </div>
 
-    margin-top:0;
 
-    margin-bottom:18px;
+        <!-- ==================================================
+        RECEPCIÓN
+        ================================================== -->
 
-}
+        <div class="recepcion-lugar">
 
-.direccion{
+            <h3>
 
-    max-width:650px;
+                Recepción
 
-    margin:0 auto 28px;
+            </h3>
 
-    color:var(--marfil);
+            <p class="nombre-lugar">
 
-    line-height:1.8;
+                Finca Anceluz
 
-}
+            </p>
 
-/*======================================================
-SEPARADOR
-======================================================*/
+            <p class="direccion">
 
-.separador-lugares{
+                Calle al Volcán, km 18<br>
+                Caserío La Virgen<br>
+                El Boquerón, El Salvador
 
-    display:flex;
+            </p>
 
-    align-items:center;
+            <a
+                href="https://ul.waze.com/ul?venue_id=177406089.1774257500.26125859&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                target="_blank"
+                rel="noopener"
+                class="btn">
 
-    justify-content:center;
+                Cómo llegar
 
-    gap:14px;
+            </a>
 
-    max-width:420px;
+        </div>
 
-    margin:0 auto 45px;
+    </div>
 
-    color:var(--marfil);
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:1.15rem;
-
-    font-style:italic;
-
-}
-
-.separador-lugares::before,
-.separador-lugares::after{
-
-    content:"";
-
-    height:1px;
-
-    flex:1;
-
-    background:rgba(248,244,236,.35);
-
-}
-
-/*======================================================
-RECEPCIÓN
-======================================================*/
-
-.recepcion-lugar{
-
-    max-width:700px;
-
-    margin:0 auto;
-
-}
-
-.recepcion-lugar h2{
-
-    color:var(--marfil);
-
-    margin-bottom:25px;
-
-}
-
-.foto-finca{
-
-    display:block;
-
-    width:min(100%,340px);
-
-    height:auto;
-
-    margin:0 auto 18px;
-
-    border-radius:24px;
-
-    box-shadow:var(--sombra);
-
-}
-
-.recepcion-lugar h3{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:2rem;
-
-    font-weight:500;
-
-    color:var(--marfil);
-
-    margin-top:18px;
-
-    margin-bottom:14px;
-
-}
-
-.recepcion .btn{
-
-    margin-top:8px;
-
-    margin-bottom:20px;
-
-}
-
-/*======================================================
-MÓVIL
-======================================================*/
-
-@media (max-width:768px){
-
-    .recepcion{
-
-        padding-top:10px;
-
-        padding-bottom:65px;
-
-    }
-
-    .ceremonia{
-
-        padding-bottom:35px;
-
-    }
-
-    .ceremonia h2,
-    .recepcion-lugar h2{
-
-        font-size:1.9rem;
-
-        margin-bottom:20px;
-
-    }
-
-    .foto-capilla,
-    .foto-finca{
-
-        width:290px;
-
-        max-width:90%;
-
-        border-radius:20px;
-
-    }
-
-    .ceremonia h3,
-    .recepcion-lugar h3{
-
-        font-size:1.7rem;
-
-        line-height:1.2;
-
-    }
-
-    .lugar-subtitulo{
-
-        font-size:.88rem;
-
-        margin-bottom:15px;
-
-    }
-
-    .direccion{
-
-        font-size:.92rem;
-
-        line-height:1.7;
-
-        margin-bottom:24px;
-
-    }
-
-    .separador-lugares{
-
-        max-width:280px;
-
-        margin-bottom:35px;
-
-        font-size:1rem;
-
-        gap:10px;
-
-    }
-
-    .recepcion .btn{
-
-        margin-bottom:10px;
-
-    }
-
-}
+</section>
 
 /*======================================================
 DRESS CODE
