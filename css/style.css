@@ -731,17 +731,17 @@ LÍNEA VERTICAL
 
 .btn-ubicacion{
 
-    display:inline-block;
+    display:inline-block !important;
 
-    padding:9px 18px;
+    width:auto !important;
 
-    font-size:.78rem;
+    max-width:max-content;
 
-    line-height:1.2;
+    padding:8px 16px;
 
-    margin-top:2px;
+    font-size:.75rem;
 
-    margin-bottom:10px;
+    margin:0 auto 10px;
 
 }
 
