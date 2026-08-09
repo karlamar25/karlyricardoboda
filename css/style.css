@@ -1993,7 +1993,7 @@ CELULARES · HASTA 768PX
 
         width:100%;
 
-        max-width:340px;
+        max-width:360px;
 
         margin:auto;
 
@@ -2002,7 +2002,7 @@ CELULARES · HASTA 768PX
 
     .dress-card img{
 
-        height:275px;
+        height:320px;
 
         object-fit:contain;
 
@@ -2256,14 +2256,14 @@ IPHONES PEQUEÑOS · HASTA 480PX
 
     .dress-card{
 
-        max-width:290px;
+        max-width:340px;
 
     }
 
 
     .dress-card img{
 
-        height:220px;
+        height:275px;
 
     }
 
