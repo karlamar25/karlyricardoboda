@@ -1371,6 +1371,13 @@ CONFIRMACIÓN
 
     opacity:.90;
 
+    text-align:center;
+
+    text-align-last:center;
+
+    font-size:1.5rem;
+
+
 }
 
 
@@ -1932,7 +1939,7 @@ CONFIRMACIÓN
 
         width:100%;
 
-        max-width:380px;
+        max-width:420px;
 
         margin:auto;
 
@@ -1943,7 +1950,7 @@ CONFIRMACIÓN
 
         width:100%;
 
-        height:325px;
+        height:360px;
 
         object-fit:contain;
 
@@ -2217,14 +2224,14 @@ CONFIRMACIÓN
 
     .faq-vestimenta .dress-card{
 
-        max-width:340px;
+        max-width:380px;
 
     }
 
 
     .faq-vestimenta .dress-card img{
 
-        height:290px;
+        height:330px;
 
     }
 
