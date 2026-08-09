@@ -755,13 +755,15 @@ IMÁGENES DE UBICACIÓN
 
     display:block;
 
-    width:min(100%,480px);
+    width:420px;
 
-    height:280px;
+    height:230px;
 
-    object-fit:contain;
+    object-fit:cover;
 
-    margin:0 auto 25px;
+    margin:0 auto 20px;
+
+    border-radius:0;
 
 }
 
@@ -776,6 +778,8 @@ CEREMONIA RELIGIOSA
     margin:0 auto;
 
     padding-bottom:45px;
+
+    text-align:center;
 
 }
 
@@ -792,6 +796,8 @@ CEREMONIA RELIGIOSA
     text-decoration:underline;
 
     text-underline-offset:5px;
+
+    text-align:center;
 
 }
 
@@ -815,6 +821,8 @@ NOMBRE DEL LUGAR
 
     margin-bottom:6px;
 
+    text-align:center;
+
 }
 
 
@@ -834,6 +842,8 @@ SUBTÍTULO CAPILLA
 
     margin-bottom:18px;
 
+    text-align:center;
+
 }
 
 
@@ -850,6 +860,8 @@ DIRECCIÓN
     color:var(--marfil);
 
     line-height:1.8;
+
+    text-align:center;
 
 }
 
@@ -871,6 +883,8 @@ BOTONES UBICACIÓN
     font-size:.75rem;
 
     margin:0 auto 10px;
+
+    text-align:center;
 
 }
 
