@@ -1630,7 +1630,7 @@ CELULARES
 
     
 /*======================================================*
-*MÓVIL*
+*MÓVIL UBICACION*
 *======================================================*/
 
 @media (max-width:768px){
@@ -1652,7 +1652,7 @@ CELULARES
     .ceremonia h2,
     .recepcion-lugar h2{
 
-        font-size:1.9rem;
+        font-size:1.2rem;
 
         margin-bottom:20px;
 
@@ -1661,7 +1661,7 @@ CELULARES
     .ceremonia h3,
     .recepcion-lugar h3{
 
-        font-size:1.7rem;
+        font-size:1.2rem;
 
         line-height:1.2;
 
