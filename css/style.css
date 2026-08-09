@@ -625,6 +625,19 @@ LÍNEA VERTICAL
 
 
 /*======================================================*
+*TÍTULO UBICACIÓN*
+*======================================================*/
+
+.recepcion > .container > h2{
+
+    color:var(--marfil);
+
+    margin-bottom:25px;
+
+}
+
+
+/*======================================================*
 *CEREMONIA RELIGIOSA*
 *======================================================*/
 
@@ -638,17 +651,28 @@ LÍNEA VERTICAL
 
 }
 
-.ceremonia h2{
+.ceremonia h2,
+.recepcion-lugar h2{
 
     color:var(--marfil);
 
-    margin-bottom:25px;
-
     font-size:1.2rem;
+
+    margin-bottom:20px;
+
+    text-decoration:underline;
+
+    text-underline-offset:5px;
 
 }
 
-.ceremonia h3{
+
+/*======================================================*
+*NOMBRE DEL LUGAR*
+*======================================================*/
+
+.ceremonia h3,
+.recepcion-lugar h3{
 
     font-family:'Cormorant Garamond',serif;
 
@@ -664,6 +688,11 @@ LÍNEA VERTICAL
 
 }
 
+
+/*======================================================*
+*SUBTÍTULO CAPILLA*
+*======================================================*/
+
 .lugar-subtitulo{
 
     color:var(--marfil);
@@ -678,15 +707,41 @@ LÍNEA VERTICAL
 
 }
 
+
+/*======================================================*
+*DIRECCIÓN*
+*======================================================*/
+
 .direccion{
 
     max-width:650px;
 
-    margin:0 auto 28px;
+    margin:0 auto 20px;
 
     color:var(--marfil);
 
     line-height:1.8;
+
+}
+
+
+/*======================================================*
+*BOTONES UBICACIÓN*
+*======================================================*/
+
+.btn-ubicacion{
+
+    display:inline-block;
+
+    padding:9px 18px;
+
+    font-size:.78rem;
+
+    line-height:1.2;
+
+    margin-top:2px;
+
+    margin-bottom:10px;
 
 }
 
@@ -705,7 +760,7 @@ LÍNEA VERTICAL
 
     gap:14px;
 
-    max-width:320px;
+    max-width:420px;
 
     margin:0 auto 45px;
 
@@ -745,37 +800,120 @@ LÍNEA VERTICAL
 
 }
 
-.recepcion-lugar h2{
 
-    color:var(--marfil);
+/*======================================================*
+*CELULAR*
+*======================================================*/
 
-    margin-bottom:25px;
+@media (max-width:768px){
 
-    font-size:1rem;
+    .recepcion{
 
-}
+        padding-top:10px;
 
-.recepcion-lugar h3{
+        padding-bottom:65px;
 
-    font-family:'Cormorant Garamond',serif;
+    }
 
-    font-size:1rem;
 
-    font-weight:500;
+    /* Título Ubicación */
 
-    color:var(--marfil);
+    .recepcion > .container > h2{
 
-    margin-top:18px;
+        font-size:1.9rem;
 
-    margin-bottom:14px;
+        margin-bottom:35px;
 
-}
+    }
 
-.recepcion .btn{
 
-    margin-top:8px;
+    /* Ceremonia y Recepción */
 
-    margin-bottom:20px;
+    .ceremonia h2,
+    .recepcion-lugar h2{
+
+        font-size:1.2rem;
+
+        margin-bottom:20px;
+
+        text-decoration:underline;
+
+        text-underline-offset:4px;
+
+    }
+
+
+    /* Nombre del lugar */
+
+    .ceremonia h3,
+    .recepcion-lugar h3{
+
+        font-size:1.2rem;
+
+        line-height:1.2;
+
+    }
+
+
+    /* Capilla */
+
+    .lugar-subtitulo{
+
+        font-size:.88rem;
+
+        margin-bottom:15px;
+
+    }
+
+
+    /* Dirección */
+
+    .direccion{
+
+        font-size:.92rem;
+
+        line-height:1.7;
+
+        margin-bottom:18px;
+
+    }
+
+
+    /* Botones */
+
+    .btn-ubicacion{
+
+        padding:8px 16px;
+
+        font-size:.75rem;
+
+        margin-bottom:10px;
+
+    }
+
+
+    /* Separador */
+
+    .separador-lugares{
+
+        max-width:280px;
+
+        margin-bottom:35px;
+
+        font-size:1rem;
+
+        gap:10px;
+
+    }
+
+
+    /* Espacio ceremonia */
+
+    .ceremonia{
+
+        padding-bottom:35px;
+
+    }
 
 }
 
@@ -1623,83 +1761,6 @@ CELULARES
         line-height:1.15;
 
         text-align:left;
-
-    }
-
-}
-
-    
-/*======================================================*
-*MÓVIL UBICACION*
-*======================================================*/
-
-@media (max-width:768px){
-
-    .recepcion{
-
-        padding-top:10px;
-
-        padding-bottom:65px;
-
-    }
-
-    .ceremonia{
-
-        padding-bottom:35px;
-
-    }
-
-    .ceremonia h2,
-    .recepcion-lugar h2{
-
-        font-size:1.2rem;
-
-        margin-bottom:20px;
-
-    }
-
-    .ceremonia h3,
-    .recepcion-lugar h3{
-
-        font-size:1.2rem;
-
-        line-height:1.2;
-
-    }
-
-    .lugar-subtitulo{
-
-        font-size:.88rem;
-
-        margin-bottom:15px;
-
-    }
-
-    .direccion{
-
-        font-size:.92rem;
-
-        line-height:1.7;
-
-        margin-bottom:24px;
-
-    }
-
-    .separador-lugares{
-
-        max-width:280px;
-
-        margin-bottom:35px;
-
-        font-size:1rem;
-
-        gap:10px;
-
-    }
-
-    .recepcion .btn{
-
-        margin-bottom:10px;
 
     }
 
