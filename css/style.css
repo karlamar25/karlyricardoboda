@@ -644,13 +644,15 @@ LÍNEA VERTICAL
 
     margin-bottom:25px;
 
+    font-size:1.2rem;
+
 }
 
 .ceremonia h3{
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:2rem;
+    font-size:1.2rem;
 
     font-weight:500;
 
@@ -749,13 +751,15 @@ LÍNEA VERTICAL
 
     margin-bottom:25px;
 
+    font-size:1rem;
+
 }
 
 .recepcion-lugar h3{
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:2rem;
+    font-size:1rem;
 
     font-weight:500;
 
