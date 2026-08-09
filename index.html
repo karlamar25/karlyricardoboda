@@ -346,277 +346,117 @@ PROGRAMACIÓN
 
 </section>
 
-/*======================================================
+<!-- ==================================================
 UBICACIÓN
-======================================================*/
+================================================== -->
 
-.recepcion{
+<section class="recepcion">
 
-    background:var(--verde);
+    <div class="container">
 
-    text-align:center;
+        <h2>
 
-    padding-top:80px;
+            Ubicación
 
-    padding-bottom:90px;
+        </h2>
 
-}
 
+        <!-- ==================================================
+        CEREMONIA RELIGIOSA
+        ================================================== -->
 
-/*======================================================
-TÍTULO UBICACIÓN
-======================================================*/
+        <div class="ceremonia">
 
-.titulo-ubicacion{
+            <h2>
 
-    color:var(--marfil);
+                Ceremonia religiosa
 
-    margin-bottom:65px;
+            </h2>
 
-}
+            <h3>
 
+                Parroquia Nuestra Señora de Las Gracias - ONUVA
 
-/*======================================================
-CEREMONIA RELIGIOSA
-======================================================*/
+            </h3>
 
-.ceremonia{
+            <p class="lugar-subtitulo">
 
-    max-width:700px;
+                "Capilla del Santisimo"
 
-    margin:0 auto;
+            </p>
 
-    padding-bottom:55px;
+            <p class="direccion">
 
-}
+                Km 12 ½ Carretera al Boquerón<br>
+                Santa Tecla, La Libertad
 
-.ceremonia h3,
-.recepcion-lugar h3{
+            </p>
 
-    font-family:'Cormorant Garamond',serif;
+            <a
+                href="https://ul.waze.com/ul?ll=13.69129378%2C-89.28246617&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                target="_blank"
+                rel="noopener"
+                class="btn">
 
-    font-size:1.35rem;
+                Ver ubicación
 
-    font-weight:500;
+            </a>
 
-    letter-spacing:2px;
+        </div>
 
-    text-transform:uppercase;
 
-    color:var(--marfil);
+        <!-- ==================================================
+        SEPARADOR
+        ================================================== -->
 
-    margin:0 0 18px;
+        <div class="separador-lugares">
 
-}
+            <span>y después...</span>
 
+        </div>
 
-/*======================================================
-NOMBRE DEL LUGAR
-======================================================*/
 
-.nombre-lugar{
+        <!-- ==================================================
+        RECEPCIÓN
+        ================================================== -->
 
-    font-family:'Cormorant Garamond',serif;
+        <div class="recepcion-lugar">
 
-    font-size:2rem;
+            <h2>
 
-    font-weight:500;
+                Recepción
 
-    color:var(--marfil);
+            </h2>
 
-    margin:0 0 7px;
+            <h3>
 
-}
+                Finca Anceluz
 
+            </h3>
 
-/*======================================================
-SUBTÍTULO
-======================================================*/
+            <p class="direccion">
 
-.lugar-subtitulo{
+                Calle al Volcán, km 18<br>
+                Caserío La Virgen<br>
+                El Boquerón, El Salvador
 
-    color:var(--marfil);
+            </p>
 
-    font-size:.9rem;
+            <a
+                href="https://ul.waze.com/ul?venue_id=177406089.1774257500.26125859&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                target="_blank"
+                rel="noopener"
+                class="btn">
 
-    letter-spacing:2px;
+                Ver ubicación
 
-    margin:0 0 20px;
+            </a>
 
-}
+        </div>
 
+    </div>
 
-/*======================================================
-DIRECCIÓN
-======================================================*/
-
-.direccion{
-
-    max-width:650px;
-
-    margin:0 auto 28px;
-
-    color:var(--marfil);
-
-    line-height:1.8;
-
-}
-
-
-/*======================================================
-SEPARADOR
-======================================================*/
-
-.separador-lugares{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:14px;
-
-    max-width:420px;
-
-    margin:0 auto 55px;
-
-    color:var(--marfil);
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:1.15rem;
-
-    font-style:italic;
-
-}
-
-.separador-lugares::before,
-.separador-lugares::after{
-
-    content:"";
-
-    height:1px;
-
-    flex:1;
-
-    background:rgba(248,244,236,.35);
-
-}
-
-
-/*======================================================
-RECEPCIÓN
-======================================================*/
-
-.recepcion-lugar{
-
-    max-width:700px;
-
-    margin:0 auto;
-
-}
-
-
-/*======================================================
-BOTONES
-======================================================*/
-
-.recepcion .btn{
-
-    margin-top:8px;
-
-    margin-bottom:10px;
-
-}
-
-
-/*======================================================
-MÓVIL
-======================================================*/
-
-@media (max-width:768px){
-
-    .recepcion{
-
-        padding-top:55px;
-
-        padding-bottom:65px;
-
-    }
-
-    .titulo-ubicacion{
-
-        font-size:2rem;
-
-        margin-bottom:45px;
-
-    }
-
-    .ceremonia{
-
-        padding-bottom:40px;
-
-    }
-
-    .ceremonia h3,
-    .recepcion-lugar h3{
-
-        font-size:1.1rem;
-
-        letter-spacing:1.5px;
-
-        margin-bottom:15px;
-
-    }
-
-    .nombre-lugar{
-
-        font-size:1.7rem;
-
-        line-height:1.2;
-
-    }
-
-    .lugar-subtitulo{
-
-        font-size:.82rem;
-
-        letter-spacing:1.5px;
-
-        margin-bottom:17px;
-
-    }
-
-    .direccion{
-
-        font-size:.9rem;
-
-        line-height:1.7;
-
-        margin-bottom:23px;
-
-    }
-
-    .separador-lugares{
-
-        max-width:280px;
-
-        margin-bottom:40px;
-
-        font-size:1rem;
-
-        gap:10px;
-
-    }
-
-    .recepcion .btn{
-
-        margin-bottom:5px;
-
-    }
-
-}
+</section>
 
 <!-- ======================================================
 DRESS CODE
