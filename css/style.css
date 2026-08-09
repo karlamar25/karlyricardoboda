@@ -1437,7 +1437,7 @@ CONFIRMACIÓN
 
 .faq-vestimenta .dress-text p{
 
-    background:transparent;
+    background:var(--verde-claro);
 
     color:var(--marfil);
 
