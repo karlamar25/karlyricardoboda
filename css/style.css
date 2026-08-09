@@ -1159,7 +1159,9 @@ CONFIRMACIÓN
 
 .faq details{
 
-    max-width:820px;
+    width:100%;
+
+    max-width:760px;
 
     margin:0 auto 18px;
 
@@ -1228,17 +1230,25 @@ CONFIRMACIÓN
 
 .faq p{
 
-    background:var(--marfil);
+    width:100%;
 
-    color:var(--verde);
+    max-width:760px;
 
-    border-radius:18px;
+    margin:12px auto 0;
 
-    padding:22px 26px;
+    background:transparent;
 
-    margin-top:12px;
+    color:var(--marfil);
+
+    border:none;
+
+    border-radius:0;
+
+    padding:0;
 
     line-height:1.9;
+
+    text-align:justify;
 
 }
 
