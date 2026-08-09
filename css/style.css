@@ -944,15 +944,15 @@ DRESS CODE
 
     width:300px;
 
-    background:rgba(248,244,236,.10);
+    background:transparent;
 
-    border:1px solid rgba(248,244,236,.12);
+    border:none;
 
-    border-radius:20px;
+    border-radius:0;
 
     overflow:hidden;
 
-    box-shadow:0 4px 12px rgba(0,0,0,.10);
+    box-shadow:transparent;
 
 }
 
