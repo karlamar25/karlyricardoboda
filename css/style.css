@@ -608,7 +608,7 @@ LÍNEA VERTICAL
 }
 
 /*======================================================
-CEREMONIA Y RECEPCIÓN
+UBICACIÓN
 ======================================================*/
 
 .recepcion{
@@ -617,123 +617,258 @@ CEREMONIA Y RECEPCIÓN
 
     text-align:center;
 
-    padding-top:20px;
+    padding-top:80px;
 
     padding-bottom:90px;
 
 }
 
-<!-- ==================================================
-UBICACIÓN
-================================================== -->
+/*======================================================
+TÍTULO UBICACIÓN
+======================================================*/
 
-<section class="recepcion">
+.titulo-ubicacion{
 
-    <div class="container">
+    color:var(--marfil);
 
-        <h2 class="titulo-ubicacion">
+    margin-bottom:65px;
 
-            Ubicación
+}
 
-        </h2>
+/*======================================================
+CEREMONIA RELIGIOSA
+======================================================*/
 
+.ceremonia{
 
-        <!-- ==================================================
-        CEREMONIA RELIGIOSA
-        ================================================== -->
+    max-width:700px;
 
-        <div class="ceremonia">
+    margin:0 auto;
 
-            <h3>
+    padding-bottom:55px;
 
-                Ceremonia religiosa
+}
 
-            </h3>
+.ceremonia h3,
+.recepcion-lugar h3{
 
-            <p class="nombre-lugar">
+    font-family:'Cormorant Garamond',serif;
 
-                Parroquia Nuestra Señora de Las Gracias
+    font-size:1.35rem;
 
-            </p>
+    font-weight:500;
 
-            <p class="lugar-subtitulo">
+    letter-spacing:2px;
 
-                ONUVA · La Capilla
+    text-transform:uppercase;
 
-            </p>
+    color:var(--marfil);
 
-            <p class="direccion">
+    margin:0 0 18px;
 
-                Km 12 ½ Carretera al Boquerón<br>
-                Santa Tecla, La Libertad
+}
 
-            </p>
+/*======================================================
+NOMBRE DEL LUGAR
+======================================================*/
 
-            <a
-                href="https://ul.waze.com/ul?ll=13.69129378%2C-89.28246617&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-                target="_blank"
-                rel="noopener"
-                class="btn">
+.nombre-lugar{
 
-                Cómo llegar
+    font-family:'Cormorant Garamond',serif;
 
-            </a>
+    font-size:2rem;
 
-        </div>
+    font-weight:500;
 
+    color:var(--marfil);
 
-        <!-- ==================================================
-        SEPARADOR
-        ================================================== -->
+    margin:0 0 7px;
 
-        <div class="separador-lugares">
+}
 
-            <span>y después...</span>
+/*======================================================
+SUBTÍTULO
+======================================================*/
 
-        </div>
+.lugar-subtitulo{
 
+    color:var(--marfil);
 
-        <!-- ==================================================
-        RECEPCIÓN
-        ================================================== -->
+    font-size:.9rem;
 
-        <div class="recepcion-lugar">
+    letter-spacing:2px;
 
-            <h3>
+    margin:0 0 20px;
 
-                Recepción
+}
 
-            </h3>
+/*======================================================
+DIRECCIÓN
+======================================================*/
 
-            <p class="nombre-lugar">
+.direccion{
 
-                Finca Anceluz
+    max-width:650px;
 
-            </p>
+    margin:0 auto 28px;
 
-            <p class="direccion">
+    color:var(--marfil);
 
-                Calle al Volcán, km 18<br>
-                Caserío La Virgen<br>
-                El Boquerón, El Salvador
+    line-height:1.8;
 
-            </p>
+}
 
-            <a
-                href="https://ul.waze.com/ul?venue_id=177406089.1774257500.26125859&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-                target="_blank"
-                rel="noopener"
-                class="btn">
+/*======================================================
+SEPARADOR
+======================================================*/
 
-                Cómo llegar
+.separador-lugares{
 
-            </a>
+    display:flex;
 
-        </div>
+    align-items:center;
 
-    </div>
+    justify-content:center;
 
-</section>
+    gap:14px;
+
+    max-width:420px;
+
+    margin:0 auto 55px;
+
+    color:var(--marfil);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.15rem;
+
+    font-style:italic;
+
+}
+
+.separador-lugares::before,
+.separador-lugares::after{
+
+    content:"";
+
+    height:1px;
+
+    flex:1;
+
+    background:rgba(248,244,236,.35);
+
+}
+
+/*======================================================
+RECEPCIÓN
+======================================================*/
+
+.recepcion-lugar{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+}
+
+/*======================================================
+BOTONES
+======================================================*/
+
+.recepcion .btn{
+
+    margin-top:8px;
+
+    margin-bottom:10px;
+
+}
+
+/*======================================================
+MÓVIL
+======================================================*/
+
+@media (max-width:768px){
+
+    .recepcion{
+
+        padding-top:55px;
+
+        padding-bottom:65px;
+
+    }
+
+    .titulo-ubicacion{
+
+        font-size:2rem;
+
+        margin-bottom:45px;
+
+    }
+
+    .ceremonia{
+
+        padding-bottom:40px;
+
+    }
+
+    .ceremonia h3,
+    .recepcion-lugar h3{
+
+        font-size:1.1rem;
+
+        letter-spacing:1.5px;
+
+        margin-bottom:15px;
+
+    }
+
+    .nombre-lugar{
+
+        font-size:1.7rem;
+
+        line-height:1.2;
+
+    }
+
+    .lugar-subtitulo{
+
+        font-size:.82rem;
+
+        letter-spacing:1.5px;
+
+        margin-bottom:17px;
+
+    }
+
+    .direccion{
+
+        font-size:.9rem;
+
+        line-height:1.7;
+
+        margin-bottom:23px;
+
+    }
+
+    .separador-lugares{
+
+        max-width:280px;
+
+        margin-bottom:40px;
+
+        font-size:1rem;
+
+        gap:10px;
+
+    }
+
+    .recepcion .btn{
+
+        margin-bottom:5px;
+
+    }
+
+}
 
 /*======================================================
 DRESS CODE
