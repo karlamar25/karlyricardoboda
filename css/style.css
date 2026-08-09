@@ -1141,7 +1141,7 @@ CONFIRMACIÓN
 }
 
 /*======================================================*
-*PREGUNTAS FRECUENTES*
+* PREGUNTAS FRECUENTES
 *======================================================*/
 
 .faq{
@@ -1152,6 +1152,10 @@ CONFIRMACIÓN
 
 }
 
+
+/*======================================================*
+* PREGUNTAS
+*======================================================*/
 
 .faq details{
 
@@ -1218,6 +1222,10 @@ CONFIRMACIÓN
 }
 
 
+/*======================================================*
+* RESPUESTAS GENERALES
+*======================================================*/
+
 .faq p{
 
     background:var(--marfil);
@@ -1235,9 +1243,9 @@ CONFIRMACIÓN
 }
 
 
-/*======================================================
-VESTIMENTA DENTRO DEL FAQ
-======================================================*/
+/*======================================================*
+* VESTIMENTA DENTRO DEL FAQ
+*======================================================*/
 
 .faq-vestimenta{
 
@@ -1246,20 +1254,30 @@ VESTIMENTA DENTRO DEL FAQ
 }
 
 
+/*======================================================*
+* VESTIMENTA · IMÁGENES UNA DEBAJO DE OTRA
+*======================================================*/
+
 .faq-vestimenta .dress-grid{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:repeat(2,minmax(280px,420px));
+    flex-direction:column;
 
-    justify-content:center;
+    align-items:center;
 
-    gap:30px;
+    gap:35px;
 
-    margin:0 auto 18px;
+    width:100%;
+
+    margin:0 auto;
 
 }
 
+
+/*======================================================*
+* TARJETAS
+*======================================================*/
 
 .faq-vestimenta .dress-card{
 
@@ -1277,6 +1295,11 @@ VESTIMENTA DENTRO DEL FAQ
 
 }
 
+
+/*======================================================*
+* IMÁGENES
+*======================================================*/
+
 .faq-vestimenta .dress-card img{
 
     width:100%;
@@ -1293,6 +1316,10 @@ VESTIMENTA DENTRO DEL FAQ
 
 }
 
+
+/*======================================================*
+* TEXTO CABALLEROS / DAMAS
+*======================================================*/
 
 .faq-vestimenta .dress-info{
 
@@ -1337,9 +1364,23 @@ VESTIMENTA DENTRO DEL FAQ
 }
 
 
+/*======================================================*
+* NOTA NOVIA
+*======================================================*/
+
 .faq-vestimenta .nota-novia{
 
-    margin:50px auto 32px;
+    margin:30px auto 24px;
+
+    padding:0;
+
+    background:transparent;
+
+    color:#D5B676;
+
+    border:none;
+
+    border-radius:0;
 
     text-align:center;
 
@@ -1347,18 +1388,20 @@ VESTIMENTA DENTRO DEL FAQ
 
     font-size:1.6rem;
 
-    color:#D5B676;
-
     line-height:1.45;
 
 }
 
 
+/*======================================================*
+* RECOMENDACIONES
+*======================================================*/
+
 .faq-vestimenta .dress-text{
 
     max-width:520px;
 
-    margin:40px auto 0;
+    margin:25px auto 0;
 
     color:var(--marfil);
 
@@ -1377,7 +1420,7 @@ VESTIMENTA DENTRO DEL FAQ
 
     color:var(--marfil);
 
-    margin-bottom:22px;
+    margin-bottom:18px;
 
 }
 
@@ -1396,10 +1439,16 @@ VESTIMENTA DENTRO DEL FAQ
 
     margin:0 auto 18px;
 
-    line-height:1.9;
+    line-height:1.8;
+
+    text-align:justify;
 
 }
 
+
+/*======================================================*
+* CONTACTO
+*======================================================*/
 
 .contacto a{
 
