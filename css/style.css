@@ -759,12 +759,11 @@ IMÁGENES DE UBICACIÓN
 
     height:230px;
 
-    object-fit:cover;
+    object-fit:contain;
 
-    margin:0 auto 20px;
+    margin:0 auto 25px;
 
-    border-radius:0;
-
+    
 }
 
 /*======================================================
