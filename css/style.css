@@ -926,16 +926,107 @@ DRESS CODE
     background:var(--verde);
 
     padding-top:25px;
+
     padding-bottom:90px;
 
 }
 
+
+/*======================================================
+TÍTULO DRESS CODE + / -
+======================================================*/
+
+.dress-toggle{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    width:auto;
+
+    margin:0 auto;
+
+    padding:0;
+
+    border:none;
+
+    background:transparent;
+
+    color:var(--marfil);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.5rem;
+
+    font-weight:400;
+
+    cursor:pointer;
+
+}
+
+.dress-icon{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:1.8rem;
+
+    font-weight:300;
+
+    line-height:1;
+
+}
+
+
+/*======================================================
+CONTENIDO DESPLEGABLE
+======================================================*/
+
+.dress-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    margin-top:0;
+
+    transition:
+        max-height .6s ease,
+        opacity .4s ease,
+        margin-top .5s ease;
+
+}
+
+.dress-content.abierto{
+
+    max-height:1400px;
+
+    opacity:1;
+
+    margin-top:35px;
+
+}
+
+
+/*======================================================
+IMÁGENES
+======================================================*/
+
 .dress-grid{
 
     display:grid;
+
     grid-template-columns:repeat(2,minmax(280px,420px));
+
     justify-content:center;
+
     gap:30px;
+
     margin:0 auto 18px;
 
 }
@@ -952,7 +1043,7 @@ DRESS CODE
 
     overflow:hidden;
 
-    box-shadow:transparent;
+    box-shadow:none;
 
 }
 
@@ -971,6 +1062,11 @@ DRESS CODE
     padding:6px;
 
 }
+
+
+/*======================================================
+TEXTO CABALLEROS / DAMAS
+======================================================*/
 
 .dress-info{
 
@@ -1002,6 +1098,11 @@ DRESS CODE
 
 }
 
+
+/*======================================================
+NOTA NOVIA
+======================================================*/
+
 .nota-novia{
 
     margin:50px auto 32px;
@@ -1018,79 +1119,48 @@ DRESS CODE
 
 }
 
+
+/*======================================================
+RECOMENDACIONES
+======================================================*/
+
 .dress-text{
 
     max-width:520px;
 
     margin:40px auto 0;
 
-}
-
-.dress-text details{
-
-    border:1px solid rgba(248,244,236,.35);
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-}
-
-.dress-text summary{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:18px 22px;
-
-    cursor:pointer;
-
-    list-style:none;
-
     color:var(--marfil);
+
+    text-align:center;
+
+}
+
+.titulo-recomendaciones{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.5rem;
 
     font-weight:500;
 
-    font-size:1.15rem;
+    color:var(--marfil);
 
-}
-
-.dress-text summary::-webkit-details-marker{
-
-    display:none;
-
-}
-
-.dress-text summary::after{
-
-    content:"+";
-
-    font-size:2rem;
-
-    font-weight:300;
-
-    transition:.25s;
-
-}
-
-.dress-text details[open] summary::after{
-
-    content:"−";
+    margin-bottom:22px;
 
 }
 
 .dress-text p{
 
-    background:var(--marfil);
+    background:transparent;
 
-    color:var(--verde);
+    color:var(--marfil);
 
-    border-top:1px solid rgba(47,59,45,.12);
+    border:none;
 
-    padding:24px 28px;
+    padding:0;
+
+    margin:0 auto 18px;
 
     line-height:1.9;
 
@@ -1788,7 +1858,7 @@ CELULARES
 
         width:100%;
 
-        max-width:320px;
+        max-width:340px;
 
         margin:auto;
 
@@ -1796,7 +1866,7 @@ CELULARES
 
     .dress-card img{
 
-        height:250px;
+        height:275px;
 
         object-fit:contain;
 

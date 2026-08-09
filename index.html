@@ -454,94 +454,124 @@ UBICACIÓN
 
 </section>
 
-<!-- ======================================================
+<!-- ==================================================
 DRESS CODE
-====================================================== -->
+================================================== -->
 
-<section id="dress-code" class="dress">
+<section class="dress">
 
     <div class="container">
 
-        <h2>
+        <!-- TÍTULO + -->
 
-            Dress Code
+        <button
+            type="button"
+            class="dress-toggle"
+            id="dress-toggle">
 
-        </h2>
+            <span>Dress Code</span>
 
-        <div class="dress-grid">
+            <span class="dress-icon">+</span>
 
-            <!-- Caballeros -->
+        </button>
 
-            <article class="dress-card">
 
-                <img
-                    src="img/trajes.png"
-                    alt="Vestimenta formal para caballeros">
+        <!-- ==================================================
+        TODO EL CONTENIDO DESPLEGABLE
+        ================================================== -->
 
-                <div class="dress-info">
+        <div
+            class="dress-content"
+            id="dress-content">
 
-                    <h3>
 
-                        Caballeros
+            <!-- ==================================================
+            VESTIMENTA
+            ================================================== -->
 
-                    </h3>
+            <div class="dress-grid">
 
-                    <p>
 
-                        Traje formal
+                <!-- CABALLEROS -->
 
-                    </p>
+                <article class="dress-card">
 
-                </div>
+                    <img
+                        src="img/trajes.png"
+                        alt="Vestimenta formal para caballeros">
 
-            </article>
+                    <div class="dress-info">
 
-            <!-- Damas -->
+                        <h3>
 
-            <article class="dress-card">
+                            Caballeros
 
-                <img
-                    src="img/vestidos.png"
-                    alt="Vestimenta formal para damas">
+                        </h3>
 
-                <div class="dress-info">
+                        <p>
 
-                    <h3>
+                            Traje formal
 
-                        Damas
+                        </p>
 
-                    </h3>
+                    </div>
 
-                    <p>
+                </article>
 
-                        Vestido largo<br>
-                        Colores alegres y elegantes
 
-                    </p>
+                <!-- DAMAS -->
 
-                </div>
+                <article class="dress-card">
 
-            </article>
+                    <img
+                        src="img/vestidos.png"
+                        alt="Vestimenta formal para damas">
 
-        </div>
+                    <div class="dress-info">
 
-        <p class="nota-novia">
+                        <h3>
 
-    El color blanco esta reservado para la novia
+                            Damas
 
-</p>
+                        </h3>
 
-        </div>
+                        <p>
 
-        <div class="dress-text">
+                            Vestido largo<br>
+                            Colores alegres y elegantes
 
-            <details>
+                        </p>
 
-                <summary>
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- ==================================================
+            NOTA NOVIA
+            ================================================== -->
+
+            <p class="nota-novia">
+
+                El color blanco está reservado para la novia
+
+            </p>
+
+
+            <!-- ==================================================
+            RECOMENDACIONES
+            ================================================== -->
+
+            <div class="dress-text">
+
+                <h3 class="titulo-recomendaciones">
 
                     Recomendaciones
 
-                </summary>
+                </h3>
 
                 <p>
 
@@ -559,7 +589,8 @@ DRESS CODE
 
                 </p>
 
-            </details>
+            </div>
+
 
         </div>
 

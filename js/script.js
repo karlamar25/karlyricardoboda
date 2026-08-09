@@ -177,3 +177,32 @@ if (botonCalendario) {
     });
 
 }
+
+/*======================================================
+DRESS CODE · DESPLEGABLE
+======================================================*/
+
+const dressToggle = document.getElementById("dress-toggle");
+const dressContent = document.getElementById("dress-content");
+
+if (dressToggle && dressContent) {
+
+    dressToggle.addEventListener("click", () => {
+
+        dressContent.classList.toggle("abierto");
+
+        const icono = dressToggle.querySelector(".dress-icon");
+
+        if (dressContent.classList.contains("abierto")) {
+
+            icono.textContent = "−";
+
+        } else {
+
+            icono.textContent = "+";
+
+        }
+
+    });
+
+}
