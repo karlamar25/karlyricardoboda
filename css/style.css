@@ -9,7 +9,7 @@ VARIABLES
     CAMBIA SOLO ESTE VALOR SI QUIERES CAMBIAR EL FONDO
     ==================================================*/
 
-    --fondo:#685a47;
+    --fondo:#3B4738;
 
 
     /*==================================================
@@ -304,7 +304,7 @@ PORTADA
 
     letter-spacing:5px;
 
-    color:var(--marfil);
+    color:var(--verde);
 
     margin-bottom:10px;
 
@@ -313,7 +313,7 @@ PORTADA
 
 .fecha{
 
-    color:var(--marfil);
+    color:var(--verde);
 
     font-size:1rem;
 
