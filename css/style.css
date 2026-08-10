@@ -365,6 +365,14 @@ PORTADA · PC
 
 @media (min-width:993px){
 
+    .hero{
+
+        min-height:75vh;
+
+        height:75vh;
+
+    }
+    
     .hero-content{
 
         width:100%;
