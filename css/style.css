@@ -1535,13 +1535,11 @@ CONFIRMACIÓN
 
     }
 
-
     h2{
 
         font-size:2.5rem;
 
     }
-
 
     .hero-content h1{
 
@@ -1550,7 +1548,6 @@ CONFIRMACIÓN
         white-space:nowrap;
 
     }
-
 
     .hero-content h2{
 
@@ -1579,13 +1576,11 @@ CONFIRMACIÓN
 
     }
 
-
     section{
 
         padding:65px 0;
 
     }
-
 
     h2{
 
@@ -1606,7 +1601,6 @@ CONFIRMACIÓN
 
     }
 
-
     .hero-mobile{
 
         display:block;
@@ -1614,7 +1608,6 @@ CONFIRMACIÓN
         animation:kenburns 18s ease-in-out infinite alternate;
 
     }
-
 
     .hero{
 
@@ -1624,13 +1617,11 @@ CONFIRMACIÓN
 
     }
 
-
     .hero-content{
 
         transform:translateY(-190px) !important;
 
     }
-
 
     .hero-content h1{
 
@@ -1642,7 +1633,6 @@ CONFIRMACIÓN
 
     }
 
-
     .hero-content h2{
 
         font-size:1.7rem;
@@ -1650,7 +1640,6 @@ CONFIRMACIÓN
         letter-spacing:2px;
 
     }
-
 
     .fecha{
 
@@ -1671,13 +1660,11 @@ CONFIRMACIÓN
 
     }
 
-
     .mensaje h2{
 
         font-size:1.60rem;
 
     }
-
 
     .mensaje-texto{
 
@@ -1702,7 +1689,6 @@ CONFIRMACIÓN
 
     }
 
-
     .fecha-evento{
 
         font-size:.85rem;
@@ -1712,7 +1698,6 @@ CONFIRMACIÓN
         margin-bottom:14px;
 
     }
-
 
     .btn-calendario{
 
@@ -1741,7 +1726,6 @@ CONFIRMACIÓN
 
     }
 
-
     .count-item{
 
         width:78px;
@@ -1752,13 +1736,11 @@ CONFIRMACIÓN
 
     }
 
-
     .count-item span{
 
         font-size:1.8rem;
 
     }
-
 
     .count-item small{
 
@@ -1781,7 +1763,6 @@ CONFIRMACIÓN
 
     }
 
-
     .evento{
 
         grid-template-columns:85px 28px 1fr;
@@ -1789,7 +1770,6 @@ CONFIRMACIÓN
         min-height:78px;
 
     }
-
 
     .hora{
 
@@ -1805,7 +1785,6 @@ CONFIRMACIÓN
 
     }
 
-
     .punto{
 
         width:8px;
@@ -1813,7 +1792,6 @@ CONFIRMACIÓN
         height:8px;
 
     }
-
 
     .evento:not(:last-child) .punto::after{
 
@@ -1823,7 +1801,6 @@ CONFIRMACIÓN
 
     }
 
-
     .detalle{
 
         padding-left:7px;
@@ -1831,7 +1808,6 @@ CONFIRMACIÓN
         text-align:left;
 
     }
-
 
     .actividad{
 
@@ -1856,7 +1832,6 @@ CONFIRMACIÓN
 
     }
 
-
     .recepcion > .container > h2{
 
         font-size:1.9rem;
@@ -1864,7 +1839,6 @@ CONFIRMACIÓN
         margin-bottom:35px;
 
     }
-
 
     .ceremonia h2,
     .recepcion-lugar h2{
@@ -1879,7 +1853,6 @@ CONFIRMACIÓN
 
     }
 
-
     .ceremonia h3,
     .recepcion-lugar h3{
 
@@ -1889,7 +1862,6 @@ CONFIRMACIÓN
 
     }
 
-
     .lugar-subtitulo{
 
         font-size:.88rem;
@@ -1897,7 +1869,6 @@ CONFIRMACIÓN
         margin-bottom:15px;
 
     }
-
 
     .direccion{
 
@@ -1909,7 +1880,6 @@ CONFIRMACIÓN
 
     }
 
-
     .btn-ubicacion{
 
         padding:8px 16px;
@@ -1919,7 +1889,6 @@ CONFIRMACIÓN
         margin-bottom:10px;
 
     }
-
 
     .separador-lugares{
 
@@ -1932,7 +1901,6 @@ CONFIRMACIÓN
         gap:10px;
 
     }
-
 
     .ceremonia{
 
@@ -1951,7 +1919,6 @@ CONFIRMACIÓN
 
     }
 
-
     .faq-vestimenta .dress-grid{
 
         display:flex;
@@ -1968,7 +1935,6 @@ CONFIRMACIÓN
 
     }
 
-
     .faq-vestimenta .dress-card{
 
         width:100%;
@@ -1978,7 +1944,6 @@ CONFIRMACIÓN
         margin:auto;
 
     }
-
 
     .faq-vestimenta .dress-card img{
 
@@ -1992,7 +1957,6 @@ CONFIRMACIÓN
 
     }
 
-
     .faq-vestimenta .dress-info{
 
         padding:18px;
@@ -2001,13 +1965,11 @@ CONFIRMACIÓN
 
     }
 
-
     .faq-vestimenta .dress-info h3{
 
         font-size:1.7rem;
 
     }
-
 
     .faq-vestimenta .dress-info p{
 
@@ -2015,13 +1977,11 @@ CONFIRMACIÓN
 
     }
 
-
     .faq-vestimenta .nota-novia{
 
         font-size:1.35rem;
 
     }
-
 
     .faq-vestimenta .dress-text{
 
@@ -2030,7 +1990,6 @@ CONFIRMACIÓN
         margin:20px auto 0;
 
     }
-
 
     .faq-vestimenta .dress-text p{
 
@@ -2053,7 +2012,6 @@ CONFIRMACIÓN
 
     }
 
-
     .faq summary{
 
         padding:18px 15px;
@@ -2061,7 +2019,6 @@ CONFIRMACIÓN
         font-size:.98rem;
 
     }
-
 
     .faq p{
 
@@ -2088,20 +2045,17 @@ CONFIRMACIÓN
 
     }
 
-
     .despedida{
 
         font-size:1.15rem;
 
     }
 
-
     .final h3{
 
         font-size:2.7rem;
 
     }
-
 
     .fecha-final{
 
@@ -2122,7 +2076,6 @@ CONFIRMACIÓN
 
     }
 
-
     .confirmacion-toggle summary{
 
         padding:18px;
@@ -2131,20 +2084,17 @@ CONFIRMACIÓN
 
     }
 
-
     .confirmacion-contenido{
 
         padding:22px;
 
     }
 
-
     .campo input[type="text"]{
 
         padding:13px 16px;
 
     }
-
 
     .btn{
 
@@ -2175,13 +2125,11 @@ CONFIRMACIÓN
 
     }
 
-
     .hero-content{
 
         transform:none;
 
     }
-
 
     .hero-content h1{
 
@@ -2195,7 +2143,6 @@ CONFIRMACIÓN
 
     }
 
-
     .hero-content h2{
 
         font-size:1rem;
@@ -2205,7 +2152,6 @@ CONFIRMACIÓN
         margin-bottom:8px;
 
     }
-
 
     .fecha{
 
@@ -2226,7 +2172,6 @@ CONFIRMACIÓN
 
     }
 
-
     .mensaje h2{
 
         font-size:1.45rem;
@@ -2243,7 +2188,6 @@ CONFIRMACIÓN
         font-size:.95rem;
 
     }
-
 
     .actividad{
 
@@ -2262,13 +2206,11 @@ CONFIRMACIÓN
 
     }
 
-
     .faq-vestimenta .dress-card img{
 
         height:330px;
 
     }
-
 
     .faq-vestimenta .dress-text{
 
@@ -2289,13 +2231,11 @@ CONFIRMACIÓN
 
     }
 
-
     .count-item span{
 
         font-size:1.5rem;
 
     }
-
 
     .count-item small{
 
@@ -2313,7 +2253,6 @@ CONFIRMACIÓN
         width:270px;
 
     }
-
 
     .final h3{
 
@@ -2336,13 +2275,11 @@ CONFIRMACIÓN
 
     }
 
-
     .hero-content h1{
 
         font-size:3rem;
 
     }
-
 
     .hero-content h2{
 
@@ -2368,7 +2305,6 @@ CONFIRMACIÓN
 
 }
 
-
 img{
 
     max-width:100%;
@@ -2376,7 +2312,6 @@ img{
     height:auto;
 
 }
-
 
 iframe{
 
