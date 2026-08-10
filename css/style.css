@@ -1049,7 +1049,7 @@ CONFIRMACIÓN
 
 .confirmacion-toggle{
 
-    max-width:420px;
+    max-width:360px;
 
     margin:0 auto;
 
@@ -2057,9 +2057,13 @@ CONFIRMACIÓN
 
     .confirmacion-toggle{
 
-        border-radius:20px;
+    width:85%;
 
-    }
+    margin:0 auto;
+
+    border-radius:20px;
+
+}
 
     .confirmacion-toggle summary{
 
