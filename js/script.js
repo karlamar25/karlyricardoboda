@@ -1,14 +1,22 @@
-/*======================================================
-CONFIGURACIÓN
-======================================================*/
+/*======================================================*
+* CONFIGURACIÓN
+*======================================================*/
 
 // La cuenta regresiva finaliza al iniciar la ceremonia (4:00 PM)
 const weddingDate = new Date("2026-12-05T16:00:00").getTime();
 
+// La confirmación estará disponible hasta el 20 de noviembre.
+// Se cierra a las 00:00 del 21 de noviembre.
+const confirmacionFecha = new Date("2026-11-21T00:00:00").getTime();
 
-/*======================================================
-CUENTA REGRESIVA
-======================================================*/
+// El botón de calendario funcionará hasta finalizar el 5 de diciembre.
+// Se desactiva a partir del 6 de diciembre.
+const calendarioFecha = new Date("2026-12-06T00:00:00").getTime();
+
+
+/*======================================================*
+* CUENTA REGRESIVA
+*======================================================*/
 
 const daysElement = document.getElementById("days");
 const hoursElement = document.getElementById("hours");
@@ -17,18 +25,15 @@ const secondsElement = document.getElementById("seconds");
 
 let countdownInterval;
 
-
 function updateCountdown(){
 
     const now = new Date().getTime();
 
     const distance = weddingDate - now;
 
-
     if(distance <= 0){
 
         const countdown = document.querySelector(".countdown");
-
 
         if(countdown){
 
@@ -46,36 +51,29 @@ function updateCountdown(){
 
         }
 
-
         clearInterval(countdownInterval);
 
         return;
-
     }
-
 
     const days = Math.floor(
         distance / (1000 * 60 * 60 * 24)
     );
-
 
     const hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24))
         / (1000 * 60 * 60)
     );
 
-
     const minutes = Math.floor(
         (distance % (1000 * 60 * 60))
         / (1000 * 60)
     );
 
-
     const seconds = Math.floor(
         (distance % (1000 * 60))
         / 1000
     );
-
 
     if(daysElement){
 
@@ -84,7 +82,6 @@ function updateCountdown(){
 
     }
 
-
     if(hoursElement){
 
         hoursElement.textContent =
@@ -92,14 +89,12 @@ function updateCountdown(){
 
     }
 
-
     if(minutesElement){
 
         minutesElement.textContent =
             String(minutes).padStart(2,"0");
 
     }
-
 
     if(secondsElement){
 
@@ -110,40 +105,110 @@ function updateCountdown(){
 
 }
 
-
 updateCountdown();
 
 countdownInterval = setInterval(updateCountdown,1000);
 
 
-/*======================================================
-EVENTO FINALIZADO
-======================================================*/
+/*======================================================*
+* CONFIRMACIÓN DE ASISTENCIA
+* CIERRE: 20 DE NOVIEMBRE DE 2026
+*======================================================*/
 
 const botonWhatsapp =
     document.querySelector(".btn-whatsapp");
 
+const confirmacionToggle =
+    document.querySelector(".confirmacion-toggle");
 
-function verificarEventoFinalizado(){
+function verificarConfirmacion(){
 
     if(!botonWhatsapp) return;
-
 
     const ahora =
         new Date().getTime();
 
+    if(ahora >= confirmacionFecha){
 
-    if(ahora >= weddingDate){
-
+        // Desactivar enlace de WhatsApp
         botonWhatsapp.removeAttribute("href");
 
         botonWhatsapp.removeAttribute("target");
 
+        botonWhatsapp.removeAttribute("rel");
+
         botonWhatsapp.style.background =
             "#7A7A7A";
 
-
         botonWhatsapp.innerHTML = `
+
+            <i class="fa-solid fa-lock"></i>
+
+            Confirmación cerrada
+
+        `;
+
+        // Evitar que se pueda hacer clic
+        botonWhatsapp.addEventListener(
+            "click",
+            function(e){
+
+                e.preventDefault();
+
+                alert(
+                    "La fecha para confirmar asistencia ya ha finalizado.\n\n" +
+                    "¡Gracias por comprenderlo! ❤️"
+                );
+
+            }
+        );
+
+        // Cambiar el texto de la sección
+        const textoConfirmacion =
+            document.querySelector(".confirmacion-texto");
+
+        if(textoConfirmacion){
+
+            textoConfirmacion.innerHTML = `
+                El período para confirmar asistencia
+                ha finalizado.
+            `;
+
+        }
+
+    }
+
+}
+
+verificarConfirmacion();
+
+
+/*======================================================*
+* AGREGAR AL CALENDARIO
+* FUNCIONA HASTA EL 5 DE DICIEMBRE DE 2026
+*======================================================*/
+
+const botonCalendario =
+    document.getElementById("btn-calendario");
+
+function verificarCalendario(){
+
+    if(!botonCalendario) return;
+
+    const ahora =
+        new Date().getTime();
+
+    if(ahora >= calendarioFecha){
+
+        botonCalendario.disabled = true;
+
+        botonCalendario.style.background =
+            "#7A7A7A";
+
+        botonCalendario.style.cursor =
+            "default";
+
+        botonCalendario.innerHTML = `
 
             <i class="fa-solid fa-heart"></i>
 
@@ -151,13 +216,11 @@ function verificarEventoFinalizado(){
 
         `;
 
-
-        botonWhatsapp.addEventListener(
+        botonCalendario.addEventListener(
             "click",
             function(e){
 
                 e.preventDefault();
-
 
                 alert(
                     "Nuestra boda ya se celebró.\n\n" +
@@ -171,114 +234,18 @@ function verificarEventoFinalizado(){
 
 }
 
-
-verificarEventoFinalizado();
-
-
-/*======================================================
-AGREGAR AL CALENDARIO
-======================================================*/
-
-const botonCalendario =
-    document.getElementById("btn-calendario");
+verificarCalendario();
 
 
-if(botonCalendario){
-
-    botonCalendario.addEventListener(
-        "click",
-        function(){
-
-            const evento = [
-
-                "BEGIN:VCALENDAR",
-
-                "VERSION:2.0",
-
-                "PRODID:-//Karla y Ricardo//Boda//ES",
-
-                "CALSCALE:GREGORIAN",
-
-                "BEGIN:VEVENT",
-
-                "UID:karla-ricardo-boda-2026@karlyricardoboda.com",
-
-                "DTSTART;TZID=America/El_Salvador:20261205T160000",
-
-                "DTEND;TZID=America/El_Salvador:20261205T220000",
-
-                "SUMMARY:Boda Karla & Ricardo",
-
-                "STATUS:CONFIRMED",
-
-                "END:VEVENT",
-
-                "END:VCALENDAR"
-
-            ].join("\r\n");
-
-
-            const archivo = new Blob(
-
-                [evento],
-
-                {
-                    type:
-                        "text/calendar;charset=utf-8"
-                }
-
-            );
-
-
-            const url =
-                URL.createObjectURL(archivo);
-
-
-            const enlace =
-                document.createElement("a");
-
-
-            enlace.href = url;
-
-            enlace.download =
-                "Boda-Karla-Ricardo.ics";
-
-
-            document.body.appendChild(enlace);
-
-            enlace.click();
-
-            document.body.removeChild(enlace);
-
-
-            setTimeout(
-
-                function(){
-
-                    URL.revokeObjectURL(url);
-
-                },
-
-                5000
-
-            );
-
-        }
-    );
-
-}
-
-
-/*======================================================
-DRESS CODE · DESPLEGABLE
-======================================================*/
+/*======================================================*
+* DRESS CODE · DESPLEGABLE
+*======================================================*/
 
 const dressToggle =
     document.getElementById("dress-toggle");
 
 const dressContent =
     document.getElementById("dress-content");
-
 
 if(dressToggle && dressContent){
 
@@ -290,12 +257,10 @@ if(dressToggle && dressContent){
 
             dressToggle.classList.toggle("abierto");
 
-
             const icono =
                 dressToggle.querySelector(
                     ".dress-icon"
                 );
-
 
             if(
                 dressContent.classList.contains(
