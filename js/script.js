@@ -183,9 +183,9 @@ function verificarConfirmacion(){
 verificarConfirmacion();
 
 
-/*======================================================*
-* AGREGAR AL CALENDARIO
-* FUNCIONA HASTA EL 5 DE DICIEMBRE DE 2026
+/*======================================================* 
+* AGREGAR AL CALENDARIO 
+* FUNCIONA HASTA EL 5 DE DICIEMBRE DE 2026 
 *======================================================*/
 
 const botonCalendario =
@@ -230,7 +230,69 @@ function verificarCalendario(){
             }
         );
 
+        return;
     }
+
+    /* CREAR EVENTO DE CALENDARIO */
+
+    botonCalendario.addEventListener(
+        "click",
+        function(){
+
+            const evento = [
+
+                "BEGIN:VCALENDAR",
+                "VERSION:2.0",
+                "PRODID:-//Karla y Ricardo//Boda//ES",
+                "CALSCALE:GREGORIAN",
+                "BEGIN:VEVENT",
+                "UID:karla-ricardo-boda-2026@karlayricardowedding.com",
+                "DTSTART;TZID=America/El_Salvador:20261205T160000",
+                "DTEND;TZID=America/El_Salvador:20261205T220000",
+                "SUMMARY:Boda Karla & Ricardo",
+                "STATUS:CONFIRMED",
+                "END:VEVENT",
+                "END:VCALENDAR"
+
+            ].join("\r\n");
+
+            const archivo =
+                new Blob(
+                    [evento],
+                    {
+                        type:
+                            "text/calendar;charset=utf-8"
+                    }
+                );
+
+            const url =
+                URL.createObjectURL(archivo);
+
+            const enlace =
+                document.createElement("a");
+
+            enlace.href = url;
+
+            enlace.download =
+                "Boda-Karla-Ricardo.ics";
+
+            document.body.appendChild(enlace);
+
+            enlace.click();
+
+            document.body.removeChild(enlace);
+
+            setTimeout(
+                function(){
+
+                    URL.revokeObjectURL(url);
+
+                },
+                1000
+            );
+
+        }
+    );
 
 }
 
